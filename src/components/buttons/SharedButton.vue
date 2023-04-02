@@ -13,7 +13,8 @@
     :height="height"
     @click="$emit('click', $event)"
   >
-    {{ text }}
+    <img v-if="imageSrc" :src="imageSrc" alt="" />
+    <span v-else>{{ text }}</span>
   </v-btn>
 </template>
 
@@ -29,6 +30,7 @@ export default {
     backgroundButton: { type: String, default: '' },
     radius: { type: Number, default: 0 },
     height: { type: Number, default: 36 },
+    imageSrc: { type: String, default: '' },
     sizeText: { type: Number, default: 20 },
   },
   computed: {
