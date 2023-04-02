@@ -1,10 +1,8 @@
 <template>
   <div>
     <div class="contenedor">
-      <v-card class="d-flex justify-center">
-        <span style="font-size: 60px; text-align: center"
-          >Bienvenido a tu kiosko "Compras Segura"</span
-        >
+      <v-card class="d-flex justify-center align-center">
+        <span class="titulo">Bienvenido a tu kiosko "Compras Segura"</span>
       </v-card>
       <v-card class="py-4 d-flex justify-center">
         <SharedButton
@@ -40,11 +38,32 @@ export default {
   },
 }
 </script>
-<style >
+
+<style>
 .contenedor {
   display: flex;
   flex-direction: column;
   height: 100vh;
   justify-content: center;
+}
+
+.titulo {
+  font-size: 4rem;
+  text-align: center;
+  margin: 2rem;
+}
+
+.SharedButton {
+  font-size: 2rem;
+  font-weight: bold;
+  background-color: #f5a623;
+  color: #fff;
+  border: none;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+  transition: background-color 0.2s ease;
+}
+
+.SharedButton:hover {
+  background-color: #e69100;
 }
 </style>

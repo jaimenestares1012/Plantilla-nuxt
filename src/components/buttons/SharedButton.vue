@@ -51,7 +51,7 @@ export default {
 .shared-button-silver {
   background: silver !important;
 }
-.background-button-orange {
-  background: linear-gradient(180deg, #eb7b36 0%, #eb9436 13.54%, #eb7b36 100%);
-}
+// .background-button-orange {
+//   background: linear-gradient(180deg, #eb7b36 0%, #eb9436 13.54%, #eb7b36 100%);
+// }
 </style>
