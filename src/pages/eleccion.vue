@@ -10,11 +10,11 @@
         <div class="text-container">Comidas</div>
       </div>
     </div>
-    <div class="carrito-container" @click="redirect('/comidas')">
+    <!-- <div class="contenedor-carrito" @click="redirect('/comidas')">
       <div class="carrito-compras">
         <img :src="require('../assets/img/carrito.png')" alt="" />
       </div>
-    </div>
+    </div> -->
   </div>
 </template>
 
@@ -82,7 +82,7 @@ export default {
   color: #333;
 }
 
-.carrito-container {
+.contenedor-carrito {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -93,7 +93,7 @@ export default {
   border-radius: 10px;
 }
 
-.carrito-container:hover {
+.contenedor-carrito:hover {
   transform: scale(1.1);
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
 }
