@@ -1,21 +1,19 @@
 <template>
   <div>
     <div class="contenedor">
-      <v-card class="d-flex justify-center align-center">
-        <span class="titulo"
-          >Bienvenido a tu kiosko "Compras Segura" {{ idLast }}</span
-        >
-      </v-card>
-      <v-card class="py-4 d-flex justify-center">
-        <SharedButton
-          type="submit"
-          text="Comprar"
-          :total-width="90"
-          :radius="10"
-          :height="70"
-          :loading="loading"
-          @click="redirect"
-        />
+      <v-card class="justify-center align-center">
+        <div class="titulo">
+          Bienvenido a nuestra <br />
+          <b>Cafetería</b>
+        </div>
+        <div class="samsung-experience">
+          <div class="samsung-logo">Samsung</div>
+          <div class="display-experience">Display</div>
+          <div class="display-experience">Experience</div>
+          <div class="image-container" @click="redirect">
+            <img :src="require('../assets/img/here.png')" alt="" />
+          </div>
+        </div>
       </v-card>
     </div>
   </div>
@@ -76,5 +74,35 @@ export default {
 
 .SharedButton:hover {
   background-color: #e69100;
+}
+.samsung-experience-title {
+  text-align: center;
+}
+.samsung-logo {
+  text-align: center;
+  font-family: 'SamsungOne', sans-serif;
+  font-size: 3em;
+  color: #0023a3;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: bold;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+.display-experience {
+  text-align: center;
+  font-family: 'SamsungOne', sans-serif;
+  font-size: 2.5em;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: bold;
+  text-shadow: 0 0 6px #0d3f8d, 0 0 8px #0d3f8d, 0 0 12px #0d3f8d,
+    0 0 20px #0d3f8d, 0 0 30px #0d3f8d;
+}
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
 }
 </style>
