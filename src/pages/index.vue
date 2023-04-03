@@ -2,7 +2,9 @@
   <div>
     <div class="contenedor">
       <v-card class="d-flex justify-center align-center">
-        <span class="titulo">Bienvenido a tu kiosko "Compras Segura"</span>
+        <span class="titulo"
+          >Bienvenido a tu kiosko "Compras Segura" {{ idLast }}</span
+        >
       </v-card>
       <v-card class="py-4 d-flex justify-center">
         <SharedButton
@@ -20,6 +22,7 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 import SharedButton from '@/components/buttons/SharedButton'
 export default {
   name: 'IndexPage',
@@ -35,6 +38,14 @@ export default {
     redirect() {
       this.$router.push('/eleccion')
     },
+  },
+  computed: {
+    ...mapGetters('producto', ['idLast']),
+  },
+  async mounted() {
+    console.log('INDEXXXXXXXXXXXXXXXXXXXX')
+    const paylodad = {}
+    await this.$store.dispatch('producto/getId', paylodad)
   },
 }
 </script>
