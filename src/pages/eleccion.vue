@@ -1,13 +1,20 @@
 <template>
-  <div>
-    <div class="contenedor">
-      <div class="image-container" @click="redirect('/bebidas')">
-        <img :src="require('../assets/img/bebidas.png')" alt="" />
-        <div class="text-container">Bebidas</div>
+  <div class="contenedor-general-eleccion">
+    <div class="parent-container">
+      <div class="contenedor">
+        <div class="image-container" @click="redirect('/bebidas')">
+          <img :src="require('../assets/img/bebida.png')" alt="" />
+          <div class="text-container">Bebidas</div>
+        </div>
+        <div class="image-container" @click="redirect('/comidas')">
+          <img :src="require('../assets/img/comida.png')" alt="" />
+          <div class="text-container">Comidas</div>
+        </div>
       </div>
-      <div class="image-container" @click="redirect('/comidas')">
-        <img :src="require('../assets/img/comidas.png')" alt="" />
-        <div class="text-container">Comidas</div>
+    </div>
+    <div>
+      <div class="carrito-compras" @click="redirect('/comidas')">
+        <img :src="require('../assets/img/carrito.png')" alt="" />
       </div>
     </div>
   </div>
@@ -32,31 +39,49 @@ export default {
   },
 }
 </script>
-<style >
+
+<style>
+.contenedor-general-eleccion {
+  height: 100vh;
+}
+.parent-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .contenedor {
   display: flex;
-  flex-direction: column;
-  height: 100vh;
   justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
+
 .image-container {
-  display: inline-block;
-  text-align: center;
-  border: 2px solid #ccc;
-  background-color: #f9f9f9;
-  border-radius: 5px;
-  margin: 10px;
-  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 20px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+}
+
+.image-container:hover {
+  transform: scale(1.1);
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
 }
 
 .image-container img {
-  max-width: 100%;
+  width: 100%;
   height: auto;
 }
 
 .text-container {
-  margin-top: 10px;
-  text-align: center;
+  font-size: 2rem;
   font-weight: bold;
+  text-align: center;
+  margin: 1rem 0;
+  color: #333;
 }
 </style>
