@@ -1,5 +1,14 @@
 <template>
   <div class="contenedor-general-eleccion">
+    <!-- font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  margin: 1rem 0;
+  color: #333; -->
+    <div class="contenedor-title">
+      <div>¿COMES O BEBES?</div>
+      <div>O LAS 2 COSAS</div>
+    </div>
     <div class="contenedor-eleccion">
       <div class="image-container" @click="redirect('/bebidas')">
         <img :src="require('../assets/img/bebida.png')" alt="" />
@@ -10,11 +19,11 @@
         <div class="text-container">Comidas</div>
       </div>
     </div>
-    <!-- <div class="contenedor-carrito" @click="redirect('/comidas')">
+    <div class="contenedor-carrito" @click="redirect('/carrito')">
       <div class="carrito-compras">
         <img :src="require('../assets/img/carrito.png')" alt="" />
       </div>
-    </div> -->
+    </div>
   </div>
 </template>
 
@@ -40,10 +49,17 @@ export default {
 
 <style>
 .contenedor-general-eleccion {
-  height: 100vh;
+  /* height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
+}
+.contenedor-title {
+  width: 95%;
+  text-align: center;
+  margin: 1rem 0;
+  font-weight: 700;
+  font-size: 2rem;
 }
 .contenedor-eleccion {
   width: 95%;
@@ -83,10 +99,12 @@ export default {
 }
 
 .contenedor-carrito {
+  width: 86%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0 20px;
+  margin: auto;
+  margin-top: 4rem;
   cursor: pointer;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
