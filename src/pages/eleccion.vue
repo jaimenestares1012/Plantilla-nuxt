@@ -1,19 +1,17 @@
 <template>
   <div class="contenedor-general-eleccion">
-    <div class="parent-container">
-      <div class="contenedor">
-        <div class="image-container" @click="redirect('/bebidas')">
-          <img :src="require('../assets/img/bebida.png')" alt="" />
-          <div class="text-container">Bebidas</div>
-        </div>
-        <div class="image-container" @click="redirect('/comidas')">
-          <img :src="require('../assets/img/comida.png')" alt="" />
-          <div class="text-container">Comidas</div>
-        </div>
+    <div class="contenedor-eleccion">
+      <div class="image-container" @click="redirect('/bebidas')">
+        <img :src="require('../assets/img/bebida.png')" alt="" />
+        <div class="text-container">Bebidas</div>
+      </div>
+      <div class="image-container" @click="redirect('/comidas')">
+        <img :src="require('../assets/img/comida.png')" alt="" />
+        <div class="text-container">Comidas</div>
       </div>
     </div>
-    <div>
-      <div class="carrito-compras" @click="redirect('/comidas')">
+    <div class="carrito-container" @click="redirect('/comidas')">
+      <div class="carrito-compras">
         <img :src="require('../assets/img/carrito.png')" alt="" />
       </div>
     </div>
@@ -43,21 +41,20 @@ export default {
 <style>
 .contenedor-general-eleccion {
   height: 100vh;
-}
-.parent-container {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.contenedor {
+.contenedor-eleccion {
+  width: 95%;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
 }
 
 .image-container {
   display: flex;
+  width: 100%;
   flex-direction: column;
   align-items: center;
   margin: 0 20px;
@@ -83,5 +80,25 @@ export default {
   text-align: center;
   margin: 1rem 0;
   color: #333;
+}
+
+.carrito-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 20px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+}
+
+.carrito-container:hover {
+  transform: scale(1.1);
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+.carrito-compras img {
+  width: 100%;
+  height: auto;
 }
 </style>
