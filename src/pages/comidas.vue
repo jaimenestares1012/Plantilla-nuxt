@@ -75,7 +75,7 @@ export default {
   methods: {
     accionCar(data) {
       this.$router.push(
-        `/carrito/?id=${data.id}&name=${data.name}&description=${data.description}&url=${url}`
+        `/carrito/?id=${data.id}&name=${data.name}&description=${data.description}&url=${data.url}`
       )
     },
   },

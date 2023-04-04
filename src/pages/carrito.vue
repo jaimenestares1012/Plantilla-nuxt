@@ -45,6 +45,7 @@ export default {
       this.$router.push('/carrito-resumen')
     },
   },
+
   mounted() {
     const valores = window.location.search
     const urlParams = new URLSearchParams(valores)

@@ -17,11 +17,15 @@ export const mutations = {
   SET_ID(state, data) {
     state.idLast = data
   },
-  SET_DES_PRODUCTOS(state, id) {
-    
+  SET_DES_PRODUCTOS(state, data) {
+    const index = state.carProducto.findIndex(p => p.id === data.id);
+    state.carProducto[index]  = { ...state.carProducto[index], cantidad: state.carProducto[index].cantidad - 1 };
+    console.log("SET_ADD_PRODUCTOS", state.carProducto );
   },
-  SET_ADD_PRODUCTOS(state, id) {
-  
+  SET_ADD_PRODUCTOS(state, data) {
+    const index = state.carProducto.findIndex(p => p.id === data.id);
+    state.carProducto[index]  = { ...state.carProducto[index], cantidad: state.carProducto[index].cantidad + 1 };
+    console.log("SET_ADD_PRODUCTOS", state.carProducto );
   },
   SET_ADD_PRODUCTO(state, data) {
     const index = state.carProducto.findIndex(p => p.id === data.id);
@@ -39,7 +43,6 @@ export const actions = {
         const responseApiIdLast = await apiIdLast(payload);
         console.log("responseApiIdLast", responseApiIdLast);
         commit('SET_ID', responseApiIdLast.data.ID);
-
     },
     
     

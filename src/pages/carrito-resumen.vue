@@ -5,7 +5,7 @@
     </div>
     <div
       class="contenedor-productos"
-      v-for="(dat, index) in carProducto"
+      v-for="(dat, index) in carProductoComputed"
       :key="index"
     >
       <div class="contendor-iterador">
@@ -41,14 +41,19 @@ export default {
   },
   methods: {
     restCantidad(data) {
-      this.$store.commit('producto/SET_DES_PRODUCTOS', data.id)
+      this.$store.commit('producto/SET_DES_PRODUCTOS', data)
     },
     addCantidad(data) {
-      this.$store.commit('producto/SET_ADD_PRODUCTOS', data.id)
+      this.$store.commit('producto/SET_ADD_PRODUCTOS', data)
     },
   },
   computed: {
     ...mapGetters('producto', ['carProducto']),
+
+    carProductoComputed() {
+      console.log('  [...this.carProducto] ', this.carProducto)
+      return this.carProducto
+    },
   },
   mounted() {},
 }
@@ -71,6 +76,7 @@ export default {
 }
 
 .contenedor-productos {
+  margin-top: 20px;
 }
 
 .contendor-iterador {
@@ -116,5 +122,14 @@ export default {
   font-size: 2rem;
   padding: 1rem;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  border: none;
+  color: #000000;
+  background-color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+.contenedor-cantidad:hover {
+  background-color: #c0c0c0;
 }
 </style>
