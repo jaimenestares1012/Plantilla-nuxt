@@ -4,29 +4,15 @@
       <div>ELIGE TU BEBIDA</div>
     </div>
     <div class="contenedor-bebidas">
-      <div class="image-container-bebidas" @click="redirect('/bebidas')">
-        <img :src="require('../assets/img/bebida.png')" alt="" />
-        <div class="text-container">Cafés</div>
-      </div>
-      <div class="image-container-bebidas" @click="redirect('/bebidas')">
-        <img :src="require('../assets/img/comida.png')" alt="" />
-        <div class="text-container">Infusiones</div>
-      </div>
-      <div class="image-container-bebidas" @click="redirect('/bebidas')">
-        <img :src="require('../assets/img/comida.png')" alt="" />
-        <div class="text-container">Chocolates</div>
-      </div>
-      <div class="image-container-bebidas" @click="redirect('/bebidas')">
-        <img :src="require('../assets/img/comida.png')" alt="" />
-        <div class="text-container">Zumos</div>
-      </div>
-      <div class="image-container-bebidas" @click="redirect('/bebidas')">
-        <img :src="require('../assets/img/comida.png')" alt="" />
-        <div class="text-container">Refrescos</div>
-      </div>
-      <div class="image-container-bebidas" @click="redirect('/bebidas')">
-        <img :src="require('../assets/img/comida.png')" alt="" />
-        <div class="text-container">Agua</div>
+      <div
+        class="image-container-bebidas"
+        v-for="(dat, index) in data"
+        :key="index"
+      >
+        <div @click="accionCar(dat)">
+          <img :src="require(`../assets/img/${dat.url}.png`)" alt="" />
+          <div class="text-container">{{ dat.name }}</div>
+        </div>
       </div>
     </div>
   </div>
@@ -42,11 +28,51 @@ export default {
   data() {
     return {
       loading: null,
+      data: [
+        {
+          name: 'Cafés',
+          description: 'Mini croissants',
+          id: 'b01',
+          url: 'comida',
+        },
+        {
+          name: 'Infusiones',
+          description: 'Mini croissants',
+          id: 'b02',
+          url: 'comida',
+        },
+        {
+          name: 'Chocolates',
+          description: 'Mini croissants',
+          id: 'b03',
+          url: 'comida',
+        },
+        {
+          name: 'Zumos',
+          description: 'Mini croissants',
+          id: 'b04',
+          url: 'comida',
+        },
+        {
+          name: 'Refrescos',
+          description: 'Mini croissants',
+          id: 'b05',
+          url: 'comida',
+        },
+        {
+          name: 'Agua',
+          description: 'Mini croissants',
+          id: 'b06',
+          url: 'comida',
+        },
+      ],
     }
   },
   methods: {
-    redirect(ruta) {
-      this.$router.push(ruta)
+    accionCar(data) {
+      this.$router.push(
+        `/carrito/?id=${data.id}&name=${data.name}&description=${data.description}`
+      )
     },
   },
 }
@@ -74,8 +100,8 @@ export default {
 }
 
 .image-container-bebidas {
-  flex-basis: calc(33.33% - 100px);
-  margin: 30px;
+  flex-basis: calc(33.33% - 50px);
+  margin: 15px;
   cursor: pointer;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);

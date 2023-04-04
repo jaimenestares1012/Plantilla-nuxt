@@ -38,7 +38,7 @@ export default {
 </script>
 <style>
 .HomeLayout {
-  background: rgb(255, 255, 255);
+  background: #f2f7fb;
   height: 3000px;
 }
 @media (min-width: 960px) {

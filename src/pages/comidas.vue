@@ -4,29 +4,15 @@
       <div>ELIGE TU COMIDA</div>
     </div>
     <div class="contenedor-comidas">
-      <div class="image-container-comidas" @click="redirect('/bebidas')">
-        <img :src="require('../assets/img/bebida.png')" alt="" />
-        <div class="text-container">Mini croissants</div>
-      </div>
-      <div class="image-container-comidas" @click="redirect('/comidas')">
-        <img :src="require('../assets/img/comida.png')" alt="" />
-        <div class="text-container">Mini napolitanas</div>
-      </div>
-      <div class="image-container-comidas" @click="redirect('/comidas')">
-        <img :src="require('../assets/img/comida.png')" alt="" />
-        <div class="text-container">Mini muffins</div>
-      </div>
-      <div class="image-container-comidas" @click="redirect('/comidas')">
-        <img :src="require('../assets/img/comida.png')" alt="" />
-        <div class="text-container">Finger sandwiches</div>
-      </div>
-      <div class="image-container-comidas" @click="redirect('/comidas')">
-        <img :src="require('../assets/img/comida.png')" alt="" />
-        <div class="text-container">Mini wraps</div>
-      </div>
-      <div class="image-container-comidas" @click="redirect('/comidas')">
-        <img :src="require('../assets/img/comida.png')" alt="" />
-        <div class="text-container">Mini bocadillos</div>
+      <div
+        class="image-container-comidas"
+        v-for="(dat, index) in data"
+        :key="index"
+      >
+        <div @click="accionCar(dat)">
+          <img :src="require(`../assets/img/${dat.url}.png`)" alt="" />
+          <div class="text-container">{{ dat.name }}</div>
+        </div>
       </div>
     </div>
   </div>
@@ -42,11 +28,52 @@ export default {
   data() {
     return {
       loading: null,
+
+      data: [
+        {
+          name: 'Mini croissants',
+          description: 'Mini croissants',
+          id: 'c01',
+          url: 'comida',
+        },
+        {
+          name: 'Mini napolitanas',
+          description: 'Mini croissants',
+          id: 'c02',
+          url: 'comida',
+        },
+        {
+          name: 'Mini muffins',
+          description: 'Mini croissants',
+          id: 'c03',
+          url: 'comida',
+        },
+        {
+          name: 'Finger sandwiches',
+          description: 'Mini croissants',
+          id: 'c01',
+          url: 'comida',
+        },
+        {
+          name: 'Mini wraps',
+          description: 'Mini croissants',
+          id: 'c01',
+          url: 'comida',
+        },
+        {
+          name: 'Mini bocadillos',
+          description: 'Mini croissants',
+          id: 'c01',
+          url: 'comida',
+        },
+      ],
     }
   },
   methods: {
-    redirect(ruta) {
-      this.$router.push(ruta)
+    accionCar(data) {
+      this.$router.push(
+        `/carrito/?id=${data.id}&name=${data.name}&description=${data.description}`
+      )
     },
   },
 }
