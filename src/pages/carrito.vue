@@ -1,13 +1,11 @@
 <template>
-  <div class="contenedor-carrito-eleccion">
-    <div class="contenedor-carrito-title">
+  <div class="contenedor-producto-eleccion">
+    <div class="contenedor-producto-title">
       <div>Cuantos quieres</div>
     </div>
     <div class="contenedor-producto">
-      <div class="image-producto">
-        <img :src="require('../assets/img/bebida.png')" alt="" />
-        <div class="text-producto">{{ this.name }}</div>
-      </div>
+      <img :src="require('../assets/img/bebida.png')" alt="" />
+      <div class="text-producto">{{ this.name }}</div>
     </div>
     <div>
       <div class="text-producto-description">{{ this.description }}</div>
@@ -53,89 +51,35 @@ export default {
 </script>
 
 <style>
-.contenedor-carrito-eleccion {
+.contenedor-producto-eleccion {
   /* height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center; */
 }
-.contenedor-carrito-title {
+.contenedor-producto-title {
   width: 100%;
   text-align: center;
   font-weight: 700;
   margin-bottom: 4rem;
   font-size: 4rem;
 }
-.contenedor-carrito {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  text-align: center;
-}
 
-.image-container-carrito {
-  flex-basis: calc(33.33% - 100px);
-  margin: 30px;
-  cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 10px;
-}
-
-.image-container-carrito:hover {
-  transform: scale(1.1);
-  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
-}
-
-.image-container-carrito img {
-  width: 100%;
-  height: auto;
-}
-
-.text-container {
-  font-size: 2rem;
-  font-weight: bold;
-  text-align: center;
-  margin: 1rem 0;
-  color: #333;
-}
-.contenedor-producto .image-producto img {
-  width: 100%;
-}
-
-.contenedor-carrito {
-  width: 86%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: auto;
-  margin-top: 4rem;
-  cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 10px;
-}
-
-.contenedor-carrito:hover {
-  transform: scale(1.1);
-  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
-}
-.carrito-compras img {
-  width: 100%;
-  height: auto;
-}
 .contenedor-producto {
   width: 50vw; /* ancho del 90% de la ventana gráfica */
   height: 50vh; /* altura del 50% de la ventana gráfica */
-  display: flex;
+  flex-wrap: wrap;
   margin: auto;
   justify-content: center;
-  align-items: center;
-  background-size: cover;
+  text-align: center;
   background: #ffffff;
   border-radius: 50%; /* radio del 50% del ancho del contenedor */
 }
 
+.contenedor-producto .image-producto img {
+  width: 100%;
+  margin: auto;
+}
 .text-producto {
   font-size: 2rem;
   font-weight: bold;
@@ -149,6 +93,7 @@ export default {
   margin: 1rem 0;
   color: #333;
 }
+
 .contenedor-botones {
   display: flex;
   justify-content: center;
