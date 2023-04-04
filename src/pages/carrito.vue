@@ -13,6 +13,9 @@
     <div class="contenedor-botones" @click="adicionProducto">
       <button class="boton-anadir">Añadir</button>
     </div>
+    <div class="contenedor-botones" @click="redirect">
+      <button class="boton-anadir">ir Carrito</button>
+    </div>
   </div>
 </template>
 
@@ -23,6 +26,7 @@ export default {
       id: null,
       name: null,
       description: null,
+      url: null,
     }
   },
   methods: {
@@ -33,8 +37,12 @@ export default {
         description: this.description,
         cantidad: 1,
         id: this.id,
+        url: this.url,
       }
       this.$store.commit('producto/SET_ADD_PRODUCTO', producto)
+    },
+    redirect() {
+      this.$router.push('/carrito-resumen')
     },
   },
   mounted() {
@@ -43,9 +51,11 @@ export default {
     this.id = urlParams.get('id')
     this.name = urlParams.get('name')
     this.description = urlParams.get('description')
+    this.url = urlParams.get('url')
     console.log('<----------------------->', this.id)
     console.log('<----------------------->', this.name)
     console.log('<----------------------->', this.description)
+    console.log('<----------------------->', this.url)
   },
 }
 </script>

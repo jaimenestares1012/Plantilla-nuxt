@@ -4,12 +4,24 @@ export const state = () => ({
   isLoading: false,
   productos: '',
   idLast: null ,
-  carProducto: [] 
+  carProducto: [{
+    name: 'Mini croissants',
+    description: 'Mini croissants',
+    id: 'c01',
+    cantidad: 1,
+    url: '/samsung/bebida.png',
+  },] 
 });
 
 export const mutations = {
   SET_ID(state, data) {
     state.idLast = data
+  },
+  SET_DES_PRODUCTOS(state, id) {
+    
+  },
+  SET_ADD_PRODUCTOS(state, id) {
+  
   },
   SET_ADD_PRODUCTO(state, data) {
     const index = state.carProducto.findIndex(p => p.id === data.id);
@@ -37,4 +49,5 @@ export const actions = {
 
 export const getters = {
     idLast: (state) => state.idLast,
+    carProducto: (state) => state.carProducto,
 };
