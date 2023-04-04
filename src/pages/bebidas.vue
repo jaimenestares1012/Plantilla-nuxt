@@ -10,7 +10,10 @@
         :key="index"
       >
         <div @click="accionCar(dat)">
-          <img :src="require(`../assets/img/${dat.url}.png`)" alt="" />
+          <img
+            :src="`https://ja-my-serverless-react-app-20-03-2023.s3.amazonaws.com${dat.url}`"
+            alt=""
+          />
           <div class="text-container">{{ dat.name }}</div>
         </div>
       </div>
@@ -33,37 +36,37 @@ export default {
           name: 'Cafés',
           description: 'Mini croissants',
           id: 'b01',
-          url: 'comida',
+          url: '/samsung/bebida.png',
         },
         {
           name: 'Infusiones',
           description: 'Mini croissants',
           id: 'b02',
-          url: 'comida',
+          url: '/samsung/bebida.png',
         },
         {
           name: 'Chocolates',
           description: 'Mini croissants',
           id: 'b03',
-          url: 'comida',
+          url: '/samsung/bebida.png',
         },
         {
           name: 'Zumos',
           description: 'Mini croissants',
           id: 'b04',
-          url: 'comida',
+          url: '/samsung/bebida.png',
         },
         {
           name: 'Refrescos',
           description: 'Mini croissants',
           id: 'b05',
-          url: 'comida',
+          url: '/samsung/bebida.png',
         },
         {
           name: 'Agua',
           description: 'Mini croissants',
           id: 'b06',
-          url: 'comida',
+          url: '/samsung/bebida.png',
         },
       ],
     }
