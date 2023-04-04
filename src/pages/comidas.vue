@@ -64,21 +64,18 @@ export default {
   text-align: center;
   margin: 1rem 0;
   font-weight: 700;
-  font-size: 2rem;
+  font-size: 4rem;
 }
 .contenedor-comidas {
-  width: 95%;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
+  text-align: center;
 }
 
 .image-container-comidas {
-  display: flex;
-  width: 100%;
-  flex-direction: column;
-  align-items: center;
-  margin: 0 20px;
+  flex-basis: calc(33.33% - 100px);
+  margin: 30px;
   cursor: pointer;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
@@ -95,7 +92,7 @@ export default {
   height: auto;
 }
 
-.contenedor-comida-title {
+.text-container {
   font-size: 2rem;
   font-weight: bold;
   text-align: center;

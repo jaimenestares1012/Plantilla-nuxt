@@ -1,6 +1,6 @@
 <template>
   <v-app dark>
-    <v-main>
+    <v-main class="HomeLayout container">
       <v-container>
         <Nuxt />
       </v-container>
@@ -36,3 +36,15 @@ export default {
   },
 }
 </script>
+<style>
+.HomeLayout {
+  background: rgb(255, 255, 255);
+  height: 3000px;
+}
+@media (min-width: 960px) {
+  .container {
+    max-width: none !important;
+    padding-top: 50px;
+  }
+}
+</style>
