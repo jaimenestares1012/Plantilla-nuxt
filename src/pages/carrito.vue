@@ -12,6 +12,9 @@
     <div>
       <div class="text-producto-description">{{ this.description }}</div>
     </div>
+    <div class="contenedor-botones" @click="adicionProducto">
+      <button class="boton-anadir">Añadir</button>
+    </div>
   </div>
 </template>
 
@@ -19,10 +22,22 @@
 export default {
   data() {
     return {
-      idProducto: null,
+      id: null,
       name: null,
       description: null,
     }
+  },
+  methods: {
+    adicionProducto() {
+      console.log('adicionProducto')
+      const producto = {
+        name: this.name,
+        description: this.description,
+        cantidad: 1,
+        id: this.id,
+      }
+      this.$store.commit('producto/SET_ADD_PRODUCTO', producto)
+    },
   },
   mounted() {
     const valores = window.location.search
@@ -133,5 +148,27 @@ export default {
   text-align: center;
   margin: 1rem 0;
   color: #333;
+}
+.contenedor-botones {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.boton-anadir {
+  background-color: #ffffff;
+  color: #000000;
+  padding: 1rem 2rem;
+  border: #000000;
+  border-radius: 10px;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.boton-anadir:hover {
+  background-color: #fff;
+  color: #000;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
 }
 </style>
