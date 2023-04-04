@@ -1,26 +1,32 @@
 <template>
-  <div class="contenedor-general-eleccion">
-    <!-- font-size: 2rem;
-  font-weight: bold;
-  text-align: center;
-  margin: 1rem 0;
-  color: #333; -->
-    <div class="contenedor-title">
+  <div class="contenedor-comidas-eleccion">
+    <div class="contenedor-comidas-title">
       <div>ELIGE TU COMIDA</div>
     </div>
-    <div class="contenedor-eleccion">
-      <div class="image-container" @click="redirect('/bebidas')">
+    <div class="contenedor-comidas">
+      <div class="image-container-comidas" @click="redirect('/bebidas')">
         <img :src="require('../assets/img/bebida.png')" alt="" />
-        <div class="text-container">Bebidas</div>
+        <div class="text-container">Mini croissants</div>
       </div>
-      <div class="image-container" @click="redirect('/comidas')">
+      <div class="image-container-comidas" @click="redirect('/comidas')">
         <img :src="require('../assets/img/comida.png')" alt="" />
-        <div class="text-container">Comidas</div>
+        <div class="text-container">Mini napolitanas</div>
       </div>
-      <div class="contenedor-carrito" @click="redirect('/carrito')">
-        <div class="carrito-compras">
-          <img :src="require('../assets/img/carrito.png')" alt="" />
-        </div>
+      <div class="image-container-comidas" @click="redirect('/comidas')">
+        <img :src="require('../assets/img/comida.png')" alt="" />
+        <div class="text-container">Mini muffins</div>
+      </div>
+      <div class="image-container-comidas" @click="redirect('/comidas')">
+        <img :src="require('../assets/img/comida.png')" alt="" />
+        <div class="text-container">Finger sandwiches</div>
+      </div>
+      <div class="image-container-comidas" @click="redirect('/comidas')">
+        <img :src="require('../assets/img/comida.png')" alt="" />
+        <div class="text-container">Mini wraps</div>
+      </div>
+      <div class="image-container-comidas" @click="redirect('/comidas')">
+        <img :src="require('../assets/img/comida.png')" alt="" />
+        <div class="text-container">Mini bocadillos</div>
       </div>
     </div>
   </div>
@@ -47,27 +53,27 @@ export default {
 </script>
 
 <style>
-.contenedor-general-eleccion {
+.contenedor-comidas-eleccion {
   /* height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center; */
 }
-.contenedor-title {
+.contenedor-comidas-title {
   width: 95%;
   text-align: center;
   margin: 1rem 0;
   font-weight: 700;
   font-size: 2rem;
 }
-.contenedor-eleccion {
+.contenedor-comidas {
   width: 95%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.image-container {
+.image-container-comidas {
   display: flex;
   width: 100%;
   flex-direction: column;
@@ -79,17 +85,17 @@ export default {
   border-radius: 10px;
 }
 
-.image-container:hover {
+.image-container-comidas:hover {
   transform: scale(1.1);
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
 }
 
-.image-container img {
+.image-container-comidas img {
   width: 100%;
   height: auto;
 }
 
-.text-container {
+.contenedor-comida-title {
   font-size: 2rem;
   font-weight: bold;
   text-align: center;
