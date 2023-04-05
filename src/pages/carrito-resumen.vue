@@ -5,7 +5,7 @@
     </div>
     <div
       class="contenedor-productos"
-      v-for="(dat, index) in carProductoComputed"
+      v-for="(dat, index) in carProducto"
       :key="index"
     >
       <div class="contendor-iterador">
@@ -30,7 +30,7 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
+import { mapGetters, mapState } from 'vuex'
 export default {
   data() {
     return {
@@ -48,11 +48,8 @@ export default {
     },
   },
   computed: {
-    ...mapGetters('producto', ['carProducto']),
-
-    carProductoComputed() {
-      return this.carProducto
-    },
+    // ...mapGetters('producto', ['carProducto']),
+    ...mapState('producto', ['carProducto']),
   },
   mounted() {},
 }

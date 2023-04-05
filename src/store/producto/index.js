@@ -10,7 +10,8 @@ export const state = () => ({
     id: 'c01',
     cantidad: 1,
     url: '/samsung/bebida.png',
-  },] 
+  },
+] 
 });
 
 export const mutations = {
@@ -18,15 +19,28 @@ export const mutations = {
     state.idLast = data
   },
   SET_DES_PRODUCTOS(state, data) {
-    const index = state.carProducto.findIndex(p => p.id === data.id);
-    state.carProducto[index]  = { ...state.carProducto[index], cantidad: state.carProducto[index].cantidad - 1 };
-    console.log("SET_ADD_PRODUCTOS", state.carProducto );
+    state.carProducto = state.carProducto.map(p => {
+      if (p.id === data.id) {
+        if (p.cantidad > 0) { // Comprobación adicional para asegurarse de que la cantidad nunca sea menor que cero
+          return { ...p, cantidad: p.cantidad - 1 };
+        }
+      }
+      return p;
+    });
   },
+  
+
+  
   SET_ADD_PRODUCTOS(state, data) {
-    const index = state.carProducto.findIndex(p => p.id === data.id);
-    state.carProducto[index]  = { ...state.carProducto[index], cantidad: state.carProducto[index].cantidad + 1 };
-    console.log("SET_ADD_PRODUCTOS", state.carProducto );
+    state.carProducto = state.carProducto.map(p => {
+      if (p.id === data.id) {
+        return { ...p, cantidad: p.cantidad + 1 };
+      }
+      return p;
+    });
   },
+
+
   SET_ADD_PRODUCTO(state, data) {
     const index = state.carProducto.findIndex(p => p.id === data.id);
     if (index !== -1) {
