@@ -4,14 +4,7 @@ export const state = () => ({
   isLoading: false,
   productos: '',
   idLast: null ,
-  carProducto: [{
-    name: 'Mini croissants',
-    description: 'Mini croissants',
-    id: 'c01',
-    cantidad: 1,
-    url: '/samsung/bebida.png',
-  },
-] 
+  carProducto: [] 
 });
 
 export const mutations = {

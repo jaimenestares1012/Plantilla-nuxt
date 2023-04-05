@@ -3,10 +3,14 @@
     <div class="contenedor-carrito-resumen-title">
       <div>Mi carrito</div>
     </div>
+    <div class="dafault-message" v-if="condicion == 0">
+      No cuenta con ningun producto seleccionado
+    </div>
     <div
       class="contenedor-productos"
       v-for="(dat, index) in carProducto"
       :key="index"
+      v-else
     >
       <div class="contendor-iterador">
         <div class="contenedor-img-text">
@@ -50,6 +54,9 @@ export default {
   computed: {
     // ...mapGetters('producto', ['carProducto']),
     ...mapState('producto', ['carProducto']),
+    condicion() {
+      return this.carProducto.length
+    },
   },
   mounted() {},
 }
@@ -76,6 +83,14 @@ export default {
 .contenedor-productos {
   margin-top: 20px;
 }
+.dafault-message {
+  background: rgb(255, 255, 255);
+  text-align: center;
+  font-size: 4rem;
+  width: 60%;
+  padding: 3rem;
+  margin: auto;
+}
 
 .contendor-iterador {
   width: 90%;
@@ -92,12 +107,12 @@ export default {
   display: flex;
 }
 .contenedor-img-resumen {
-  width: 35%;
+  width: 40%;
   margin: auto;
   background: rgb(255, 255, 255);
   border-radius: 50%;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
-
+  padding: 10px;
   overflow: hidden;
 }
 .contenedor-img-resumen img {
