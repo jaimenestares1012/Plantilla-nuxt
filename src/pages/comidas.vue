@@ -35,7 +35,7 @@ export default {
       data: [
         {
           name: 'Mini croissants',
-          description: 'Mini croissants',
+          description: 'Mini croissant',
           id: 'c01',
           url: '/samsung/mini-croissants.png',
         },

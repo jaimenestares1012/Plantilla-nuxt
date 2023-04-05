@@ -50,6 +50,12 @@ export default {
     addCantidad(data) {
       this.$store.commit('producto/SET_ADD_PRODUCTOS', data)
     },
+    async sendData() {
+      let paylodad = {
+        data: this.carProducto,
+      }
+      await this.$store.dispatch('producto/sendDataStore', paylodad)
+    },
   },
   computed: {
     // ...mapGetters('producto', ['carProducto']),
