@@ -39,12 +39,11 @@ export default {
 <style>
 .HomeLayout {
   background: #f2f7fb;
-  height: 3000px;
+  /* height: 3000px; */
 }
 @media (min-width: 960px) {
   .container {
     max-width: none !important;
-    padding-top: 50px;
     height: 100vh;
     background: #f2f7fb;
   }

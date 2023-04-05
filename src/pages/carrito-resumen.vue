@@ -69,6 +69,8 @@ export default {
   font-weight: 700;
   margin-bottom: 4rem;
   font-size: 4rem;
+  background: rgb(255, 255, 255);
+  width: 100%;
 }
 
 .contenedor-productos {
@@ -78,6 +80,7 @@ export default {
 .contendor-iterador {
   width: 90%;
   margin: auto;
+  margin-top: 40px;
   display: flex;
 }
 .contenedor-img-text {
@@ -105,7 +108,7 @@ export default {
   object-fit: cover;
 }
 .text-description {
-  font-size: 1rem;
+  font-size: 1.5rem;
   font-weight: 500;
 }
 .contenedor-cantidad {
