@@ -20,7 +20,7 @@
         <div class="text-container">Comidas</div>
       </div>
     </div>
-    <div class="contenedor-carrito" @click="redirect('/carrito')">
+    <div class="contenedor-carrito" @click="redirect('/carrito-resumen')">
       <div class="carrito-compras">
         <img :src="require('../assets/img/carrito.png')" alt="" />
       </div>
