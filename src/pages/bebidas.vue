@@ -34,39 +34,39 @@ export default {
       data: [
         {
           name: 'Cafés',
-          description: 'Mini croissants',
+          description: 'Café con leche',
           id: 'b01',
-          url: '/samsung/bebida.png',
+          url: '/samsung/cafe-con-leche.png',
         },
         {
           name: 'Infusiones',
           description: 'Mini croissants',
           id: 'b02',
-          url: '/samsung/bebida.png',
+          url: '/samsung/infusiones.png',
         },
         {
           name: 'Chocolates',
           description: 'Mini croissants',
           id: 'b03',
-          url: '/samsung/bebida.png',
+          url: '/samsung/chocolate.png',
         },
         {
           name: 'Zumos',
           description: 'Mini croissants',
           id: 'b04',
-          url: '/samsung/bebida.png',
+          url: '/samsung/zumos.png',
         },
         {
           name: 'Refrescos',
           description: 'Mini croissants',
           id: 'b05',
-          url: '/samsung/bebida.png',
+          url: '/samsung/refrescos.png',
         },
         {
           name: 'Agua',
           description: 'Mini croissants',
           id: 'b06',
-          url: '/samsung/bebida.png',
+          url: '/samsung/agua.png',
         },
       ],
     }

@@ -11,7 +11,10 @@
           <div class="display-experience">Display</div>
           <div class="display-experience">Experience</div>
           <div class="image-container" @click="redirect">
-            <img :src="require('../assets/img/here.png')" alt="" />
+            <img
+              src="https://ja-my-serverless-react-app-20-03-2023.s3.amazonaws.com/here.png"
+              alt=""
+            />
           </div>
         </div>
       </v-card>

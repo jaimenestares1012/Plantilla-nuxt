@@ -6,11 +6,17 @@
     </div>
     <div class="contenedor-eleccion">
       <div class="image-container" @click="redirect('/bebidas')">
-        <img :src="require('../assets/img/bebida.png')" alt="" />
+        <img
+          src="https://ja-my-serverless-react-app-20-03-2023.s3.amazonaws.com/samsung/bebida.png"
+          alt=""
+        />
         <div class="text-container">Bebidas</div>
       </div>
       <div class="image-container" @click="redirect('/comidas')">
-        <img :src="require('../assets/img/comida.png')" alt="" />
+        <img
+          src="https://ja-my-serverless-react-app-20-03-2023.s3.amazonaws.com/samsung/comida.png"
+          alt=""
+        />
         <div class="text-container">Comidas</div>
       </div>
     </div>
@@ -61,6 +67,7 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: auto;
 }
 
 .image-container {
@@ -69,6 +76,7 @@ export default {
   flex-direction: column;
   align-items: center;
   margin: 50px;
+  padding: 20px;
   cursor: pointer;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);

@@ -51,7 +51,6 @@ export default {
     ...mapGetters('producto', ['carProducto']),
 
     carProductoComputed() {
-      console.log('  [...this.carProducto] ', this.carProducto)
       return this.carProducto
     },
   },
