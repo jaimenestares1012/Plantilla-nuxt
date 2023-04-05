@@ -41,16 +41,19 @@ export default {
   },
   methods: {
     redirect() {
+      this.$showSpinner(true)
       this.$router.push('/eleccion')
+      this.$showSpinner(false)
     },
   },
   computed: {
     ...mapGetters('producto', ['idLast']),
   },
   async mounted() {
-    console.log('INDEXXXXXXXXXXXXXXXXXXXX')
+    this.$showSpinner(true)
     const paylodad = {}
     await this.$store.dispatch('producto/getId', paylodad)
+    this.$showSpinner(false)
   },
 }
 </script>

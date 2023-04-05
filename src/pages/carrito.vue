@@ -50,6 +50,7 @@ export default {
   },
 
   mounted() {
+    this.$showSpinner(true)
     const valores = window.location.search
     const urlParams = new URLSearchParams(valores)
     this.id = urlParams.get('id')
@@ -60,6 +61,7 @@ export default {
     console.log('<----------------------->', this.name)
     console.log('<----------------------->', this.description)
     console.log('<----------------------->', this.url)
+    this.$showSpinner(false)
   },
 }
 </script>

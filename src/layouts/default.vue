@@ -1,5 +1,6 @@
 <template>
   <v-app dark>
+    <LoadingGeneral :is-loading="isLoading" />
     <v-main class="HomeLayout container">
       <v-container>
         <Nuxt />
@@ -9,8 +10,17 @@
 </template>
 
 <script>
+import LoadingGeneral from '@/components/Loading/LoadingGeneral'
 export default {
   name: 'DefaultLayout',
+  components: {
+    LoadingGeneral,
+  },
+  computed: {
+    isLoading() {
+      return this.$store.state.isLoading
+    },
+  },
   data() {
     return {
       clipped: false,
