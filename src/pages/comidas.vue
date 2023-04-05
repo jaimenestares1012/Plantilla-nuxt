@@ -105,7 +105,7 @@ export default {
 
 .image-container-comidas {
   flex-basis: calc(33.33% - 100px);
-  margin: 30px;
+  margin: 15px;
   cursor: pointer;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);

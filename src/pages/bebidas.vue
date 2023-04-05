@@ -103,7 +103,7 @@ export default {
 }
 
 .image-container-bebidas {
-  flex-basis: calc(33.33% - 50px);
+  flex-basis: calc(33.33% - 100px);
   margin: 15px;
   cursor: pointer;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
