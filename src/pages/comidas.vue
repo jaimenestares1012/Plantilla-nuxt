@@ -118,8 +118,9 @@ export default {
 }
 
 .image-container-comidas img {
-  width: 100%;
-  height: auto;
+  width: 18rem;
+  height: 15rem;
+  padding: 20px;
 }
 
 .text-container {
