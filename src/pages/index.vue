@@ -7,13 +7,11 @@
           <b>Cafetería</b>
         </div>
         <div class="samsung-experience">
-          <!-- <div class="samsung-logo">Samsung</div>
-          <div class="display-experience">Display</div>
-          <div class="display-experience">Experience</div> -->
           <div class="image-container" @click="redirect">
             <img
               src="https://ja-my-serverless-react-app-20-03-2023.s3.amazonaws.com/samsung/LogoSamsungDigitalExperience.png"
               alt=""
+              style="width: 100vw; height: 40vw"
             />
           </div>
           <div class="image-container" @click="redirect">
@@ -61,12 +59,11 @@ export default {
 .contenedor {
   display: flex;
   flex-direction: column;
-  /* height: 100vh; */
   justify-content: center;
 }
 
 .titulo {
-  font-size: 4rem;
+  font-size: 3rem;
   text-align: center;
   margin: 2rem;
 }

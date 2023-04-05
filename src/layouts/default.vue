@@ -45,6 +45,8 @@ export default {
   .container {
     max-width: none !important;
     padding-top: 50px;
+    height: 100vh;
+    background: #f2f7fb;
   }
 }
 </style>

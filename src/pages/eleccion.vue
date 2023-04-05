@@ -1,18 +1,18 @@
 <template>
   <div class="contenedor-general-eleccion">
-    <div class="contenedor-title">
-      <div>¿COMES O BEBES?</div>
-      <div>O LAS 2 COSAS</div>
+    <div>
+      <div class="contenedor-title">¿COMES O BEBES?</div>
+      <div class="contenedor-subtitle">O LAS 2 COSAS</div>
     </div>
     <div class="contenedor-eleccion">
-      <div class="image-container" @click="redirect('/bebidas')">
+      <div class="image-container-eleccion" @click="redirect('/bebidas')">
         <img
           src="https://ja-my-serverless-react-app-20-03-2023.s3.amazonaws.com/samsung/bebida.png"
           alt=""
         />
         <div class="text-container">Bebidas</div>
       </div>
-      <div class="image-container" @click="redirect('/comidas')">
+      <div class="image-container-eleccion" @click="redirect('/comidas')">
         <img
           src="https://ja-my-serverless-react-app-20-03-2023.s3.amazonaws.com/samsung/comida.png"
           alt=""
@@ -62,6 +62,13 @@ export default {
   font-weight: 700;
   font-size: 4rem;
 }
+.contenedor-subtitle {
+  width: 95%;
+  text-align: center;
+  margin-top: -30px;
+  font-weight: 500;
+  font-size: 3rem;
+}
 .contenedor-eleccion {
   width: 95%;
   display: flex;
@@ -70,7 +77,7 @@ export default {
   margin: auto;
 }
 
-.image-container {
+.image-container-eleccion {
   display: flex;
   width: 100%;
   flex-direction: column;
@@ -83,12 +90,12 @@ export default {
   border-radius: 10px;
 }
 
-.image-container:hover {
+.image-container-eleccion:hover {
   transform: scale(1.1);
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
 }
 
-.image-container img {
+.image-container-eleccion img {
   width: 100%;
   height: auto;
 }
