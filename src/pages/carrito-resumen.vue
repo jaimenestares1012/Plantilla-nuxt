@@ -75,6 +75,7 @@ export default {
   text-align: center;
   font-weight: 700;
   margin-bottom: 4rem;
+  padding: 1rem 0;
   font-size: 4rem;
   background: rgb(255, 255, 255);
   width: 100%;

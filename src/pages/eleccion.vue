@@ -1,6 +1,6 @@
 <template>
   <div class="contenedor-general-eleccion">
-    <div>
+    <div class="contenedor-group">
       <div class="contenedor-title">¿COMES O BEBES?</div>
       <div class="contenedor-subtitle">O LAS 2 COSAS</div>
     </div>
@@ -55,10 +55,18 @@ export default {
   justify-content: center;
   align-items: center; */
 }
+.contenedor-group {
+  width: 100%;
+  text-align: center;
+  background: #ffffff;
+  padding: 1rem 0;
+  margin-bottom: 2rem;
+  font-weight: 700;
+  font-size: 4rem;
+}
 .contenedor-title {
   width: 95%;
   text-align: center;
-  margin: 1rem 0;
   font-weight: 700;
   font-size: 4rem;
 }
@@ -86,6 +94,7 @@ export default {
   padding: 20px;
   cursor: pointer;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  background: #ffffff;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
 }

@@ -90,9 +90,11 @@ export default {
   align-items: center; */
 }
 .contenedor-comidas-title {
-  width: 95%;
+  width: 100%;
   text-align: center;
-  margin: 1rem 0;
+  margin-bottom: 2rem;
+  background: rgb(255, 255, 255);
+  padding: 1rem 0;
   font-weight: 700;
   font-size: 4rem;
 }
@@ -107,6 +109,7 @@ export default {
   flex-basis: calc(33.33% - 100px);
   margin: 15px;
   cursor: pointer;
+  background: #ffffff;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
