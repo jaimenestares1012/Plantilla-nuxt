@@ -18,6 +18,7 @@
             <img
               src="https://ja-my-serverless-react-app-20-03-2023.s3.amazonaws.com/here.png"
               alt=""
+              style="width: 30vw; height: 40vw"
             />
           </div>
         </div>
