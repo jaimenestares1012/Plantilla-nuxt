@@ -4,7 +4,10 @@
       <div>Cuantos quieres</div>
     </div>
     <div class="contenedor-producto">
-      <img :src="require('../assets/img/bebida.png')" alt="" />
+      <img
+        :src="`https://ja-my-serverless-react-app-20-03-2023.s3.amazonaws.com${this.url}`"
+        alt=""
+      />
       <div class="text-producto">{{ this.name }}</div>
     </div>
     <div>
