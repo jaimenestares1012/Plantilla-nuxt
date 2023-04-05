@@ -4,6 +4,22 @@
       <div class="contenedor-title">¿COMES O BEBES?</div>
       <div class="contenedor-subtitle">O LAS 2 COSAS</div>
     </div>
+    <div class="contenedor-buttons">
+      <div class="contenedor-butt" @click="inicioRefresh">
+        <div class="btn-stylos" style="font-size: 2rem; padding: 10px">
+          Inicio
+        </div>
+      </div>
+      <div class="contenedor-butt" @click="atras">
+        <v-btn
+          class="btn-stylos"
+          style="padding: 33px; font-size: 1.4rem; background: #ffffff"
+        >
+          <v-icon dark style="font-size: 2.5rem"> mdi-arrow-u-left-top </v-icon>
+          volver</v-btn
+        >
+      </div>
+    </div>
     <div class="contenedor-eleccion">
       <div class="image-container-eleccion" @click="redirect('/bebidas')">
         <img
@@ -20,10 +36,17 @@
         <div class="text-container">Comidas</div>
       </div>
     </div>
-    <div class="contenedor-carrito" @click="redirect('/carrito-resumen')">
+    <!-- <div class="contenedor-carrito" @click="redirect('/carrito-resumen')">
       <div class="carrito-compras">
         <img :src="require('../assets/img/carrito.png')" alt="" />
       </div>
+    </div> -->
+    <div class="contenedor-img">
+      <img
+        src="https://ja-my-serverless-react-app-20-03-2023.s3.amazonaws.com/samsung/FaldonOK.png"
+        alt="Imagen"
+        style="width: 100vw"
+      />
     </div>
   </div>
 </template>
@@ -44,6 +67,12 @@ export default {
     redirect(ruta) {
       this.$router.push(ruta)
     },
+    inicioRefresh() {
+      this.$router.push('/')
+    },
+    atras() {
+      this.$router.back()
+    },
   },
 }
 </script>
@@ -55,14 +84,41 @@ export default {
   justify-content: center;
   align-items: center; */
 }
+.contenedor-buttons {
+  width: 100%;
+  display: flex;
+  text-align: center;
+  background: #ffffff;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+  padding: 1.5rem;
+}
+
+.contenedor-butt {
+  margin: auto;
+  width: 50%;
+}
+.btn-stylos {
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  border: 1px solid rgb(0, 0, 0);
+  margin: auto;
+  width: 50%;
+}
 .contenedor-group {
   width: 100%;
   text-align: center;
   background: #ffffff;
   padding: 1rem 0;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
   margin-bottom: 2rem;
   font-weight: 700;
   font-size: 4rem;
+}
+.contenedor-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
 }
 .contenedor-title {
   width: 95%;
@@ -78,7 +134,7 @@ export default {
   font-size: 3rem;
 }
 .contenedor-eleccion {
-  width: 95%;
+  width: 90%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -101,7 +157,7 @@ export default {
 
 .image-container-eleccion:hover {
   transform: scale(1.1);
-  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .image-container-eleccion img {

@@ -1,7 +1,23 @@
 <template>
   <div class="contenedor-producto-eleccion">
     <div class="contenedor-producto-title">
-      <div>Cuantos quieres</div>
+      <div>¿CUANTOS QUIERES?</div>
+    </div>
+    <div class="contenedor-buttons">
+      <div class="contenedor-butt" @click="inicioRefresh">
+        <div class="btn-stylos" style="font-size: 2rem; padding: 10px">
+          Inicio
+        </div>
+      </div>
+      <div class="contenedor-butt" @click="atras">
+        <v-btn
+          class="btn-stylos"
+          style="padding: 33px; font-size: 1.4rem; background: #ffffff"
+        >
+          <v-icon dark style="font-size: 2.5rem"> mdi-arrow-u-left-top </v-icon>
+          volver</v-btn
+        >
+      </div>
     </div>
     <div class="contenedor-producto">
       <img
@@ -47,6 +63,12 @@ export default {
     redirect() {
       this.$router.push('/carrito-resumen')
     },
+    inicioRefresh() {
+      this.$router.push('/')
+    },
+    atras() {
+      this.$router.back()
+    },
   },
 
   mounted() {
@@ -78,22 +100,40 @@ export default {
   text-align: center;
   font-weight: 700;
   padding: 1rem 0;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
   background: rgb(255, 255, 255);
   margin-bottom: 4rem;
   font-size: 4rem;
 }
 
 .contenedor-producto {
-  width: 50vw; /* ancho del 90% de la ventana gráfica */
-  height: 50vh; /* altura del 50% de la ventana gráfica */
   flex-wrap: wrap;
   margin: auto;
   justify-content: center;
   text-align: center;
+  margin-top: 30px;
   background: #ffffff;
-  border-radius: 50%; /* radio del 50% del ancho del contenedor */
+}
+.contenedor-buttons {
+  width: 100%;
+  display: flex;
+  text-align: center;
+  background: #ffffff;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+  padding: 1.5rem;
 }
 
+.contenedor-butt {
+  margin: auto;
+  width: 50%;
+}
+.btn-stylos {
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  border: 1px solid rgb(0, 0, 0);
+  margin: auto;
+  width: 50%;
+}
 .contenedor-producto .image-producto img {
   width: 100%;
   margin: auto;

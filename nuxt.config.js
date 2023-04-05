@@ -12,7 +12,10 @@ export default {
       { hid: 'description', name: 'description', content: '' },
       { name: 'format-detection', content: 'telephone=no' },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/LogoSamsungDigitalExperience.ico' }],
+    link: [
+      { rel: 'icon', type: 'image/x-icon', href: '/LogoSamsungDigitalExperience.ico' },
+      // { rel: 'stylesheet', href: '/fonts/AMSUNGSHARPSANS-REGULAR.ttf' }
+    ],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -66,6 +69,9 @@ export default {
           success: colors.green.accent3,
         },
       },
+      // fonts: {
+      //   body: 'SamsungSharpSans-Regular, sans-serif'
+      // }
     },
   },
 

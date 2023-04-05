@@ -3,6 +3,22 @@
     <div class="contenedor-bebidas-title">
       <div>ELIGE TU BEBIDA</div>
     </div>
+    <div class="contenedor-buttons">
+      <div class="contenedor-butt" @click="inicioRefresh">
+        <div class="btn-stylos" style="font-size: 2rem; padding: 10px">
+          Inicio
+        </div>
+      </div>
+      <div class="contenedor-butt" @click="atras">
+        <v-btn
+          class="btn-stylos"
+          style="padding: 33px; font-size: 1.4rem; background: #ffffff"
+        >
+          <v-icon dark style="font-size: 2.5rem"> mdi-arrow-u-left-top </v-icon>
+          volver</v-btn
+        >
+      </div>
+    </div>
     <div class="contenedor-bebidas">
       <div
         class="image-container-bebidas"
@@ -77,6 +93,12 @@ export default {
         `/carrito/?id=${data.id}&name=${data.name}&description=${data.description}&url=${data.url}`
       )
     },
+    inicioRefresh() {
+      this.$router.push('/')
+    },
+    atras() {
+      this.$router.back()
+    },
   },
 }
 </script>
@@ -93,15 +115,37 @@ export default {
   text-align: center;
   font-weight: 700;
   background: rgb(255, 255, 255);
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
   padding: 1rem 0;
   margin-bottom: 2rem;
   font-size: 4rem;
 }
 .contenedor-bebidas {
+  margin-top: 30px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   text-align: center;
+}
+.contenedor-buttons {
+  width: 100%;
+  display: flex;
+  text-align: center;
+  background: #ffffff;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+  padding: 1.5rem;
+}
+
+.contenedor-butt {
+  margin: auto;
+  width: 50%;
+}
+.btn-stylos {
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  border: 1px solid rgb(0, 0, 0);
+  margin: auto;
+  width: 50%;
 }
 
 .image-container-bebidas {

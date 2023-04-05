@@ -2,8 +2,8 @@
   <div>
     <div class="contenedor">
       <v-card class="justify-center align-center">
-        <div class="titulo">
-          Bienvenido a nuestra <br />
+        <div class="titulo">Bienvenido a nuestra</div>
+        <div class="titulo" style="font-size: 7rem">
           <b>Cafetería</b>
         </div>
         <div class="samsung-experience">
@@ -18,7 +18,7 @@
             <img
               src="https://ja-my-serverless-react-app-20-03-2023.s3.amazonaws.com/here.png"
               alt=""
-              style="width: 30vw; height: 40vw"
+              style="width: 20vw; height: 30vw"
             />
           </div>
         </div>
@@ -67,9 +67,10 @@ export default {
 }
 
 .titulo {
-  font-size: 3rem;
+  font-size: 6rem;
+  width: 70%;
+  margin: auto;
   text-align: center;
-  margin: 2rem;
 }
 
 .SharedButton {

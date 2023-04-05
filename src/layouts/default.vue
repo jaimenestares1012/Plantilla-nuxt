@@ -57,4 +57,8 @@ export default {
   padding: 0px;
   background: #f2f7fb;
 }
+
+.v-application {
+  font-family: 'SamsungSharpSans-Regular', sans-serif;
+}
 </style>

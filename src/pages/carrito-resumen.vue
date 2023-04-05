@@ -114,7 +114,7 @@ export default {
   display: flex;
 }
 .contenedor-img-resumen {
-  width: 40%;
+  width: 45%;
   margin: auto;
   background: rgb(255, 255, 255);
   border-radius: 50%;
