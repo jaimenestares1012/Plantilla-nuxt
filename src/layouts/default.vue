@@ -49,11 +49,10 @@ export default {
 <style>
 .HomeLayout {
   background: #f2f7fb;
-  /* height: 3000px; */
 }
 .container {
   max-width: none !important;
-  height: 100vh;
+  height: 1900px;
   padding: 0px;
   background: #f2f7fb;
 }

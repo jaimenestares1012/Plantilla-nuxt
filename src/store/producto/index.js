@@ -27,7 +27,11 @@ export const mutations = {
   SET_ADD_PRODUCTOS(state, data) {
     state.carProducto = state.carProducto.map(p => {
       if (p.id === data.id) {
-        return { ...p, cantidad: p.cantidad + 1 };
+        if (p.cantidad < 4) {
+          return { ...p, cantidad: p.cantidad + 1 };
+        } else {
+          return p;
+        }
       }
       return p;
     });

@@ -33,11 +33,16 @@
       </div>
     </div>
     <div class="contenedor-botones" @click="adicionProducto">
-      <button class="boton-anadir">Añadir</button>
+      <v-btn
+        class="boton-anadir"
+        :loading="loading"
+        style="padding: 25px; font-size: 1.4rem; background: #ffffff"
+        >Añadir</v-btn
+      >
     </div>
-    <div class="contenedor-botones" @click="redirect">
+    <!-- <div class="contenedor-botones" @click="redirect">
       <button class="boton-anadir">ir Carrito</button>
-    </div>
+    </div> -->
   </div>
 </template>
 
@@ -49,11 +54,16 @@ export default {
       name: null,
       description: null,
       url: null,
+      loading: false,
     }
   },
   methods: {
     adicionProducto() {
+      this.loading = true
       console.log('adicionProducto')
+      setTimeout(() => {
+        this.loading = false
+      }, 600)
       const producto = {
         name: this.name,
         description: this.description,
@@ -205,5 +215,10 @@ export default {
   background-color: #fff;
   color: #000;
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.boton-anadir:active {
+  background-color: #0023a3;
+  color: #fff;
 }
 </style>
