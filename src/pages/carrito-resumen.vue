@@ -68,6 +68,13 @@
         >
       </div>
     </div>
+    <div class="contenedor-img">
+      <img
+        src="https://ja-my-serverless-react-app-20-03-2023.s3.amazonaws.com/samsung/FaldonOK.png"
+        alt="Imagen"
+        style="width: 100vw; height: 20vw"
+      />
+    </div>
   </div>
 </template>
 
@@ -134,7 +141,8 @@ export default {
   text-align: center;
   font-weight: 700;
   margin-bottom: 4rem;
-  padding: 1rem 0;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+  padding: 2rem 0;
   font-size: 4rem;
   background: rgb(255, 255, 255);
   width: 100%;
@@ -145,6 +153,7 @@ export default {
 }
 .dafault-message {
   background: rgb(255, 255, 255);
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
   text-align: center;
   font-size: 4rem;
   width: 60%;
@@ -245,5 +254,10 @@ export default {
 
 .contenedor-cantidad:hover {
   background-color: #c0c0c0;
+}
+.contenedor-img {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 </style>

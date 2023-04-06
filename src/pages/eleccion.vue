@@ -37,7 +37,10 @@
       </div>
     </div>
     <div class="contenedor-eleccion-cart">
-      <div class="contenedor-butt-eleccion-cart" @click="redirect">
+      <div
+        class="contenedor-butt-eleccion-cart"
+        @click="redirect('/carrito-resumen')"
+      >
         <v-btn
           class="btn-stylos-eleccion-cart"
           style="
@@ -56,7 +59,7 @@
       <img
         src="https://ja-my-serverless-react-app-20-03-2023.s3.amazonaws.com/samsung/FaldonOK.png"
         alt="Imagen"
-        style="width: 100vw"
+        style="width: 100vw; height: 20vw"
       />
     </div>
   </div>
@@ -134,10 +137,9 @@ export default {
   font-size: 4rem;
 }
 .contenedor-img {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 2rem;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 .contenedor-title {
   width: 95%;

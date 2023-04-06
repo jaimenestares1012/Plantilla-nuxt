@@ -30,9 +30,16 @@
             :src="`https://ja-my-serverless-react-app-20-03-2023.s3.amazonaws.com${dat.url}`"
             alt=""
           />
-          <div class="text-container">{{ dat.name }}</div>
+          <div class="text-container-2">{{ dat.name }}</div>
         </div>
       </div>
+    </div>
+    <div class="contenedor-img">
+      <img
+        src="https://ja-my-serverless-react-app-20-03-2023.s3.amazonaws.com/samsung/FaldonOK.png"
+        alt="Imagen"
+        style="width: 100vw; height: 20vw"
+      />
     </div>
   </div>
 </template>
@@ -117,7 +124,7 @@ export default {
   margin-bottom: 2rem;
   background: rgb(255, 255, 255);
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
-  padding: 1rem 0;
+  padding: 2rem 0;
   font-weight: 700;
   font-size: 4rem;
 }
@@ -170,11 +177,14 @@ export default {
   padding: 20px;
 }
 
-.text-container {
+.text-container-2 {
   font-size: 2rem;
   font-weight: bold;
+  line-height: 1.2;
+  width: 70%;
   text-align: center;
-  margin: 1rem 0;
+  padding: 20px 0px;
+  margin: auto;
   color: #333;
 }
 
@@ -198,5 +208,10 @@ export default {
 .carrito-compras img {
   width: 100%;
   height: auto;
+}
+.contenedor-img {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 </style>
