@@ -74,18 +74,18 @@ export default {
       // }
     },
   },
-  icon: {
-    iconSrc: '@/static/icon.png',
-  },
-  manifest: {
-    name: 'Consulta Vehicular',
-    short_name: 'Consulta Vehicular',
-    theme_color: '#ffffff',
-    background_color: '#fff',
-    display: 'standalone',
-    Scope: '/',
-    start_url: '/',
-  },
+  // icon: {
+  //   iconSrc: '@/static/icon.png',
+  // },
+  // manifest: {
+  //   name: 'Consulta Vehicular',
+  //   short_name: 'Consulta Vehicular',
+  //   theme_color: '#ffffff',
+  //   background_color: '#fff',
+  //   display: 'standalone',
+  //   Scope: '/',
+  //   start_url: '/',
+  // },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
