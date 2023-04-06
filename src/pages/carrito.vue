@@ -19,15 +19,18 @@
         >
       </div>
     </div>
-    <div class="contenedor-producto">
-      <img
-        :src="`https://ja-my-serverless-react-app-20-03-2023.s3.amazonaws.com${this.url}`"
-        alt=""
-      />
-      <div class="text-producto">{{ this.name }}</div>
-    </div>
-    <div>
-      <div class="text-producto-description">{{ this.description }}</div>
+    <div class="contendor-car-selected">
+      <div class="contenedor-img-text-car">
+        <div class="contenedor-imagen-selected">
+          <img
+            :src="`https://ja-my-serverless-react-app-20-03-2023.s3.amazonaws.com${this.url}`"
+            alt=""
+          />
+          <div class="text-description">{{ this.name }}</div>
+        </div>
+
+        <div class="text-description-secu">{{ this.description }}</div>
+      </div>
     </div>
     <div class="contenedor-botones" @click="adicionProducto">
       <button class="boton-anadir">Añadir</button>
@@ -105,15 +108,6 @@ export default {
   margin-bottom: 4rem;
   font-size: 4rem;
 }
-
-.contenedor-producto {
-  flex-wrap: wrap;
-  margin: auto;
-  justify-content: center;
-  text-align: center;
-  margin-top: 30px;
-  background: #ffffff;
-}
 .contenedor-buttons {
   width: 100%;
   display: flex;
@@ -121,6 +115,43 @@ export default {
   background: #ffffff;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
   padding: 1.5rem;
+}
+
+.contendor-car-selected {
+  width: 100%;
+  margin: auto;
+  margin-top: 40px;
+  display: flex;
+}
+.contenedor-img-text-car {
+  width: 100%;
+  text-align: center;
+}
+
+.contenedor-imagen-selected {
+  width: 45%;
+  margin: auto;
+  background: rgb(255, 255, 255);
+  border-radius: 50%;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+  padding: 40px;
+  overflow: hidden;
+}
+.contenedor-imagen-selected img {
+  width: 18rem;
+  /* height: 15rem; */
+  margin: auto;
+  text-align: center;
+  object-fit: cover;
+}
+.text-description {
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+.text-description-secu {
+  margin-top: 20px;
+  font-size: 2rem;
+  font-weight: 500;
 }
 
 .contenedor-butt {

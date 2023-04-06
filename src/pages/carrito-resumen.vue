@@ -3,6 +3,22 @@
     <div class="contenedor-carrito-resumen-title">
       <div>Mi carrito</div>
     </div>
+    <div class="contenedor-buttons">
+      <div class="contenedor-butt" @click="inicioRefresh">
+        <div class="btn-stylos" style="font-size: 2rem; padding: 10px">
+          Inicio
+        </div>
+      </div>
+      <div class="contenedor-butt" @click="atras">
+        <v-btn
+          class="btn-stylos"
+          style="padding: 33px; font-size: 1.4rem; background: #ffffff"
+        >
+          <v-icon dark style="font-size: 2.5rem"> mdi-arrow-u-left-top </v-icon>
+          volver</v-btn
+        >
+      </div>
+    </div>
     <div class="dafault-message" v-if="condicion == 0">
       No cuenta con ningun producto seleccionado
     </div>
@@ -56,6 +72,12 @@ export default {
       }
       await this.$store.dispatch('producto/sendDataStore', paylodad)
     },
+    inicioRefresh() {
+      this.$router.push('/')
+    },
+    atras() {
+      this.$router.back()
+    },
   },
   computed: {
     // ...mapGetters('producto', ['carProducto']),
@@ -97,6 +119,7 @@ export default {
   width: 60%;
   padding: 3rem;
   margin: auto;
+  margin-top: 30px;
 }
 
 .contendor-iterador {
@@ -112,6 +135,26 @@ export default {
 .group-contenedores {
   width: 60%;
   display: flex;
+}
+.contenedor-buttons {
+  width: 100%;
+  display: flex;
+  text-align: center;
+  background: #ffffff;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+  padding: 1.5rem;
+}
+
+.contenedor-butt {
+  margin: auto;
+  width: 50%;
+}
+.btn-stylos {
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  border: 1px solid rgb(0, 0, 0);
+  margin: auto;
+  width: 50%;
 }
 .contenedor-img-resumen {
   width: 45%;
