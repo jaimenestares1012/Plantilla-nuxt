@@ -83,6 +83,7 @@ export default {
       this.$router.push(ruta)
     },
     inicioRefresh() {
+      console.log('www')
       this.$router.push('/')
     },
     atras() {
