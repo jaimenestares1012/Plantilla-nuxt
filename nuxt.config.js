@@ -52,15 +52,6 @@ export default {
       lang: 'en',
     },
   },
-  manifest: {
-    name: 'App store',
-    short_name: 'App store',
-    theme_color: '#ffffff',
-    background_color: '#fff',
-    display: 'standalone',
-    Scope: '/',
-    start_url: '/',
-  },
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
   vuetify: {
