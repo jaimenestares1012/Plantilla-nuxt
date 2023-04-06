@@ -64,13 +64,8 @@
 </template>
 
 <script>
-import { mapGetters, mapState } from 'vuex'
-import SharedButton from '@/components/buttons/SharedButton'
+import { mapState } from 'vuex'
 export default {
-  name: 'IndexPage',
-  components: {
-    SharedButton,
-  },
   data() {
     return {
       loading: null,

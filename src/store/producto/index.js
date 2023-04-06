@@ -56,6 +56,7 @@ export const actions = {
         commit('SET_ID', responseApiIdLast.data.ID);
     },
     async sendDataStore({ commit }, payload){
+      console.log("payload", payload);
       const responseSendDataStore = await apiSendDataStore(payload);
       console.log("responseSendDataStore", responseSendDataStore);
       // commit('SET_ID', responseApiIdLast.data.ID);

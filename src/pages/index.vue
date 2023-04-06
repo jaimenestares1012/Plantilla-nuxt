@@ -7,7 +7,7 @@
           <b>Cafetería</b>
         </div>
         <div class="samsung-experience">
-          <div class="image-container" @click="redirect">
+          <div class="image-container">
             <img
               src="https://ja-my-serverless-react-app-20-03-2023.s3.amazonaws.com/samsung/LogoSamsungDigitalExperience.png"
               alt=""

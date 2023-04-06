@@ -79,7 +79,7 @@
 </template>
 
 <script>
-import { mapGetters, mapState } from 'vuex'
+import { mapState } from 'vuex'
 export default {
   data() {
     return {
@@ -96,10 +96,13 @@ export default {
       this.$store.commit('producto/SET_ADD_PRODUCTOS', data)
     },
     async sendData() {
+      this.$showSpinner(true)
       let paylodad = {
         data: this.carProducto,
       }
       await this.$store.dispatch('producto/sendDataStore', paylodad)
+      this.$showSpinner(false)
+      this.$router.push('/final')
     },
     inicioRefresh() {
       this.$router.push('/')
@@ -115,7 +118,6 @@ export default {
     },
   },
   computed: {
-    // ...mapGetters('producto', ['carProducto']),
     ...mapState('producto', ['carProducto']),
     condicion() {
       return this.carProducto.length
