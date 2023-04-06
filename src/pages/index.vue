@@ -2,8 +2,8 @@
   <div>
     <div class="contenedor">
       <v-card class="justify-center align-center">
-        <div class="titulo">Bienvenido a nuestra</div>
-        <div class="titulo" style="font-size: 7rem">
+        <div class="titulo" style="padding-top: 50px">Bienvenido a nuestra</div>
+        <div class="titulo" style="font-size: 7rem; padding-top: 20px">
           <b>Cafetería</b>
         </div>
         <div class="samsung-experience">
@@ -11,14 +11,14 @@
             <img
               src="https://ja-my-serverless-react-app-20-03-2023.s3.amazonaws.com/samsung/LogoSamsungDigitalExperience.png"
               alt=""
-              style="width: 100vw; height: 40vw"
+              style="width: 100vw; height: 60vw"
             />
           </div>
           <div class="image-container" @click="redirect">
             <img
               src="https://ja-my-serverless-react-app-20-03-2023.s3.amazonaws.com/here.png"
               alt=""
-              style="width: 20vw; height: 30vw"
+              style="width: 30vw; height: 50vw"
             />
           </div>
         </div>
@@ -71,6 +71,7 @@ export default {
   width: 70%;
   margin: auto;
   text-align: center;
+  line-height: 1;
 }
 
 .SharedButton {
@@ -114,6 +115,7 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 2rem;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
 }
 </style>
