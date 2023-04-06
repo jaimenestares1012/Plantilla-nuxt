@@ -9,6 +9,13 @@
     <div class="contenedor-subgroup-final">
       <div class="contenedor-subtitle-final">Disfruta tu desayuno</div>
     </div>
+    <div class="contenedor-buttons" style="margin-top: 200px">
+      <div class="contenedor-butt" @click="inicioRefresh">
+        <div class="btn-stylos" style="font-size: 2rem; padding: 10px">
+          Inicio
+        </div>
+      </div>
+    </div>
 
     <div class="contenedor-img">
       <img
@@ -29,14 +36,9 @@ export default {
     }
   },
   methods: {
-    redirect(ruta) {
-      this.$router.push(ruta)
-    },
     inicioRefresh() {
       this.$router.push('/')
-    },
-    atras() {
-      this.$router.back()
+      this.$store.commit('producto/SET_CLEAR')
     },
   },
   computed: {
@@ -55,7 +57,6 @@ export default {
   background: #ffffff;
   padding: 2rem 0;
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
-  margin-bottom: 2rem;
   font-weight: 700;
   font-size: 4rem;
 }
@@ -63,7 +64,7 @@ export default {
 .contenedor-subgroup-final {
   width: 100%;
   text-align: center;
-  margin-top: 15rem;
+  margin-top: 12rem;
   margin-bottom: 2rem;
 }
 
@@ -97,5 +98,26 @@ export default {
   margin-top: -30px;
   font-weight: 600;
   font-size: 2.6rem;
+}
+.contenedor-buttons {
+  width: 100%;
+  margin-top: 80px;
+  display: flex;
+  text-align: center;
+  background: #ffffff;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+  padding: 1.5rem;
+}
+
+.contenedor-butt {
+  margin: auto;
+  width: 50%;
+}
+.btn-stylos {
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  border: 1px solid rgb(0, 0, 0);
+  margin: auto;
+  width: 50%;
 }
 </style>

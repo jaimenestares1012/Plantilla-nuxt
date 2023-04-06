@@ -104,10 +104,13 @@ export default {
       this.$store.commit('producto/SET_ADD_PRODUCTO', producto)
     },
     async sendData() {
+      this.$showSpinner(true)
       let paylodad = {
         data: this.carProducto,
       }
       await this.$store.dispatch('producto/sendDataStore', paylodad)
+      this.$showSpinner(false)
+      this.$router.push('/final')
     },
     home() {
       this.$router.push('/eleccion')

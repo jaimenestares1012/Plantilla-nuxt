@@ -45,8 +45,14 @@ export const mutations = {
     } else {
       state.carProducto.push(data);
     }
+  },
+  SET_CLEAR(state){
+    console.log("LIPIERZA");
+    state.carProducto = []
+  },
+  SET_ERROR(){
+    console.log("SET_ERROR");
   }
-  
 };
 
 export const actions = {
@@ -57,8 +63,17 @@ export const actions = {
     },
     async sendDataStore({ commit }, payload){
       console.log("payload", payload);
-      const responseSendDataStore = await apiSendDataStore(payload);
-      console.log("responseSendDataStore", responseSendDataStore);
+      try {
+        const responseSendDataStore = await apiSendDataStore(payload);
+        console.log("responseSendDataStore", responseSendDataStore.codRes);
+        if (responseSendDataStore.codRes == "00") {
+          console.log("00");
+          commit('SET_ID', responseSendDataStore.data.ID);
+        }
+      } catch (error) {
+        commit('SET_ERROR', error);
+      }
+      
       // commit('SET_ID', responseApiIdLast.data.ID);
     }
     
