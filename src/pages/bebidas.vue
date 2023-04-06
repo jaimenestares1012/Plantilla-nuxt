@@ -115,7 +115,7 @@ export default {
   text-align: center;
   font-weight: 700;
   background: rgb(255, 255, 255);
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
   padding: 1rem 0;
   margin-bottom: 2rem;
   font-size: 4rem;
@@ -132,7 +132,7 @@ export default {
   display: flex;
   text-align: center;
   background: #ffffff;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
   padding: 1.5rem;
 }
 
@@ -141,7 +141,7 @@ export default {
   width: 50%;
 }
 .btn-stylos {
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
   border-radius: 20px;
   border: 1px solid rgb(0, 0, 0);
   margin: auto;
@@ -154,7 +154,7 @@ export default {
   cursor: pointer;
   background: #ffffff;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
 }
 
@@ -186,7 +186,7 @@ export default {
   margin-top: 4rem;
   cursor: pointer;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
 }
 

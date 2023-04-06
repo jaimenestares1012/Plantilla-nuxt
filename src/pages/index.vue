@@ -80,7 +80,7 @@ export default {
   background-color: #f5a623;
   color: #fff;
   border: none;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
   transition: background-color 0.2s ease;
 }
 

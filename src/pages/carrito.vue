@@ -151,7 +151,7 @@ export default {
   text-align: center;
   font-weight: 700;
   padding: 1rem 0;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
   background: rgb(255, 255, 255);
   margin-bottom: 4rem;
   font-size: 4rem;
@@ -161,7 +161,7 @@ export default {
   display: flex;
   text-align: center;
   background: #ffffff;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
   padding: 1.5rem;
 }
 
@@ -181,7 +181,7 @@ export default {
   margin: auto;
   background: rgb(255, 255, 255);
   border-radius: 50%;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
   padding: 40px;
   overflow: hidden;
 }
@@ -213,21 +213,21 @@ export default {
   display: flex;
   text-align: center;
   background: #ffffff;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
   padding: 1.5rem;
 }
 .contenedor-butt-exit {
   margin: auto;
 }
 .btn-stylos-exit {
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
   border-radius: 20px;
   border: 1px solid rgb(0, 0, 0);
   width: 100%;
   margin: 0 20px;
 }
 .btn-stylos {
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
   border-radius: 20px;
   border: 1px solid rgb(0, 0, 0);
   margin: auto;
