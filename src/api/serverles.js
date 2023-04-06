@@ -22,11 +22,12 @@ async function apiIdLast(data) {
     try {
       console.log("serverlessss API");
       const response = await axios({
-        url: `https://2lefg2yy33.execute-api.us-east-1.amazonaws.com/dev/increment-id`,
-        method: "GET",
+        url: `https://2lefg2yy33.execute-api.us-east-1.amazonaws.com/dev/insert-data`,
+        method: "POST",
         headers: {
           "X-API-KEY": "Lc9XtRmZ8OaJzKvS2q0F"
-        }
+        },
+        data
       });
       return response.data
     } catch (error) {
