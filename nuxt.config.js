@@ -78,8 +78,8 @@ export default {
     iconSrc: '@/static/icon.png',
   },
   manifest: {
-    name: 'Consulta Vehicular',
-    short_name: 'Consulta Vehicular',
+    name: 'App Coffe',
+    short_name: 'App Coffe',
     theme_color: '#ffffff',
     background_color: '#fff',
     display: 'standalone',
