@@ -107,7 +107,7 @@ export default {
 }
 .contenedor-buttons {
   width: 100%;
-  margin-top: 100px;
+  margin-top: 80px;
   display: flex;
   text-align: center;
   background: #ffffff;
