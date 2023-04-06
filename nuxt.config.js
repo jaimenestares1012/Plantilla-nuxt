@@ -78,8 +78,8 @@ export default {
     iconSrc: '@/static/icon.png',
   },
   manifest: {
-    name: 'App Coffe',
-    short_name: 'App Coffe',
+    name: 'Cafetería',
+    short_name: 'Cafetería',
     theme_color: '#ffffff',
     background_color: '#fff',
     display: 'standalone',
