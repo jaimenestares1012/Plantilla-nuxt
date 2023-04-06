@@ -46,6 +46,28 @@
         </div>
       </div>
     </div>
+    <div class="contenedor-exit">
+      <div class="contenedor-butt-exit" @click="home">
+        <div class="btn-stylos-exit" style="font-size: 2rem; padding: 10px">
+          Sigue pidiendo
+        </div>
+      </div>
+      <div class="contenedor-butt-exit" @click="sendData">
+        <div class="btn-stylos-exit" style="font-size: 2rem; padding: 10px">
+          Terminar pedido
+        </div>
+      </div>
+
+      <div class="contenedor-butt-exit" @click="redirect">
+        <v-btn
+          class="btn-stylos-exit"
+          style="padding: 33px; font-size: 1.4rem; background: #ffffff"
+        >
+          <v-icon dark style="font-size: 2.5rem"> mdi-cart</v-icon>
+          {{ conteoCanasta }}</v-btn
+        >
+      </div>
+    </div>
   </div>
 </template>
 
@@ -75,14 +97,23 @@ export default {
     inicioRefresh() {
       this.$router.push('/')
     },
+    redirect() {
+      this.$router.push('/carrito-resumen')
+    },
     atras() {
       this.$router.back()
+    },
+    home() {
+      this.$router.push('/eleccion')
     },
   },
   computed: {
     // ...mapGetters('producto', ['carProducto']),
     ...mapState('producto', ['carProducto']),
     condicion() {
+      return this.carProducto.length
+    },
+    conteoCanasta() {
       return this.carProducto.length
     },
   },
@@ -143,6 +174,25 @@ export default {
   background: #ffffff;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
   padding: 1.5rem;
+}
+.contenedor-exit {
+  margin-top: 50px;
+  width: 100%;
+  display: flex;
+  text-align: center;
+  background: #ffffff;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+  padding: 1.5rem;
+}
+.contenedor-butt-exit {
+  margin: auto;
+}
+.btn-stylos-exit {
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  border: 1px solid rgb(0, 0, 0);
+  width: 100%;
+  margin: 0 20px;
 }
 
 .contenedor-butt {
