@@ -87,6 +87,7 @@ export default {
       this.$router.push('/')
     },
     atras() {
+      console.log("wwwwwwwwww");
       this.$router.back()
     },
   },
