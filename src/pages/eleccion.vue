@@ -26,7 +26,7 @@
           src="https://ja-my-serverless-react-app-20-03-2023.s3.amazonaws.com/samsung/bebida.png"
           alt=""
         />
-        <div class="text-container">Bebidas</div>
+        <div class="text-container" style="margin-top: 5.3rem">Bebidas</div>
       </div>
       <div class="image-container-eleccion" @click="redirect('/comidas')">
         <img
@@ -86,6 +86,7 @@ export default {
 }
 .contenedor-buttons {
   width: 100%;
+  margin-top: 100px;
   display: flex;
   text-align: center;
   background: #ffffff;
@@ -108,8 +109,8 @@ export default {
   width: 100%;
   text-align: center;
   background: #ffffff;
-  padding: 1rem 0;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+  padding: 2rem 0;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
   margin-bottom: 2rem;
   font-weight: 700;
   font-size: 4rem;
@@ -130,15 +131,16 @@ export default {
   width: 95%;
   text-align: center;
   margin-top: -30px;
-  font-weight: 500;
-  font-size: 3rem;
+  font-weight: 600;
+  font-size: 2.6rem;
 }
 .contenedor-eleccion {
-  width: 90%;
+  width: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
-  margin: auto;
+  /* align-items: center; */
+
+  margin: 120px auto;
 }
 
 .image-container-eleccion {
@@ -166,10 +168,10 @@ export default {
 }
 
 .text-container {
-  font-size: 2rem;
+  font-size: 2.6rem;
   font-weight: bold;
   text-align: center;
-  margin: 1rem 0;
+  margin: 4rem 0 1rem 0;
   color: #333;
 }
 
