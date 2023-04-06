@@ -36,11 +36,22 @@
         <div class="text-container">Comidas</div>
       </div>
     </div>
-    <!-- <div class="contenedor-carrito" @click="redirect('/carrito-resumen')">
-      <div class="carrito-compras">
-        <img :src="require('../assets/img/carrito.png')" alt="" />
+    <div class="contenedor-eleccion-cart">
+      <div class="contenedor-butt-eleccion-cart" @click="redirect">
+        <v-btn
+          class="btn-stylos-eleccion-cart"
+          style="
+            padding: 33px;
+            font-size: 1rem;
+            background: #ffffff;
+            height: 100px;
+          "
+        >
+          <v-icon dark style="font-size: 4rem"> mdi-cart</v-icon>
+          {{ conteoCanasta }}</v-btn
+        >
       </div>
-    </div> -->
+    </div>
     <div class="contenedor-img">
       <img
         src="https://ja-my-serverless-react-app-20-03-2023.s3.amazonaws.com/samsung/FaldonOK.png"
@@ -52,6 +63,7 @@
 </template>
 
 <script>
+import { mapGetters, mapState } from 'vuex'
 import SharedButton from '@/components/buttons/SharedButton'
 export default {
   name: 'IndexPage',
@@ -72,6 +84,12 @@ export default {
     },
     atras() {
       this.$router.back()
+    },
+  },
+  computed: {
+    ...mapState('producto', ['carProducto']),
+    conteoCanasta() {
+      return this.carProducto.length == 0 ? '' : this.carProducto.length
     },
   },
 }
@@ -141,6 +159,25 @@ export default {
   /* align-items: center; */
 
   margin: 120px auto;
+}
+
+.contenedor-eleccion-cart {
+  margin-top: 50px;
+  width: 100%;
+  display: flex;
+  text-align: center;
+  background: #ffffff;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+  padding: 1.5rem;
+}
+.contenedor-butt-eleccion-cart {
+  margin: auto;
+  width: 500px;
+}
+.btn-stylos-eleccion-cart {
+  border-radius: 20px;
+  width: 100%;
+  margin: 0 20px;
 }
 
 .image-container-eleccion {
