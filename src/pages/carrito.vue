@@ -36,7 +36,12 @@
       <v-btn
         class="boton-anadir"
         :loading="loading"
-        style="padding: 25px; font-size: 1.4rem; background: #ffffff"
+        style="
+          padding: 45px;
+          font-weight: 800;
+          font-size: 2rem;
+          background: #ffffff;
+        "
         >Añadir</v-btn
       >
     </div>
@@ -69,13 +74,12 @@
         style="width: 100vw; height: 20vw"
       />
     </div>
-    <!-- <div class="contenedor-botones" @click="redirect">
-      <button class="boton-anadir">ir Carrito</button>
-    </div> -->
+    <ModalAlert ref="modalAlert" />
   </div>
 </template>
 
 <script>
+import ModalAlert from '@/components/modals/ModalAlert'
 import { mapState } from 'vuex'
 export default {
   data() {
@@ -86,6 +90,9 @@ export default {
       url: null,
       loading: false,
     }
+  },
+  components: {
+    ModalAlert,
   },
   methods: {
     adicionProducto() {
@@ -104,13 +111,22 @@ export default {
       this.$store.commit('producto/SET_ADD_PRODUCTO', producto)
     },
     async sendData() {
-      this.$showSpinner(true)
-      let paylodad = {
-        data: this.carProducto,
+      if (this.carProducto.length == 0) {
+        let data = {
+          img: '😟',
+          titulo: 'Estimado usuario',
+          message: 'debe elegir al menos un producto',
+        }
+        this.$refs.modalAlert.open(data)
+      } else {
+        this.$showSpinner(true)
+        let paylodad = {
+          data: this.carProducto,
+        }
+        await this.$store.dispatch('producto/sendDataStore', paylodad)
+        this.$showSpinner(false)
+        this.$router.push('/final')
       }
-      await this.$store.dispatch('producto/sendDataStore', paylodad)
-      this.$showSpinner(false)
-      this.$router.push('/final')
     },
     home() {
       this.$router.push('/eleccion')
@@ -188,7 +204,7 @@ export default {
 }
 
 .contenedor-imagen-selected {
-  width: 45%;
+  width: 50%;
   margin: auto;
   background: rgb(255, 255, 255);
   border-radius: 50%;
@@ -197,7 +213,7 @@ export default {
   overflow: hidden;
 }
 .contenedor-imagen-selected img {
-  width: 18rem;
+  width: 20rem;
   /* height: 15rem; */
   margin: auto;
   text-align: center;
@@ -221,7 +237,7 @@ export default {
 }
 
 .contenedor-exit {
-  margin-top: 50px;
+  margin-top: 160px;
   width: 100%;
   display: flex;
   text-align: center;
@@ -267,7 +283,7 @@ export default {
 .contenedor-botones {
   display: flex;
   justify-content: center;
-  margin-top: 2rem;
+  margin-top: 6rem;
   /* border: 1px solid rgb(0, 0, 0); */
 }
 

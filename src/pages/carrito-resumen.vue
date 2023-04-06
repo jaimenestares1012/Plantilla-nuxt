@@ -75,12 +75,17 @@
         style="width: 100vw; height: 20vw"
       />
     </div>
+    <ModalAlert ref="modalAlert" />
   </div>
 </template>
 
 <script>
 import { mapState } from 'vuex'
+import ModalAlert from '@/components/modals/ModalAlert'
 export default {
+  components: {
+    ModalAlert,
+  },
   data() {
     return {
       id: null,
@@ -96,13 +101,22 @@ export default {
       this.$store.commit('producto/SET_ADD_PRODUCTOS', data)
     },
     async sendData() {
-      this.$showSpinner(true)
-      let paylodad = {
-        data: this.carProducto,
+      if (this.carProducto.length == 0) {
+        let data = {
+          img: '😟',
+          titulo: 'Estimado usuario',
+          message: 'debe elegir al menos un producto',
+        }
+        this.$refs.modalAlert.open(data)
+      } else {
+        this.$showSpinner(true)
+        let paylodad = {
+          data: this.carProducto,
+        }
+        await this.$store.dispatch('producto/sendDataStore', paylodad)
+        this.$showSpinner(false)
+        this.$router.push('/final')
       }
-      await this.$store.dispatch('producto/sendDataStore', paylodad)
-      this.$showSpinner(false)
-      this.$router.push('/final')
     },
     inicioRefresh() {
       this.$router.push('/')

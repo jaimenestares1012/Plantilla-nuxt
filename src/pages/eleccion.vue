@@ -67,12 +67,9 @@
 
 <script>
 import { mapState } from 'vuex'
-import SharedButton from '@/components/buttons/SharedButton'
 export default {
   name: 'IndexPage',
-  components: {
-    SharedButton,
-  },
+  components: {},
   data() {
     return {
       loading: null,
@@ -87,7 +84,6 @@ export default {
       this.$router.push('/')
     },
     atras() {
-      console.log("wwwwwwwwww");
       this.$router.back()
     },
   },

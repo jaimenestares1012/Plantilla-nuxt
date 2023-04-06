@@ -19,7 +19,7 @@ export default {
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [],
+  css: ['~/assets/style/own.css'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: ['~plugins/store-helpers','~/plugins/vuelidate'],
@@ -73,6 +73,18 @@ export default {
       //   body: 'SamsungSharpSans-Regular, sans-serif'
       // }
     },
+  },
+  icon: {
+    iconSrc: '@/static/icon.png',
+  },
+  manifest: {
+    name: 'Consulta Vehicular',
+    short_name: 'Consulta Vehicular',
+    theme_color: '#ffffff',
+    background_color: '#fff',
+    display: 'standalone',
+    Scope: '/',
+    start_url: '/',
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
