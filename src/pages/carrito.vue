@@ -187,13 +187,14 @@ export default {
   display: flex;
   justify-content: center;
   margin-top: 2rem;
+  /* border: 1px solid rgb(0, 0, 0); */
 }
 
 .boton-anadir {
   background-color: #ffffff;
   color: #000000;
-  padding: 1rem 2rem;
-  border: #000000;
+  padding: 0.4rem 2rem;
+  border: 1px solid rgb(0, 0, 0);
   border-radius: 10px;
   font-size: 2rem;
   cursor: pointer;
