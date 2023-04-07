@@ -3,7 +3,6 @@
     <div class="contenedor">
       <v-card class="justify-center align-center">
         <div class="titulo" style="padding-top: 50px">Bienvenido a nuestra</div>
-        <i class="fas fa-camera"></i>
         <div class="titulo" style="font-size: 7rem; padding-top: 20px">
           <b>Cafetería</b>
         </div>
