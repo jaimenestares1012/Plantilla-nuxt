@@ -12,9 +12,16 @@
       <div class="contenedor-butt" @click="atras">
         <v-btn
           class="btn-stylos"
-          style="padding: 33px; font-size: 1.4rem; background: #ffffff"
+          style="
+            padding: 33px;
+            font-size: 1.7rem;
+            background: #ffffff;
+            font-family: sans-serif;
+            letter-spacing: 0px;
+            text-transform: capitalize;
+          "
         >
-          <v-icon dark style="font-size: 2.5rem"> mdi-arrow-u-left-top </v-icon>
+          <i class="fas fa-undo-alt" style="font-size: 2.5rem"></i>
           volver</v-btn
         >
       </div>
@@ -43,12 +50,12 @@
           class="btn-stylos-eleccion-cart"
           style="
             padding: 33px;
-            font-size: 1rem;
+            font-size: 2rem;
             background: #ffffff;
             height: 100px;
           "
         >
-          <v-icon dark style="font-size: 4rem"> mdi-cart</v-icon>
+          <i class="fas fa-shopping-cart" style="font-size: 4rem"></i>
           {{ conteoCanasta }}</v-btn
         >
       </div>

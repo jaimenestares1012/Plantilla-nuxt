@@ -58,6 +58,6 @@ export default {
 }
 
 .v-application {
-  font-family: 'SamsungSharpSans-Regular', sans-serif;
+  font-family: 'Mulish', sans-serif;
 }
 </style>
