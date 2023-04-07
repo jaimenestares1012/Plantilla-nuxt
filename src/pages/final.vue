@@ -90,7 +90,7 @@ export default {
   font-weight: 500;
   line-height: 1.1;
   padding: 0;
-  font-size: 8rem;
+  font-size: 7rem;
 }
 .contenedor-subtitle {
   width: 95%;
