@@ -66,7 +66,7 @@
       <img
         src="https://ja-my-serverless-react-app-20-03-2023.s3.amazonaws.com/samsung/FaldonOK.png"
         alt="Imagen"
-        style="width: 100vw; height: 20vw"
+        style="width: 100vw; height: 15vw"
       />
     </div>
   </div>

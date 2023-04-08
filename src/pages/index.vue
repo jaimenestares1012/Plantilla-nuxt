@@ -14,11 +14,26 @@
               style="width: 100vw; height: 60vw"
             />
           </div>
-          <div class="image-container" @click="redirect">
+          <div
+            class="image-container"
+            style="margin-top: 4rem"
+            @click="redirect"
+          >
             <img
               src="https://ja-my-serverless-react-app-20-03-2023.s3.amazonaws.com/here.png"
               alt=""
-              style="width: 30vw; height: 50vw"
+              style="width: 25vw; height: 44vw"
+            />
+          </div>
+          <div
+            class="image-container"
+            style="margin-top: -4rem"
+            @click="redirect"
+          >
+            <img
+              src="https://ja-my-serverless-react-app-20-03-2023.s3.amazonaws.com/samsung/Pulsa.png"
+              alt=""
+              style="width: 30vw; height: 7vw"
             />
           </div>
         </div>
