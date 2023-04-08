@@ -162,6 +162,9 @@ export default {
     home() {
       this.$router.push('/eleccion')
     },
+    // tamanoRedu(data) {
+    //   return parseInt(data.taman) - 18
+    // },
   },
   computed: {
     ...mapState('producto', ['carProducto']),
@@ -265,12 +268,12 @@ export default {
   width: 50%;
 }
 .contenedor-img-resumen {
-  width: 45%;
+  width: 50%;
   margin: auto;
   background: rgb(255, 255, 255);
   border-radius: 50%;
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
-  padding: 10px;
+  padding: 30px;
   overflow: hidden;
 }
 .contenedor-img-resumen img {

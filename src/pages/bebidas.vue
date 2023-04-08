@@ -89,36 +89,42 @@ export default {
           name: 'Cafés',
           description: 'Café',
           id: 'b01',
+          taman: '25',
           url: '/samsung/cafe-con-leche.png',
         },
         {
           name: 'Infusiones',
           description: 'Infusión',
           id: 'b02',
+          taman: '25',
           url: '/samsung/infusiones.png',
         },
         {
           name: 'Chocolates',
           description: 'Chocolate',
           id: 'b03',
+          taman: '25',
           url: '/samsung/chocolate.png',
         },
         {
           name: 'Zumos',
           description: 'Zumo',
           id: 'b04',
+          taman: '25',
           url: '/samsung/zumos.png',
         },
         {
           name: 'Refrescos',
           description: 'Refresco',
           id: 'b05',
+          taman: '18',
           url: '/samsung/refrescos.png',
         },
         {
           name: 'Aguas',
           description: 'Agua',
           id: 'b06',
+          taman: '19',
           url: '/samsung/agua.png',
         },
       ],
@@ -127,7 +133,7 @@ export default {
   methods: {
     accionCar(data) {
       this.$router.push(
-        `/carrito/?id=${data.id}&name=${data.name}&description=${data.description}&url=${data.url}`
+        `/carrito/?id=${data.id}&name=${data.name}&description=${data.description}&url=${data.url}&taman=${data.taman}`
       )
     },
     inicioRefresh() {

@@ -34,9 +34,9 @@
           <img
             :src="`https://ja-my-serverless-react-app-20-03-2023.s3.amazonaws.com${this.url}`"
             alt=""
+            :style="{ width: tamano + 'rem' }"
           />
         </div>
-
         <div class="text-description-secu">{{ this.description }}</div>
       </div>
     </div>
@@ -107,6 +107,7 @@ export default {
       description: null,
       url: null,
       loading: false,
+      taman: '20',
     }
   },
   components: {
@@ -123,6 +124,7 @@ export default {
         name: this.name,
         description: this.description,
         cantidad: 1,
+        taman: this.taman,
         id: this.id,
         url: this.url,
       }
@@ -177,6 +179,9 @@ export default {
     conteoCanasta() {
       return this.carProducto.length == 0 ? '' : this.carProducto.length
     },
+    tamano() {
+      return this.taman
+    },
   },
 
   mounted() {
@@ -187,10 +192,12 @@ export default {
     this.name = urlParams.get('name')
     this.description = urlParams.get('description')
     this.url = urlParams.get('url')
+    this.taman = urlParams.get('taman')
     console.log('<----------------------->', this.id)
     console.log('<----------------------->', this.name)
     console.log('<----------------------->', this.description)
     console.log('<----------------------->', this.url)
+    console.log('<----------------------->', this.taman)
     this.$showSpinner(false)
   },
 }
@@ -243,16 +250,17 @@ export default {
 }
 
 .contenedor-imagen-selected {
-  width: 60%;
+  width: 50%;
+  height: 100%;
+  display: flex;
   margin: auto;
   background: rgb(255, 255, 255);
   border-radius: 50%;
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
-  padding: 30px;
+  padding: 0px;
   overflow: hidden;
 }
 .contenedor-imagen-selected img {
-  width: 80%;
   margin: auto;
   text-align: center;
   object-fit: cover;
@@ -313,7 +321,7 @@ export default {
 .contenedor-botones {
   display: flex;
   justify-content: center;
-  margin-top: 6rem;
+  margin-top: 10rem;
   /* border: 1px solid rgb(0, 0, 0); */
 }
 

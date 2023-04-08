@@ -95,36 +95,42 @@ export default {
           name: 'Mini croissants',
           description: 'Mini croissant',
           id: 'c01',
+          taman: '25',
           url: '/samsung/mini-croissants.png',
         },
         {
           name: 'Mini napolitanas',
           description: 'Mini manpolitana',
           id: 'c02',
+          taman: '25',
           url: '/samsung/mini-napolitana.png',
         },
         {
           name: 'Mini muffins',
           description: 'Mini muffin',
           id: 'c03',
+          taman: '20',
           url: '/samsung/mini-muffin.png',
         },
         {
           name: 'Finger sandwiches',
           description: 'Finger sandwich',
           id: 'c04',
+          taman: '20',
           url: '/samsung/finger-sandwich.png',
         },
         {
           name: 'Mini wraps',
           description: 'Mini wrap',
           id: 'c05',
+          taman: '27',
           url: '/samsung/mini-wrap.png',
         },
         {
           name: 'Mini bocadillos',
           description: 'Mini bocadillo',
           id: 'c06',
+          taman: '25',
           url: '/samsung/mini-bocadillo.png',
         },
       ],
@@ -133,7 +139,7 @@ export default {
   methods: {
     accionCar(data) {
       this.$router.push(
-        `/carrito/?id=${data.id}&name=${data.name}&description=${data.description}&url=${data.url}`
+        `/carrito/?id=${data.id}&name=${data.name}&description=${data.description}&url=${data.url}&taman=${data.taman}`
       )
     },
     inicioRefresh() {
@@ -218,7 +224,7 @@ export default {
   margin: 0 20px;
 }
 .image-container-comidas {
-  flex-basis: calc(33.33% - 100px);
+  flex-basis: calc(30%);
   margin: 15px;
   cursor: pointer;
   background: #ffffff;
@@ -233,8 +239,8 @@ export default {
 }
 
 .image-container-comidas img {
-  width: 18rem;
-  height: 17rem;
+  /* width: 18rem;
+  height: 17rem; */
   padding: 20px;
 }
 
