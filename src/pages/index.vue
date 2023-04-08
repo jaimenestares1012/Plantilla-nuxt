@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="contenedor">
-      <v-card class="justify-center align-center">
+      <v-card class="justify-center align-center" @click="redirect">
         <div class="titulo" style="padding-top: 50px; font-weight: 600">
           Bienvenido a nuestra
         </div>
