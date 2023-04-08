@@ -130,7 +130,7 @@ export default {
           name: 'Mini bocadillos',
           description: 'Mini bocadillo',
           id: 'c06',
-          taman: '25',
+          taman: '28',
           url: '/samsung/mini-bocadillo.png',
         },
       ],

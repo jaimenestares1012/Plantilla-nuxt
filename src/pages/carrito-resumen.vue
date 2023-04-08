@@ -172,11 +172,11 @@ export default {
     tamanored(data) {
       console.log('data', data)
       if (parseInt(data.taman) > 20) {
-        return '100'
-      } else if (parseInt(data.taman) == 18) {
-        return '70'
+        return '110'
+      } else if (parseInt(data.taman) == 15) {
+        return '65'
       } else {
-        return '80'
+        return '75'
       }
     },
     // tamanoRedu(data) {
