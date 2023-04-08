@@ -15,6 +15,8 @@
           style="
             padding: 33px;
             font-size: 1.7rem;
+            border: none;
+            box-shadow: none;
             background: #ffffff;
             font-family: sans-serif;
             letter-spacing: 0px;
@@ -58,7 +60,7 @@
           Sigue pidiendo
         </div>
       </div>
-      <div class="contenedor-butt-exit" @click="sendData">
+      <div class="contenedor-butt-exit" @click="redirect">
         <div class="btn-stylos-exit" style="font-size: 2rem; padding: 10px">
           Terminar pedido
         </div>
@@ -67,9 +69,18 @@
       <div class="contenedor-butt-exit" @click="redirect">
         <v-btn
           class="btn-stylos-exit"
-          style="padding: 37px; font-size: 1.4rem; background: #ffffff"
+          style="
+            font-size: 1.4rem;
+            background: #ffffff;
+            border: none;
+            box-shadow: none;
+          "
         >
-          <i class="fas fa-shopping-cart" style="font-size: 2.5rem"></i>
+          <!-- <i class="fas fa-shopping-cart" style="font-size: 2.5rem"></i> -->
+          <img
+            src="https://ja-my-serverless-react-app-20-03-2023.s3.amazonaws.com/samsung/Carrito.png"
+            alt=""
+          />
           {{ conteoCanasta }}</v-btn
         >
       </div>
@@ -164,7 +175,7 @@ export default {
   computed: {
     ...mapState('producto', ['carProducto']),
     conteoCanasta() {
-      return this.carProducto.length
+      return this.carProducto.length == 0 ? '' : this.carProducto.length
     },
   },
 
@@ -197,18 +208,17 @@ export default {
   text-align: center;
   font-weight: 750;
   padding: 2rem 0;
-  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
   background: rgb(255, 255, 255);
   margin-bottom: 4rem;
   font-size: 4rem;
 }
 .simbolo {
-  font-size: 4rem;
+  font-size: 2rem;
   border: 2px solid rgb(0, 0, 0);
   background-color: #fff;
   position: absolute;
-  padding: 0 4px;
-  margin-right: 240px;
+  padding: 23px 4px;
+  margin-right: 200px;
   /* margin-bottom: 0.4px; */
 }
 .contenedor-buttons {
@@ -233,17 +243,16 @@ export default {
 }
 
 .contenedor-imagen-selected {
-  width: 40%;
+  width: 60%;
   margin: auto;
   background: rgb(255, 255, 255);
   border-radius: 50%;
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
-  padding: 55px;
+  padding: 30px;
   overflow: hidden;
 }
 .contenedor-imagen-selected img {
-  width: 100%;
-  /* height: 15rem; */
+  width: 80%;
   margin: auto;
   text-align: center;
   object-fit: cover;
@@ -260,7 +269,7 @@ export default {
 }
 
 .contenedor-exit {
-  margin-top: 160px;
+  margin-top: 100px;
   width: 100%;
   display: flex;
   text-align: center;
@@ -272,15 +281,13 @@ export default {
   margin: auto;
 }
 .btn-stylos-exit {
-  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
-  border-radius: 20px;
   border: 2px solid rgb(0, 0, 0);
   width: 100%;
-  margin: 0 20px;
+  letter-spacing: 0px;
+  font-weight: 600;
+  margin: 0 10px;
 }
 .btn-stylos {
-  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
-  border-radius: 20px;
   border: 2px solid rgb(0, 0, 0);
   margin: auto;
   width: 50%;

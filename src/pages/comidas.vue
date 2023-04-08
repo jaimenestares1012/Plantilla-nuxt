@@ -16,6 +16,8 @@
             padding: 33px;
             font-size: 1.7rem;
             background: #ffffff;
+            border: none;
+            box-shadow: none;
             font-family: sans-serif;
             letter-spacing: 0px;
             text-transform: capitalize;
@@ -52,10 +54,16 @@
             padding: 33px;
             font-size: 2rem;
             background: #ffffff;
+            box-shadow: none;
+            border: none;
             height: 100px;
           "
         >
-          <i class="fas fa-shopping-cart" style="font-size: 4rem"></i>
+          <!-- <i class="fas fa-shopping-cart" style="font-size: 4rem"></i> -->
+          <img
+            src="https://ja-my-serverless-react-app-20-03-2023.s3.amazonaws.com/samsung/Carrito.png"
+            alt=""
+          />
           {{ conteoCanasta }}</v-btn
         >
       </div>
@@ -160,7 +168,6 @@ export default {
   text-align: center;
   margin-bottom: 2rem;
   background: rgb(255, 255, 255);
-  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
   padding: 2rem 0;
   font-weight: 750;
   font-size: 4rem;
@@ -187,8 +194,6 @@ export default {
   width: 50%;
 }
 .btn-stylos {
-  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
-  border-radius: 20px;
   border: 2px solid rgb(0, 0, 0);
   margin: auto;
   width: 50%;

@@ -17,6 +17,8 @@
             padding: 33px;
             font-size: 1.7rem;
             background: #ffffff;
+            border: none;
+            box-shadow: none;
             font-family: sans-serif;
             letter-spacing: 0px;
             text-transform: capitalize;
@@ -33,14 +35,14 @@
           src="https://ja-my-serverless-react-app-20-03-2023.s3.amazonaws.com/samsung/bebida.png"
           alt=""
         />
-        <div class="text-container" style="margin-top: 5.3rem">Bebidas</div>
+        <div class="text-container" style="margin-top: 5.3rem">Bebida</div>
       </div>
       <div class="image-container-eleccion" @click="redirect('/comidas')">
         <img
           src="https://ja-my-serverless-react-app-20-03-2023.s3.amazonaws.com/samsung/comida.png"
           alt=""
         />
-        <div class="text-container">Comidas</div>
+        <div class="text-container">Comida</div>
       </div>
     </div>
     <div class="contenedor-eleccion-cart">
@@ -53,11 +55,17 @@
           style="
             padding: 33px;
             font-size: 2rem;
+            box-shadow: none;
+            border: none;
             background: #ffffff;
             height: 100px;
           "
         >
-          <i class="fas fa-shopping-cart" style="font-size: 4rem"></i>
+          <!-- <i class="fas fa-shopping-cart" style="font-size: 4rem"></i> -->
+          <img
+            src="https://ja-my-serverless-react-app-20-03-2023.s3.amazonaws.com/samsung/Carrito.png"
+            alt=""
+          />
           {{ conteoCanasta }}
         </v-btn>
       </div>
@@ -125,8 +133,6 @@ export default {
   width: 50%;
 }
 .btn-stylos {
-  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
-  border-radius: 20px;
   border: 2px solid rgb(0, 0, 0);
   margin: auto;
   width: 50%;
@@ -136,7 +142,6 @@ export default {
   text-align: center;
   background: #ffffff;
   padding: 2rem 0;
-  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
   margin-bottom: 2rem;
   font-weight: 700;
   font-size: 4rem;
@@ -193,12 +198,13 @@ export default {
   flex-direction: column;
   align-items: center;
   margin: 50px;
-  padding: 20px;
+  padding: 60px;
   cursor: pointer;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   background: #ffffff;
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
+  padding-bottom: 10px;
 }
 
 .image-container-eleccion:hover {

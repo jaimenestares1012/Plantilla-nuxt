@@ -48,13 +48,13 @@ export default {
 </script>
 <style>
 .HomeLayout {
-  background: #f2f7fb;
+  background: #f5f6f7;
 }
 .container {
   max-width: none !important;
   height: 1900px;
   padding: 0px;
-  background: #f2f7fb;
+  background: #f5f6f7;
 }
 
 .v-application {

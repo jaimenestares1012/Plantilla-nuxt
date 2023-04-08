@@ -16,6 +16,8 @@
             padding: 33px;
             font-size: 1.7rem;
             background: #ffffff;
+            border: none;
+            box-shadow: none;
             font-family: sans-serif;
             letter-spacing: 0px;
             text-transform: capitalize;
@@ -32,7 +34,7 @@
         v-for="(dat, index) in data"
         :key="index"
       >
-        <div @click="accionCar(dat)">
+        <div @click="accionCar(dat)" class="contendor-image-text">
           <img
             :src="`https://ja-my-serverless-react-app-20-03-2023.s3.amazonaws.com${dat.url}`"
             alt=""
@@ -52,10 +54,16 @@
             padding: 33px;
             font-size: 2rem;
             background: #ffffff;
+            box-shadow: none;
+            border: none;
             height: 100px;
           "
         >
-          <i class="fas fa-shopping-cart" style="font-size: 4rem"></i>
+          <!-- <i class="fas fa-shopping-cart" style="font-size: 4rem"></i> -->
+          <img
+            src="https://ja-my-serverless-react-app-20-03-2023.s3.amazonaws.com/samsung/Carrito.png"
+            alt=""
+          />
           {{ conteoCanasta }}</v-btn
         >
       </div>
@@ -85,7 +93,7 @@ export default {
         },
         {
           name: 'Infusiones',
-          description: 'Infusion',
+          description: 'Infusión',
           id: 'b02',
           url: '/samsung/infusiones.png',
         },
@@ -154,7 +162,6 @@ export default {
   text-align: center;
   font-weight: 750;
   background: rgb(255, 255, 255);
-  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
   padding: 2rem 0;
   margin-bottom: 2rem;
   font-size: 4rem;
@@ -199,15 +206,13 @@ export default {
   width: 50%;
 }
 .btn-stylos {
-  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
-  border-radius: 20px;
   border: 2px solid rgb(0, 0, 0);
   margin: auto;
   width: 50%;
 }
 
 .image-container-bebidas {
-  flex-basis: calc(33.33% - 100px);
+  flex-basis: calc(30%);
   margin: 15px;
   cursor: pointer;
   background: #ffffff;
@@ -215,15 +220,14 @@ export default {
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
 }
-
+.contendor-image-text {
+}
 .image-container-bebidas:hover {
   transform: scale(1.1);
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
 }
 
 .image-container-bebidas img {
-  width: 18rem;
-  height: 18rem;
   padding: 20px;
 }
 

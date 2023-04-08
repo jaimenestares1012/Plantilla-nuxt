@@ -9,9 +9,9 @@
           class="titulo"
           style="font-size: 7rem; padding-top: 20px; font-weight: 800"
         >
-          <b>Cafetería</b>
+          Cafetería
         </div>
-        <div class="samsung-experience">
+        <div class="samsung-experience" @click="redirect">
           <div class="image-container">
             <img
               src="https://ja-my-serverless-react-app-20-03-2023.s3.amazonaws.com/samsung/LogoSamsungDigitalExperience.png"
