@@ -37,6 +37,7 @@
             :src="`https://ja-my-serverless-react-app-20-03-2023.s3.amazonaws.com${dat.url}`"
             alt=""
           />
+          <div class="text-container-2">{{ dat.name }}</div>
         </div>
       </div>
     </div>
@@ -78,7 +79,7 @@ export default {
       data: [
         {
           name: 'Cafés',
-          description: 'Café con leche',
+          description: 'Café',
           id: 'b01',
           url: '/samsung/cafe-con-leche.png',
         },
@@ -122,6 +123,7 @@ export default {
       )
     },
     inicioRefresh() {
+      this.$store.commit('producto/SET_CLEAR')
       this.$router.push('/')
     },
     atras() {

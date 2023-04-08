@@ -129,6 +129,7 @@ export default {
       )
     },
     inicioRefresh() {
+      this.$store.commit('producto/SET_CLEAR')
       this.$router.push('/')
     },
     atras() {
@@ -228,7 +229,7 @@ export default {
 
 .image-container-comidas img {
   width: 18rem;
-  height: 15rem;
+  height: 17rem;
   padding: 20px;
 }
 

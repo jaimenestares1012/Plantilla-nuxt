@@ -33,7 +33,6 @@
             :src="`https://ja-my-serverless-react-app-20-03-2023.s3.amazonaws.com${this.url}`"
             alt=""
           />
-          <div class="text-description">{{ this.name }}</div>
         </div>
 
         <div class="text-description-secu">{{ this.description }}</div>
@@ -118,17 +117,29 @@ export default {
       this.$store.commit('producto/SET_ADD_PRODUCTO', producto)
     },
     async sendData() {
-      if (this.carProducto.length == 0) {
+      let productosFiltrados = this.carProducto.filter((p) => p.cantidad !== 0)
+      let sumaCantidad = this.carProducto.reduce(
+        (acum, p) => acum + p.cantidad,
+        0
+      )
+      if (productosFiltrados == 0) {
         let data = {
           img: '😟',
           titulo: 'Estimado usuario',
           message: 'debe elegir al menos un producto',
         }
         this.$refs.modalAlert.open(data)
+      } else if (sumaCantidad > 3) {
+        let data = {
+          img: '😟',
+          titulo: 'Estimado usuario',
+          message: 'Solo puede elegir hasta 3 productos en total',
+        }
+        this.$refs.modalAlert.open(data)
       } else {
         this.$showSpinner(true)
         let paylodad = {
-          data: this.carProducto,
+          data: productosFiltrados,
         }
         await this.$store.dispatch('producto/sendDataStore', paylodad)
         this.$showSpinner(false)
@@ -142,6 +153,7 @@ export default {
       this.$router.push('/carrito-resumen')
     },
     inicioRefresh() {
+      this.$store.commit('producto/SET_CLEAR')
       this.$router.push('/')
     },
     atras() {
@@ -202,7 +214,7 @@ export default {
 .contendor-car-selected {
   width: 100%;
   margin: auto;
-  margin-top: 40px;
+  margin-top: 80px;
   display: flex;
 }
 .contenedor-img-text-car {
@@ -211,31 +223,25 @@ export default {
 }
 
 .contenedor-imagen-selected {
-  width: 46%;
+  width: 40%;
   margin: auto;
   background: rgb(255, 255, 255);
   border-radius: 50%;
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
-  padding: 30px;
+  padding: 55px;
   overflow: hidden;
 }
 .contenedor-imagen-selected img {
-  width: 20rem;
+  width: 100%;
   /* height: 15rem; */
   margin: auto;
   text-align: center;
   object-fit: cover;
 }
-.text-description {
-  font-size: 1.5rem;
-  font-weight: 700;
-  width: 70%;
-  margin: auto;
-}
 .text-description-secu {
   margin-top: 20px;
-  font-size: 2rem;
-  font-weight: 500;
+  font-size: 2.8rem;
+  font-weight: 700;
 }
 
 .contenedor-butt {

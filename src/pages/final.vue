@@ -9,13 +9,13 @@
     <div class="contenedor-subgroup-final">
       <div class="contenedor-subtitle-final">Disfruta tu desayuno</div>
     </div>
-    <div class="contenedor-buttons" style="margin-top: 200px">
+    <!-- <div class="contenedor-buttons" style="margin-top: 200px">
       <div class="contenedor-butt" @click="inicioRefresh">
         <div class="btn-stylos" style="font-size: 2rem; padding: 10px">
           Inicio
         </div>
       </div>
-    </div>
+    </div> -->
 
     <div class="contenedor-img">
       <img
@@ -36,16 +36,24 @@ export default {
     }
   },
   methods: {
-    inicioRefresh() {
-      this.$router.push('/')
-      this.$store.commit('producto/SET_CLEAR')
-    },
+    // inicioRefresh() {
+    //   this.$router.push('/')
+    //   this.$store.commit('producto/SET_CLEAR')
+    // },
   },
   computed: {
     ...mapState('producto', ['carProducto']),
     conteoCanasta() {
       return this.carProducto.length == 0 ? '' : this.carProducto.length
     },
+  },
+  mounted() {
+    setTimeout(() => {
+      // Código que se ejecutará después de esperar 3 segundos
+      console.log('Han pasado 5  segundos')
+      this.$router.push('/')
+      this.$store.commit('producto/SET_CLEAR')
+    }, 5000) // Esperar 3 segundos (3000 milisegundos)
   },
 }
 </script>

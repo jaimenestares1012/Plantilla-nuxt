@@ -87,7 +87,7 @@ export default {
       this.$router.push(ruta)
     },
     inicioRefresh() {
-      console.log('www')
+      this.$store.commit('producto/SET_CLEAR')
       this.$router.push('/')
     },
     atras() {

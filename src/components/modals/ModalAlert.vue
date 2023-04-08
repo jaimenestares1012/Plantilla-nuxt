@@ -1,11 +1,11 @@
 <template>
   <v-dialog
     v-model="dialogVisible"
-    max-width="400.8pt !important"
+    max-width="500.8pt !important"
     class="v-dialog"
   >
     <v-card>
-      <div style="text-align: end; margin-right: 7px; margin-top: 7px">
+      <div style="text-align: end; margin-right: 7px">
         <button @click="close">
           <v-icon color="#005793" style="font-size: 40px"
             >mdi-close-circle-outline</v-icon
@@ -73,22 +73,20 @@ export default {
 <style>
 .message-title {
   color: #005092;
-  font-size: 40px;
+  font-size: 60px;
   line-height: 28px;
-  font-weight: 600;
+  font-weight: 700;
 }
 .message-modal {
-  font-family: 'Roboto';
   font-style: normal;
-  font-weight: 500;
-  font-size: 40px;
-  line-height: 40px;
+  font-weight: 600;
+  font-size: 50px;
+  line-height: 60px;
   text-align: center;
   color: #000000;
 }
 .buttom-close {
   width: 50%;
-  font-family: 'Roboto';
   font-style: normal;
   font-weight: 500;
   font-size: 40px;

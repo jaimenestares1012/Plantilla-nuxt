@@ -108,17 +108,29 @@ export default {
       this.$store.commit('producto/SET_ADD_PRODUCTOS', data)
     },
     async sendData() {
-      if (this.carProducto.length == 0) {
+      let productosFiltrados = this.carProducto.filter((p) => p.cantidad !== 0)
+      let sumaCantidad = this.carProducto.reduce(
+        (acum, p) => acum + p.cantidad,
+        0
+      )
+      if (productosFiltrados.length == 0) {
         let data = {
           img: '😟',
           titulo: 'Estimado usuario',
           message: 'debe elegir al menos un producto',
         }
         this.$refs.modalAlert.open(data)
+      } else if (sumaCantidad > 3) {
+        let data = {
+          img: '😟',
+          titulo: 'Estimado usuario',
+          message: 'Solo puede elegir hasta 3 productos en total',
+        }
+        this.$refs.modalAlert.open(data)
       } else {
         this.$showSpinner(true)
         let paylodad = {
-          data: this.carProducto,
+          data: productosFiltrados,
         }
         await this.$store.dispatch('producto/sendDataStore', paylodad)
         this.$showSpinner(false)
@@ -126,6 +138,7 @@ export default {
       }
     },
     inicioRefresh() {
+      this.$store.commit('producto/SET_CLEAR')
       this.$router.push('/')
     },
     redirect() {
@@ -172,17 +185,20 @@ export default {
 }
 
 .contenedor-productos {
-  margin-top: 20px;
+  margin-top: 50px;
 }
 .dafault-message {
   background: rgb(255, 255, 255);
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
   text-align: center;
   font-size: 4rem;
+  border-radius: 40px;
+  font-weight: 600;
+  line-height: 1.2;
   width: 60%;
   padding: 3rem;
-  margin: auto;
-  margin-top: 30px;
+  margin: 60px auto;
+  /* margin-top: 60px; */
 }
 
 .contendor-iterador {
@@ -256,11 +272,11 @@ export default {
   object-fit: cover;
 }
 .text-description {
-  font-size: 1.5rem;
-  font-weight: 500;
+  font-size: 2rem;
+  font-weight: 700;
 }
 .contenedor-cantidad {
-  width: 10%;
+  width: 15%;
   margin: auto;
   text-align: center;
   background-color: rgb(255, 255, 255);
