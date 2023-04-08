@@ -162,7 +162,7 @@ export default {
   background: rgb(255, 255, 255);
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
   padding: 2rem 0;
-  font-weight: 700;
+  font-weight: 750;
   font-size: 4rem;
 }
 .contenedor-comidas {

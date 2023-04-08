@@ -195,7 +195,7 @@ export default {
 .contenedor-producto-title {
   width: 100%;
   text-align: center;
-  font-weight: 700;
+  font-weight: 750;
   padding: 2rem 0;
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
   background: rgb(255, 255, 255);

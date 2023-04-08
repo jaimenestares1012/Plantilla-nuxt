@@ -35,12 +35,6 @@ export default {
       loading: null,
     }
   },
-  methods: {
-    // inicioRefresh() {
-    //   this.$router.push('/')
-    //   this.$store.commit('producto/SET_CLEAR')
-    // },
-  },
   computed: {
     ...mapState('producto', ['carProducto']),
     conteoCanasta() {
@@ -53,7 +47,7 @@ export default {
       console.log('Han pasado 5  segundos')
       this.$router.push('/')
       this.$store.commit('producto/SET_CLEAR')
-    }, 5000) // Esperar 3 segundos (3000 milisegundos)
+    }, 5000)
   },
 }
 </script>
@@ -72,7 +66,7 @@ export default {
 .contenedor-subgroup-final {
   width: 100%;
   text-align: center;
-  margin-top: 12rem;
+  margin-top: 15rem;
   margin-bottom: 2rem;
 }
 
@@ -85,7 +79,7 @@ export default {
   width: 60%;
   text-align: center;
   margin: auto;
-  font-weight: 900;
+  font-weight: 750;
   line-height: 1.4;
   padding: 30px 0;
   font-size: 4rem;
@@ -95,7 +89,7 @@ export default {
   width: 60%;
   text-align: center;
   margin: auto;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.1;
   padding: 0;
   font-size: 7rem;

@@ -152,7 +152,7 @@ export default {
 .contenedor-bebidas-title {
   width: 100%;
   text-align: center;
-  font-weight: 700;
+  font-weight: 750;
   background: rgb(255, 255, 255);
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
   padding: 2rem 0;

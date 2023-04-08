@@ -149,14 +149,14 @@ export default {
 .contenedor-title {
   width: 95%;
   text-align: center;
-  font-weight: 700;
+  font-weight: 750;
   font-size: 4rem;
 }
 .contenedor-subtitle {
   width: 95%;
   text-align: center;
   margin-top: -30px;
-  font-weight: 600;
+  font-weight: 720;
   font-size: 2.6rem;
 }
 .contenedor-eleccion {
