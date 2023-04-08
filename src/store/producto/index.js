@@ -27,11 +27,7 @@ export const mutations = {
   SET_ADD_PRODUCTOS(state, data) {
     state.carProducto = state.carProducto.map(p => {
       if (p.id === data.id) {
-        if (p.cantidad < 3) {
-          return { ...p, cantidad: p.cantidad + 1 };
-        } else {
-          return p;
-        }
+        return { ...p, cantidad: p.cantidad + 1 };
       }
       return p;
     });
@@ -41,12 +37,7 @@ export const mutations = {
   SET_ADD_PRODUCTO(state, data) {
     const index = state.carProducto.findIndex(p => p.id === data.id);
     if (index !== -1) {
-      if (state.carProducto[index].cantidad < 3) {
-        state.carProducto[index] = { ...state.carProducto[index], cantidad: state.carProducto[index].cantidad + 1 };
-      } else {
-        // Si ya hay 3 unidades, no se agrega más
-        console.log('Este producto ya tiene la cantidad máxima permitida');
-      }
+      state.carProducto[index] = { ...state.carProducto[index], cantidad: state.carProducto[index].cantidad + 1 };
     } else {
       state.carProducto.push(data);
     }
@@ -58,7 +49,10 @@ export const mutations = {
   },
   SET_ERROR(){
     console.log("SET_ERROR");
-  }
+  },
+  SET_DELETE_PRODUCTO(state, data){
+    state.carProducto = state.carProducto.filter(p => p.id !== data.id);
+  },
 };
 
 export const actions = {

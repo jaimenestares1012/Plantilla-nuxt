@@ -130,36 +130,7 @@ export default {
       }
       this.$store.commit('producto/SET_ADD_PRODUCTO', producto)
     },
-    async sendData() {
-      let productosFiltrados = this.carProducto.filter((p) => p.cantidad !== 0)
-      let sumaCantidad = this.carProducto.reduce(
-        (acum, p) => acum + p.cantidad,
-        0
-      )
-      if (productosFiltrados == 0) {
-        let data = {
-          img: '😟',
-          titulo: 'Estimado usuario',
-          message: 'debe elegir al menos un producto',
-        }
-        this.$refs.modalAlert.open(data)
-      } else if (sumaCantidad > 3) {
-        let data = {
-          img: '😟',
-          titulo: 'Estimado usuario',
-          message: 'Solo puede elegir hasta 3 productos en total',
-        }
-        this.$refs.modalAlert.open(data)
-      } else {
-        this.$showSpinner(true)
-        let paylodad = {
-          data: productosFiltrados,
-        }
-        await this.$store.dispatch('producto/sendDataStore', paylodad)
-        this.$showSpinner(false)
-        this.$router.push('/final')
-      }
-    },
+    
     home() {
       this.$router.push('/eleccion')
     },

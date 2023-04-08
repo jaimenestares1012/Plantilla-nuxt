@@ -14,9 +14,9 @@
       </div>
 
       <div class="container-body">
-        <div class="container-img">
+        <!-- <div class="container-img">
           <span style="font-size: 170px">{{ imgModal }}</span>
-        </div>
+        </div> -->
         <div class="container-title">
           <span class="message-title"> {{ tituloModal }}</span>
         </div>

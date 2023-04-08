@@ -43,6 +43,7 @@
             <img
               :src="`https://ja-my-serverless-react-app-20-03-2023.s3.amazonaws.com${dat.url}`"
               alt=""
+              :style="{ width: tamanored(dat) + '%' }"
             />
           </div>
 
@@ -50,8 +51,15 @@
         </div>
         <div class="group-contenedores">
           <div class="contenedor-cantidad">{{ dat.cantidad }}</div>
-          <div class="contenedor-cantidad" @click="restCantidad(dat)">-</div>
-          <div class="contenedor-cantidad" @click="addCantidad(dat)">+</div>
+          <div class="contenedor-cantidad" @click="restCantidad(dat)">
+            <b>-</b>
+          </div>
+          <div class="contenedor-cantidad" @click="addCantidad(dat)">
+            <b>+</b>
+          </div>
+          <div class="contenedor-cantidad" @click="quitProducto(dat)">
+            <i class="fas fa-trash-alt"></i>
+          </div>
         </div>
       </div>
     </div>
@@ -119,24 +127,23 @@ export default {
     addCantidad(data) {
       this.$store.commit('producto/SET_ADD_PRODUCTOS', data)
     },
+    quitProducto(data) {
+      this.$store.commit('producto/SET_DELETE_PRODUCTO', data)
+    },
     async sendData() {
       let productosFiltrados = this.carProducto.filter((p) => p.cantidad !== 0)
-      let sumaCantidad = this.carProducto.reduce(
-        (acum, p) => acum + p.cantidad,
-        0
-      )
       if (productosFiltrados.length == 0) {
         let data = {
           img: '😟',
           titulo: 'Estimado usuario',
-          message: 'debe elegir al menos un producto',
+          message: 'Añade productos a tu carrito.',
         }
         this.$refs.modalAlert.open(data)
-      } else if (sumaCantidad > 3) {
+      } else if (productosFiltrados.length > 3) {
         let data = {
           img: '😟',
           titulo: 'Estimado usuario',
-          message: 'Solo puede elegir hasta 3 productos en total',
+          message: 'Solo puede elegir 3 productos distintos',
         }
         this.$refs.modalAlert.open(data)
       } else {
@@ -161,6 +168,16 @@ export default {
     },
     home() {
       this.$router.push('/eleccion')
+    },
+    tamanored(data) {
+      console.log('data', data)
+      if (parseInt(data.taman) > 20) {
+        return '100'
+      } else if (parseInt(data.taman) == 18) {
+        return '70'
+      } else {
+        return '80'
+      }
     },
     // tamanoRedu(data) {
     //   return parseInt(data.taman) - 18
@@ -216,7 +233,7 @@ export default {
 }
 
 .contendor-iterador {
-  width: 90%;
+  width: 95%;
   margin: auto;
   margin-top: 40px;
   display: flex;
@@ -273,7 +290,7 @@ export default {
   background: rgb(255, 255, 255);
   border-radius: 50%;
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
-  padding: 30px;
+  padding: 15px;
   overflow: hidden;
 }
 .contenedor-img-resumen img {
@@ -309,7 +326,7 @@ export default {
 }
 .contenedor-img {
   position: absolute;
-  bottom: 0;
+  bottom: 0px;
   width: 100%;
 }
 </style>
