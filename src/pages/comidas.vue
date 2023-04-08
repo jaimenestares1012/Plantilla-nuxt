@@ -189,7 +189,7 @@ export default {
 .btn-stylos {
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
   border-radius: 20px;
-  border: 1px solid rgb(0, 0, 0);
+  border: 2px solid rgb(0, 0, 0);
   margin: auto;
   width: 50%;
 }

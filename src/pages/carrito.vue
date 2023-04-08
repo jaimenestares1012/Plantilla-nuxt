@@ -48,7 +48,8 @@
           font-size: 2rem;
           background: #ffffff;
         "
-        >Añadir</v-btn
+      >
+        <span class="simbolo">+ </span> Añadir</v-btn
       >
     </div>
     <div class="contenedor-exit">
@@ -201,6 +202,15 @@ export default {
   margin-bottom: 4rem;
   font-size: 4rem;
 }
+.simbolo {
+  font-size: 4rem;
+  border: 2px solid rgb(0, 0, 0);
+  background-color: #fff;
+  position: absolute;
+  padding: 0 4px;
+  margin-right: 240px;
+  /* margin-bottom: 0.4px; */
+}
 .contenedor-buttons {
   width: 100%;
   margin-top: 80px;
@@ -264,14 +274,14 @@ export default {
 .btn-stylos-exit {
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
   border-radius: 20px;
-  border: 1px solid rgb(0, 0, 0);
+  border: 2px solid rgb(0, 0, 0);
   width: 100%;
   margin: 0 20px;
 }
 .btn-stylos {
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
   border-radius: 20px;
-  border: 1px solid rgb(0, 0, 0);
+  border: 2px solid rgb(0, 0, 0);
   margin: auto;
   width: 50%;
 }
@@ -302,10 +312,11 @@ export default {
 
 .boton-anadir {
   background-color: #ffffff;
-  color: #000000;
   padding: 0.4rem 2rem;
-  border: 1px solid rgb(0, 0, 0);
-  border-radius: 10px;
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 0px;
+  text-transform: capitalize;
+  letter-spacing: 1px;
   font-size: 2rem;
   cursor: pointer;
   transition: all 0.3s ease;
