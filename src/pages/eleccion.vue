@@ -6,7 +6,7 @@
     </div>
     <div class="contenedor-buttons">
       <div class="contenedor-butt" @click="inicioRefresh">
-        <div class="btn-stylos" style="font-size: 2rem; padding: 10px">
+        <div class="btn-stylos" style="font-size: 31px; padding: 10px">
           Inicio
         </div>
       </div>
@@ -15,7 +15,8 @@
           class="btn-stylos"
           style="
             padding: 33px;
-            font-size: 1.7rem;
+            font-size: 31px;
+            font-family: 'SAMSUNGSHARPSANS-BOLD';
             background: #ffffff;
             border: none;
             box-shadow: none;
@@ -53,7 +54,7 @@
           class="btn-stylos-eleccion-cart"
           style="
             padding: 33px;
-            font-size: 2rem;
+            font-size: 33px;
             box-shadow: none;
             border: none;
             background: #ffffff;
@@ -133,6 +134,7 @@ export default {
 }
 .btn-stylos {
   border: 2px solid rgb(0, 0, 0);
+  font-family: 'SAMSUNGSHARPSANS-MEDIUM';
   margin: auto;
   width: 50%;
 }
@@ -153,15 +155,15 @@ export default {
 .contenedor-title {
   width: 95%;
   text-align: center;
-  font-weight: 850;
-  font-size: 4rem;
+  font-family: 'SAMSUNGSHARPSANS-BOLD';
+  font-size: 89px;
 }
 .contenedor-subtitle {
   width: 95%;
   text-align: center;
   margin-top: -30px;
-  font-weight: 720;
-  font-size: 2.6rem;
+  font-family: 'SAMSUNGSHARPSANS-BOLD';
+  font-size: 49px;
 }
 .contenedor-eleccion {
   width: 100%;
@@ -217,8 +219,8 @@ export default {
 }
 
 .text-container {
-  font-size: 2.6rem;
-  font-weight: bold;
+  font-size: 45px;
+  font-family: 'SAMSUNGSHARPSANS-BOLD';
   text-align: center;
   margin: 4rem 0 1rem 0;
   color: #333;

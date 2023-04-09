@@ -7,15 +7,11 @@
       <div class="contenedor-subtitle-final">Gracias</div>
     </div>
     <div class="contenedor-subgroup-final">
-      <div class="contenedor-subtitle-final">Disfruta tu desayuno</div>
-    </div>
-    <!-- <div class="contenedor-buttons" style="margin-top: 200px">
-      <div class="contenedor-butt" @click="inicioRefresh">
-        <div class="btn-stylos" style="font-size: 2rem; padding: 10px">
-          Inicio
-        </div>
+      <div class="contenedor-subtitle-final">
+        Disfruta <br />
+        tu desayuno
       </div>
-    </div> -->
+    </div>
 
     <div class="contenedor-img">
       <img
@@ -37,9 +33,6 @@ export default {
   },
   computed: {
     ...mapState('producto', ['carProducto']),
-    conteoCanasta() {
-      return this.carProducto.length == 0 ? '' : this.carProducto.length
-    },
   },
   mounted() {
     setTimeout(() => {
@@ -47,7 +40,7 @@ export default {
       console.log('Han pasado 5  segundos')
       this.$router.push('/')
       this.$store.commit('producto/SET_CLEAR')
-    }, 5000)
+    }, 14000)
   },
 }
 </script>
@@ -79,27 +72,20 @@ export default {
   width: 60%;
   text-align: center;
   margin: auto;
-  font-weight: 850;
+  font-family: 'SAMSUNGSHARPSANS-BOLD';
   line-height: 1.4;
   padding: 30px 0;
-  font-size: 4rem;
+  font-size: 77px;
 }
 
 .contenedor-subtitle-final {
-  width: 60%;
+  width: 74%;
   text-align: center;
   margin: auto;
-  font-weight: 600;
+  font-family: 'SAMSUNGSHARPSANS-MEDIUM';
   line-height: 1.1;
   padding: 0;
-  font-size: 7rem;
-}
-.contenedor-subtitle {
-  width: 95%;
-  text-align: center;
-  margin-top: -30px;
-  font-weight: 600;
-  font-size: 2.6rem;
+  font-size: 121px;
 }
 .contenedor-buttons {
   width: 100%;
@@ -112,11 +98,6 @@ export default {
 }
 
 .contenedor-butt {
-  margin: auto;
-  width: 50%;
-}
-.btn-stylos {
-  border: 2px solid rgb(0, 0, 0);
   margin: auto;
   width: 50%;
 }

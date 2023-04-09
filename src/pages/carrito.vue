@@ -5,7 +5,7 @@
     </div>
     <div class="contenedor-buttons">
       <div class="contenedor-butt" @click="inicioRefresh">
-        <div class="btn-stylos" style="font-size: 2rem; padding: 10px">
+        <div class="btn-stylos" style="font-size: 31px; padding: 10px">
           Inicio
         </div>
       </div>
@@ -14,7 +14,8 @@
           class="btn-stylos"
           style="
             padding: 33px;
-            font-size: 1.7rem;
+            font-size: 31px;
+            font-family: 'SAMSUNGSHARPSANS-BOLD';
             border: none;
             box-shadow: none;
             background: #ffffff;
@@ -44,7 +45,7 @@
         class="boton-anadir"
         :loading="loading"
         style="
-          padding: 30px 26px 30px 26px;
+          padding: 41px 26px 41px 32px;
           font-family: SAMSUNGSHARPSANS-MEDIUM;
           font-size: 39px;
           background: #ffffff;
@@ -69,7 +70,7 @@
         <v-btn
           class="btn-stylos-exit"
           style="
-            font-size: 1.4rem;
+            font-size: 33px;
             background: #ffffff;
             border: none;
             box-shadow: none;
@@ -187,15 +188,17 @@ export default {
   padding: 2rem 0;
   background: rgb(255, 255, 255);
   margin-bottom: 4rem;
-  font-size: 4rem;
+  font-family: 'SAMSUNGSHARPSANS-BOLD';
+  font-size: 77px;
 }
 .simbolo {
-  font-size: 2.7rem;
+  font-size: 66px;
   border: 2px solid rgb(0, 0, 0);
   background-color: #fff;
   position: absolute;
+  font-family: 'SAMSUNGSHARPSANS-MEDIUM';
   padding: 0px 10px 0px 10px;
-  margin-right: 210px;
+  margin-right: 217px;
   /* margin-bottom: 0.4px; */
 }
 .contenedor-buttons {
@@ -237,8 +240,8 @@ export default {
 }
 .text-description-secu {
   margin-top: 20px;
-  font-size: 2.8rem;
-  font-weight: 700;
+  font-size: 49px;
+  font-family: 'SAMSUNGSHARPSANS-BOLD';
 }
 
 .contenedor-butt {
@@ -267,6 +270,7 @@ export default {
 }
 .btn-stylos {
   border: 2px solid rgb(0, 0, 0);
+  font-family: 'SAMSUNGSHARPSANS-MEDIUM';
   margin: auto;
   width: 50%;
 }

@@ -5,7 +5,7 @@
     </div>
     <div class="contenedor-buttons">
       <div class="contenedor-butt" @click="inicioRefresh">
-        <div class="btn-stylos" style="font-size: 2rem; padding: 10px">
+        <div class="btn-stylos" style="font-size: 31px; padding: 10px">
           Inicio
         </div>
       </div>
@@ -14,7 +14,8 @@
           class="btn-stylos"
           style="
             padding: 33px;
-            font-size: 1.7rem;
+            font-size: 31px;
+            font-family: 'SAMSUNGSHARPSANS-BOLD';
             background: #ffffff;
             border: none;
             box-shadow: none;
@@ -51,7 +52,7 @@
           class="btn-stylos-eleccion-cart"
           style="
             padding: 33px;
-            font-size: 2rem;
+            font-size: 33px;
             background: #ffffff;
             box-shadow: none;
             border: none;
@@ -99,7 +100,7 @@ export default {
         },
         {
           name: 'Mini napolitanas',
-          description: 'Mini manpolitana',
+          description: 'Mini napolitana',
           id: 'c02',
           taman: '25',
           url: '/samsung/mini-napolitana.png',
@@ -174,8 +175,8 @@ export default {
   margin-bottom: 2rem;
   background: rgb(255, 255, 255);
   padding: 2rem 0;
-  font-weight: 850;
-  font-size: 4rem;
+  font-family: 'SAMSUNGSHARPSANS-BOLD';
+  font-size: 77px;
 }
 .contenedor-comidas {
   margin: 80px 0 80px 0;
@@ -200,6 +201,7 @@ export default {
 }
 .btn-stylos {
   border: 2px solid rgb(0, 0, 0);
+  font-family: 'SAMSUNGSHARPSANS-MEDIUM';
   margin: auto;
   width: 50%;
 }
@@ -244,8 +246,8 @@ export default {
 }
 
 .text-container-2 {
-  font-size: 2rem;
-  font-weight: bold;
+  font-size: 37px;
+  font-family: 'SAMSUNGSHARPSANS-BOLD';
   line-height: 1.2;
   width: 70%;
   text-align: center;

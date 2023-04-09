@@ -5,7 +5,7 @@
     </div>
     <div class="contenedor-buttons">
       <div class="contenedor-butt" @click="inicioRefresh">
-        <div class="btn-stylos" style="font-size: 2rem; padding: 10px">
+        <div class="btn-stylos" style="font-size: 31px; padding: 10px">
           Inicio
         </div>
       </div>
@@ -14,7 +14,8 @@
           class="btn-stylos"
           style="
             padding: 33px;
-            font-size: 1.7rem;
+            font-size: 31px;
+            font-family: 'SAMSUNGSHARPSANS-BOLD';
             background: #ffffff;
             border: none;
             box-shadow: none;
@@ -64,12 +65,12 @@
     </div>
     <div class="contenedor-exit">
       <div class="contenedor-butt-exit" @click="home">
-        <div class="btn-stylos-exit" style="font-size: 2rem; padding: 10px">
+        <div class="btn-stylos-exit" style="font-size: 33px; padding: 10px">
           Sigue pidiendo
         </div>
       </div>
       <div class="contenedor-butt-exit" @click="sendData">
-        <div class="btn-stylos-exit" style="font-size: 2rem; padding: 10px">
+        <div class="btn-stylos-exit" style="font-size: 33px; padding: 10px">
           Terminar pedido
         </div>
       </div>
@@ -79,7 +80,7 @@
           class="btn-stylos-exit"
           style="
             padding: 37px;
-            font-size: 1.4rem;
+            font-size: 33px;
             background: #ffffff;
             border: none;
             box-shadow: none;
@@ -204,12 +205,11 @@ export default {
 }
 
 .contenedor-carrito-resumen-title {
-  width: 100%;
   text-align: center;
-  font-weight: 850;
+  font-family: 'SAMSUNGSHARPSANS-BOLD';
   margin-bottom: 4rem;
   padding: 2rem 0;
-  font-size: 4rem;
+  font-size: 77px;
   background: rgb(255, 255, 255);
   width: 100%;
 }
@@ -248,7 +248,7 @@ export default {
 .contenedor-buttons {
   width: 100%;
   display: flex;
-  margin-top: 80px;
+  margin-top: 40px;
   text-align: center;
   background: #ffffff;
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
@@ -270,7 +270,7 @@ export default {
   border: 2px solid rgb(0, 0, 0);
   width: 100%;
   letter-spacing: 0px;
-  font-weight: 600;
+  font-family: 'SAMSUNGSHARPSANS-MEDIUM';
   margin: 0 10px;
 }
 
@@ -280,6 +280,8 @@ export default {
 }
 .btn-stylos {
   border: 2px solid rgb(0, 0, 0);
+  font-size: 31px;
+  font-family: 'SAMSUNGSHARPSANS-MEDIUM';
   margin: auto;
   width: 50%;
 }
@@ -301,8 +303,8 @@ export default {
   object-fit: cover;
 }
 .text-description {
-  font-size: 2rem;
-  font-weight: 700;
+  font-size: 37px;
+  font-family: 'SAMSUNGSHARPSANS-MEDIUM';
 }
 .contenedor-cantidad {
   width: 15%;
@@ -310,8 +312,8 @@ export default {
   text-align: center;
   background-color: rgb(255, 255, 255);
   border-radius: 50%;
-  font-weight: 600;
-  font-size: 2rem;
+  font-family: 'SAMSUNGSHARPSANS-MEDIUM';
+  font-size: 40px;
   padding: 1rem;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
   cursor: pointer;

@@ -2,10 +2,19 @@
   <div>
     <div class="contenedor">
       <v-card class="justify-center align-center" @click="redirect">
-        <div class="titulo" style="padding-top: 50px">Bienvenido a nuestra</div>
         <div
           class="titulo"
-          style="font-size: 7rem; padding-top: 20px; font-weight: 800"
+          style="padding-top: 50px; font-family: 'SAMSUNGSHARPSANS-MEDIUM'"
+        >
+          Bienvenido a nuestra
+        </div>
+        <div
+          class="titulo"
+          style="
+            font-size: 7rem;
+            padding-top: 20px;
+            font-family: 'SAMSUNGSHARPSANS-BOLD';
+          "
         >
           Cafetería
         </div>
@@ -78,7 +87,7 @@ export default {
 }
 
 .titulo {
-  font-size: 6rem;
+  font-size: 105px;
   width: 70%;
   margin: auto;
   text-align: center;
