@@ -171,7 +171,7 @@ export default {
     tamanored(data) {
       console.log('data', data)
       if (parseInt(data.taman) > 20) {
-        return '110'
+        return '105'
       } else if (parseInt(data.taman) == 15) {
         return '65'
       } else {
@@ -284,7 +284,8 @@ export default {
   width: 50%;
 }
 .contenedor-img-resumen {
-  width: 50%;
+  width: 200px;
+  height: 200px;
   margin: auto;
   background: rgb(255, 255, 255);
   border-radius: 50%;

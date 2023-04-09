@@ -44,9 +44,9 @@
         class="boton-anadir"
         :loading="loading"
         style="
-          padding: 30px 26px;
-          font-weight: 800;
-          font-size: 2rem;
+          padding: 30px 26px 30px 26px;
+          font-family: SAMSUNGSHARPSANS-MEDIUM;
+          font-size: 39px;
           background: #ffffff;
         "
       >
@@ -55,12 +55,12 @@
     </div>
     <div class="contenedor-exit">
       <div class="contenedor-butt-exit" @click="home">
-        <div class="btn-stylos-exit" style="font-size: 2rem; padding: 10px">
+        <div class="btn-stylos-exit" style="font-size: 33px; padding: 10px">
           Sigue pidiendo
         </div>
       </div>
       <div class="contenedor-butt-exit" @click="redirect">
-        <div class="btn-stylos-exit" style="font-size: 2rem; padding: 10px">
+        <div class="btn-stylos-exit" style="font-size: 33px; padding: 10px">
           Terminar pedido
         </div>
       </div>
@@ -194,7 +194,7 @@ export default {
   border: 2px solid rgb(0, 0, 0);
   background-color: #fff;
   position: absolute;
-  padding: 0px 10px;
+  padding: 0px 10px 0px 10px;
   margin-right: 210px;
   /* margin-bottom: 0.4px; */
 }
@@ -220,8 +220,8 @@ export default {
 }
 
 .contenedor-imagen-selected {
-  width: 50%;
-  height: 100%;
+  width: 450px;
+  height: 450px;
   display: flex;
   margin: auto;
   background: rgb(255, 255, 255);
@@ -262,7 +262,7 @@ export default {
   border: 2px solid rgb(0, 0, 0);
   width: 100%;
   letter-spacing: 0px;
-  font-weight: 600;
+  font-family: 'SAMSUNGSHARPSANS-MEDIUM';
   margin: 0 10px;
 }
 .btn-stylos {
