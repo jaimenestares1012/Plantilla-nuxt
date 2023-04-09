@@ -28,7 +28,7 @@
       </div>
     </div>
     <div class="dafault-message" v-if="condicion == 0">
-      No cuenta con ningun producto seleccionado
+      No cuenta con ningún producto seleccionado
     </div>
     <div
       class="contenedor-productos"
