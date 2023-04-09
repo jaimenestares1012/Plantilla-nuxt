@@ -40,7 +40,7 @@ export default {
       console.log('Han pasado 5  segundos')
       this.$router.push('/')
       this.$store.commit('producto/SET_CLEAR')
-    }, 14000)
+    }, 5000)
   },
 }
 </script>
