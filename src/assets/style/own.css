@@ -4,15 +4,15 @@
 
 @font-face {
     font-family: "SAMSUNGSHARPSANS-REGULAR";
-    src: url("/fonts/SAMSUNGSHARPSANS-REGULAR.ttf") format("truetype");
+    src: url("../fonts/SAMSUNGSHARPSANS-REGULAR.ttf") format("truetype");
 }
 
 @font-face {
     font-family: "SAMSUNGSHARPSANS-MEDIUM";
-    src: url("/fonts/SAMSUNGSHARPSANS-MEDIUM.ttf") format("truetype");
+    src: url("../fonts/SAMSUNGSHARPSANS-MEDIUM.ttf") format("truetype");
 }
 
 @font-face {
     font-family: "SAMSUNGSHARPSANS-BOLD";
-    src: url("/fonts/SAMSUNGSHARPSANS-BOLD.ttf") format("truetype");
+    src: url("../fonts/SAMSUNGSHARPSANS-BOLD.ttf") format("truetype");
 }
