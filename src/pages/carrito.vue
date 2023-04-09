@@ -44,7 +44,7 @@
         class="boton-anadir"
         :loading="loading"
         style="
-          padding: 45px;
+          padding: 30px 26px;
           font-weight: 800;
           font-size: 2rem;
           background: #ffffff;
@@ -190,11 +190,11 @@ export default {
   font-size: 4rem;
 }
 .simbolo {
-  font-size: 2rem;
+  font-size: 2.7rem;
   border: 2px solid rgb(0, 0, 0);
   background-color: #fff;
   position: absolute;
-  padding: 23px 4px;
+  padding: 0px 10px;
   margin-right: 210px;
   /* margin-bottom: 0.4px; */
 }
@@ -297,7 +297,7 @@ export default {
 
 .boton-anadir {
   background-color: #ffffff;
-  padding: 0.4rem 2rem;
+  padding: 0.4rem 0;
   border: 2px solid rgb(0, 0, 0);
   border-radius: 0px;
   text-transform: capitalize;
