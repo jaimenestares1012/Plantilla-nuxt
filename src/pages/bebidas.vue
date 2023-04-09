@@ -222,14 +222,14 @@ export default {
   cursor: pointer;
   background: #ffffff;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
-  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.05);
   border-radius: 10px;
 }
 .contendor-image-text {
 }
 .image-container-bebidas:hover {
   transform: scale(1.1);
-  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .image-container-bebidas img {
