@@ -18,7 +18,6 @@
             background: #ffffff;
             border: none;
             box-shadow: none;
-            font-family: sans-serif;
             letter-spacing: 0px;
             text-transform: capitalize;
           "
@@ -189,7 +188,7 @@ export default {
       return this.carProducto.length
     },
     conteoCanasta() {
-      return this.carProducto.length
+      return this.carProducto.length == 0 ? '' : this.carProducto.length
     },
   },
   mounted() {},
@@ -207,7 +206,7 @@ export default {
 .contenedor-carrito-resumen-title {
   width: 100%;
   text-align: center;
-  font-weight: 750;
+  font-weight: 850;
   margin-bottom: 4rem;
   padding: 2rem 0;
   font-size: 4rem;

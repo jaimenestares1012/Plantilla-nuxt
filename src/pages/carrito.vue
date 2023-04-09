@@ -18,7 +18,6 @@
             border: none;
             box-shadow: none;
             background: #ffffff;
-            font-family: sans-serif;
             letter-spacing: 0px;
             text-transform: capitalize;
           "
@@ -130,7 +129,7 @@ export default {
       }
       this.$store.commit('producto/SET_ADD_PRODUCTO', producto)
     },
-    
+
     home() {
       this.$router.push('/eleccion')
     },
@@ -184,7 +183,7 @@ export default {
 .contenedor-producto-title {
   width: 100%;
   text-align: center;
-  font-weight: 750;
+  font-weight: 850;
   padding: 2rem 0;
   background: rgb(255, 255, 255);
   margin-bottom: 4rem;
@@ -196,7 +195,7 @@ export default {
   background-color: #fff;
   position: absolute;
   padding: 23px 4px;
-  margin-right: 200px;
+  margin-right: 210px;
   /* margin-bottom: 0.4px; */
 }
 .contenedor-buttons {

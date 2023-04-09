@@ -18,7 +18,6 @@
             background: #ffffff;
             border: none;
             box-shadow: none;
-            font-family: sans-serif;
             letter-spacing: 0px;
             text-transform: capitalize;
           "
@@ -175,7 +174,7 @@ export default {
   margin-bottom: 2rem;
   background: rgb(255, 255, 255);
   padding: 2rem 0;
-  font-weight: 750;
+  font-weight: 850;
   font-size: 4rem;
 }
 .contenedor-comidas {

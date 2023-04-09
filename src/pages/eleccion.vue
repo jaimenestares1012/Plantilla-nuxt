@@ -19,7 +19,6 @@
             background: #ffffff;
             border: none;
             box-shadow: none;
-            font-family: sans-serif;
             letter-spacing: 0px;
             text-transform: capitalize;
           "
@@ -154,7 +153,7 @@ export default {
 .contenedor-title {
   width: 95%;
   text-align: center;
-  font-weight: 750;
+  font-weight: 850;
   font-size: 4rem;
 }
 .contenedor-subtitle {

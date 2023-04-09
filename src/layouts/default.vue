@@ -57,7 +57,7 @@ export default {
   background: #f5f6f7;
 }
 
-.v-application {
-  font-family: 'Mulish', sans-serif;
-}
+/* .v-application {
+  font-family: 'SAMSUNGSHARPSANS-REGULAR';
+} */
 </style>

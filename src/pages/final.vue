@@ -66,7 +66,7 @@ export default {
 .contenedor-subgroup-final {
   width: 100%;
   text-align: center;
-  margin-top: 15rem;
+  margin-top: 12rem;
   margin-bottom: 2rem;
 }
 
@@ -79,7 +79,7 @@ export default {
   width: 60%;
   text-align: center;
   margin: auto;
-  font-weight: 750;
+  font-weight: 850;
   line-height: 1.4;
   padding: 30px 0;
   font-size: 4rem;

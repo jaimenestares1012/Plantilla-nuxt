@@ -18,7 +18,6 @@
             background: #ffffff;
             border: none;
             box-shadow: none;
-            font-family: sans-serif;
             letter-spacing: 0px;
             text-transform: capitalize;
           "
@@ -121,7 +120,7 @@ export default {
           url: '/samsung/refrescos.png',
         },
         {
-          name: 'Aguas',
+          name: 'Agua',
           description: 'Agua',
           id: 'b06',
           taman: '18',
@@ -166,7 +165,7 @@ export default {
 .contenedor-bebidas-title {
   width: 100%;
   text-align: center;
-  font-weight: 750;
+  font-weight: 850;
   background: rgb(255, 255, 255);
   padding: 2rem 0;
   margin-bottom: 2rem;

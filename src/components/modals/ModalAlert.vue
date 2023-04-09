@@ -1,7 +1,7 @@
 <template>
   <v-dialog
     v-model="dialogVisible"
-    max-width="500.8pt !important"
+    max-width="560.8pt !important"
     class="v-dialog"
   >
     <v-card>
@@ -103,7 +103,7 @@ export default {
   padding: 0px 50px 40px 30px;
 }
 .container-title {
-  margin: 30px 0px 50px 0px;
+  margin: 70px 0px 50px 0px;
 }
 .container-msg {
   margin: 0px 0px 50px 0px;

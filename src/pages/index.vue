@@ -2,9 +2,7 @@
   <div>
     <div class="contenedor">
       <v-card class="justify-center align-center" @click="redirect">
-        <div class="titulo" style="padding-top: 50px; font-weight: 600">
-          Bienvenido a nuestra
-        </div>
+        <div class="titulo" style="padding-top: 50px">Bienvenido a nuestra</div>
         <div
           class="titulo"
           style="font-size: 7rem; padding-top: 20px; font-weight: 800"

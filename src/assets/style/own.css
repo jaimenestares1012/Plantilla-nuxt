@@ -1,3 +1,22 @@
 .v-dialog {
     border-radius: 50px !important;
 }
+
+@font-face {
+    font-family: "SAMSUNGSHARPSANS-REGULAR";
+    src: local("SAMSUNGSHARPSANS-REGULAR"),
+        url(~assets/SAMSUNGSHARPSANS-REGULAR.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "SAMSUNGSHARPSANS-MEDIUM";
+    src: local("SAMSUNGSHARPSANS-MEDIUM"),
+        url(~assets/SAMSUNGSHARPSANS-MEDIUM.ttf) format("truetype");
+}
+
+
+@font-face {
+    font-family: "SAMSUNGSHARPSANS-BOLD";
+    src: local("SAMSUNGSHARPSANS-BOLD"),
+        url(~assets/SAMSUNGSHARPSANS-BOLD.ttf) format("truetype");
+}
