@@ -1,10 +1,12 @@
 
-import { apiIdLast, apiSendDataStore } from '@/api/serverles';
+import { apiIdLast, apiSendDataStore, apiGetDataStore } from '@/api/serverles';
 export const state = () => ({
   isLoading: false,
   productos: '',
   idLast: null ,
-  carProducto: [] 
+  carProducto: [],
+  dataDashboard : [],
+  dataTurno: []
 });
 
 export const mutations = {
@@ -53,6 +55,14 @@ export const mutations = {
   SET_DELETE_PRODUCTO(state, data){
     state.carProducto = state.carProducto.filter(p => p.id !== data.id);
   },
+  SET_DATA_TURNO(state, data){
+    state.dataTurno = data
+  },
+  SET_DATA_DASHBOARD(state, data){
+    state.dataDashboard = data
+    data.sort((a, b) => b.ID.localeCompare(a.ID));
+    console.log("responseapiGetDataStore", state.dataDashboard);
+  }
 };
 
 export const actions = {
@@ -75,8 +85,13 @@ export const actions = {
       }
       
       // commit('SET_ID', responseApiIdLast.data.ID);
-    }
-    
+    },
+    async getDataStore({ commit }) {
+      const responseapiGetDataStore = await apiGetDataStore();
+
+
+      commit('SET_DATA_DASHBOARD', responseapiGetDataStore.data);
+  },
     
 };
 
@@ -85,4 +100,6 @@ export const actions = {
 export const getters = {
     idLast: (state) => state.idLast,
     carProducto: (state) => state.carProducto,
+    dataDashboard: (state) =>state.dataDashboard,
+    dataTurno: (state) =>state.dataTurno,
 };
