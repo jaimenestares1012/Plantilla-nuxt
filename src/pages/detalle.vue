@@ -70,9 +70,6 @@ td {
 th {
   background-color: #f8e1e1;
 }
-.botn-ir {
-  color: red;
-}
 .refresh-btn {
   padding: 10px;
   width: 35%;
