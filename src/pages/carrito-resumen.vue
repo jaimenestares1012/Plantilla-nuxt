@@ -108,6 +108,7 @@
 
 <script>
 import { mapState } from 'vuex'
+import axios from 'axios'
 import ModalAlert from '@/components/modals/ModalAlert'
 export default {
   components: {
@@ -152,6 +153,85 @@ export default {
           data: productosFiltrados,
         }
         await this.$store.dispatch('producto/sendDataStore', paylodad)
+        try {
+          const requestURL = 'http://127.0.0.1:18080/WebPrintSDK/Printer1'
+          const strSubmit = {
+            id: 1,
+            functions: {
+              func0: { clearBuffer: [] },
+              func1: { setWidth: [380] },
+              func2: {
+                drawDeviceFont: ['holaMundo', 10, 15, '0', 2, 2, 0, 0, 0, 0],
+              },
+              func3: {
+                drawTrueTypeFont: [
+                  'Sample',
+                  10,
+                  40,
+                  'Arial',
+                  80,
+                  0,
+                  false,
+                  true,
+                  false,
+                  true,
+                ],
+              },
+              func4: {
+                draw1DBarcode: ['1234567890', 10, 180, 1, 3, 2, 96, 0, 3],
+              },
+              func5: { drawBlock: [10, 60, 350, 160, 'B', 5] },
+              func6: {
+                drawVectorFont: [
+                  'Vector Font',
+                  10,
+                  350,
+                  'U',
+                  40,
+                  40,
+                  0,
+                  0,
+                  1,
+                  0,
+                  0,
+                  0,
+                  false,
+                ],
+              },
+              func7: { printBuffer: [] },
+            },
+          }
+          axios
+            .post(requestURL, strSubmit, {
+              headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            })
+            .then((response) => {
+              const res = response.data
+              const ret = res.Result
+              if (ret.search('ready') >= 0 || ret.search('progress') >= 0) {
+                checkResult(
+                  'POST',
+                  strPrinterName,
+                  res.RequestID,
+                  res.ResponseID,
+                  _callback
+                )
+              } else if (ret.search('duplicated') >= 0) {
+                _callback(res.Result)
+              }
+            })
+            .catch((error) => {
+              if (error.response && error.response.status === 404) {
+                console.log('xmlHttpReq 404', error.response)
+                _callback('No printers')
+              } else {
+                console.log('xmlHttpReq error', error)
+                _callback('Cannot connect to server')
+              }
+            })
+        } catch (error) {
+          console.log('error', error)
+        }
         this.$showSpinner(false)
         this.$router.push('/final')
       }
