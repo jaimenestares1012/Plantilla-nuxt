@@ -161,7 +161,7 @@ export default {
               func0: { clearBuffer: [] },
               func1: { setWidth: [380] },
               func2: {
-                drawDeviceFont: ['holaMundo', 10, 15, '0', 2, 2, 0, 0, 0, 0],
+                drawDeviceFont: [this.idLast, 10, 15, '0', 2, 2, 0, 0, 0, 0],
               },
               func3: {
                 drawTrueTypeFont: [
@@ -201,36 +201,27 @@ export default {
               func7: { printBuffer: [] },
             },
           }
-          axios
-            .post(requestURL, strSubmit, {
-              headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-            })
-            .then((response) => {
-              const res = response.data
-              const ret = res.Result
-              if (ret.search('ready') >= 0 || ret.search('progress') >= 0) {
-                checkResult(
-                  'POST',
-                  strPrinterName,
-                  res.RequestID,
-                  res.ResponseID,
-                  _callback
-                )
-              } else if (ret.search('duplicated') >= 0) {
-                _callback(res.Result)
-              }
-            })
-            .catch((error) => {
-              if (error.response && error.response.status === 404) {
-                console.log('xmlHttpReq 404', error.response)
-                _callback('No printers')
-              } else {
-                console.log('xmlHttpReq error', error)
-                _callback('Cannot connect to server')
-              }
-            })
+          const response = await axios.post(requestURL, strSubmit, {
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          })
+          const res = response.data
+          const ret = res.Result
+          if (ret.search('ready') >= 0 || ret.search('progress') >= 0) {
+            await checkResult(
+              'POST',
+              strPrinterName,
+              res.RequestID,
+              res.ResponseID
+            )
+          } else if (ret.search('duplicated') >= 0) {
+            console.log(res.Result)
+          }
         } catch (error) {
-          console.log('error', error)
+          if (error.response && error.response.status === 404) {
+            console.log('xmlHttpReq 404', error.response)
+          } else {
+            console.log('xmlHttpReq error', error)
+          }
         }
         this.$showSpinner(false)
         this.$router.push('/final')
@@ -264,7 +255,7 @@ export default {
     // },
   },
   computed: {
-    ...mapState('producto', ['carProducto']),
+    ...mapState('producto', ['carProducto', 'idLast']),
     condicion() {
       return this.carProducto.length
     },
