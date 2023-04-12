@@ -6,7 +6,8 @@ export const state = () => ({
   idLast: null ,
   carProducto: [],
   dataDashboard : [],
-  dataTurno: []
+  dataTurno: [],
+  limpio: []
 });
 
 export const mutations = {
@@ -62,6 +63,9 @@ export const mutations = {
     state.dataDashboard = data
     data.sort((a, b) => b.ID.localeCompare(a.ID));
     console.log("responseapiGetDataStore", state.dataDashboard);
+  },
+  SET_DATA_LIMPIA(state, data){
+    state.limpio = data
   }
 };
 
@@ -74,6 +78,11 @@ export const actions = {
     async sendDataStore({ commit }, payload){
       console.log("payload", payload);
       try {
+        const limpio = payload.data.map(objeto => {
+          const { description, url, id, taman, ...rest } = objeto;
+          return rest;
+        });
+        commit('SET_DATA_LIMPIA', limpio);
         const responseSendDataStore = await apiSendDataStore(payload);
         console.log("responseSendDataStore", responseSendDataStore.codRes);
         if (responseSendDataStore.codRes == "00") {
@@ -102,4 +111,5 @@ export const getters = {
     carProducto: (state) => state.carProducto,
     dataDashboard: (state) =>state.dataDashboard,
     dataTurno: (state) =>state.dataTurno,
+    limpio: (state) =>state.limpio,
 };

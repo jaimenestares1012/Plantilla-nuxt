@@ -155,6 +155,7 @@ export default {
         await this.$store.dispatch('producto/sendDataStore', paylodad)
         try {
           const requestURL = 'http://127.0.0.1:18080/WebPrintSDK/Printer1'
+          console.log('DATA-------------LIMPIA', this.limpio)
           const strSubmit = {
             id: 1,
             functions: {
@@ -170,14 +171,37 @@ export default {
                 drawDeviceFont: ['Cantidad', 250, 70, '0', 2, 2, 0, 0, 0, 0],
               },
               func5: {
-                drawDeviceFont: ['Infusiones', 60, 90, '0', 2, 2, 0, 0, 0, 0],
+                drawDeviceFont: [
+                  this.limpio[0].name,
+                  60,
+                  90,
+                  '0',
+                  2,
+                  2,
+                  0,
+                  0,
+                  0,
+                  0,
+                ],
               },
               func6: {
-                drawDeviceFont: ['1', 250, 90, '0', 2, 2, 0, 0, 0, 0],
+                drawDeviceFont: [
+                  this.limpio[0].cantidad,
+                  ,
+                  250,
+                  90,
+                  '0',
+                  2,
+                  2,
+                  0,
+                  0,
+                  0,
+                  0,
+                ],
               },
               func7: {
                 drawDeviceFont: [
-                  'Mini muffins',
+                  this.limpio[1].name,
                   60,
                   110,
                   '0',
@@ -190,9 +214,49 @@ export default {
                 ],
               },
               func8: {
-                drawDeviceFont: ['1', 250, 110, '0', 2, 2, 0, 0, 0, 0],
+                drawDeviceFont: [
+                  this.limpio[1].cantidad,
+                  250,
+                  110,
+                  '0',
+                  2,
+                  2,
+                  0,
+                  0,
+                  0,
+                  0,
+                ],
               },
-              func9: { printBuffer: [] },
+              func9: {
+                drawDeviceFont: [
+                  this.limpio[2].name,
+                  60,
+                  130,
+                  '0',
+                  2,
+                  2,
+                  0,
+                  0,
+                  0,
+                  0,
+                ],
+              },
+              func10: {
+                drawDeviceFont: [
+                  this.limpio[2].cantidad,
+                  250,
+                  130,
+                  '0',
+                  2,
+                  2,
+                  0,
+                  0,
+                  0,
+                  0,
+                ],
+              },
+
+              func11: { printBuffer: [] },
             },
           }
           const response = await axios.post(requestURL, strSubmit, {
@@ -249,13 +313,14 @@ export default {
     // },
   },
   computed: {
-    ...mapState('producto', ['carProducto', 'idLast']),
+    ...mapState('producto', ['carProducto', 'idLast', 'limpio']),
     condicion() {
       return this.carProducto.length
     },
     conteoCanasta() {
       return this.carProducto.length == 0 ? '' : this.carProducto.length
     },
+    creatorFunction() {},
   },
   mounted() {},
 }
