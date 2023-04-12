@@ -163,8 +163,8 @@ export default {
               func2: {
                 drawDeviceFont: [this.idLast, 10, 40, '0', 2, 2, 190, 0, 0, 0],
               },
+              func7: { printBuffer: [] },
             },
-            func7: { printBuffer: [] },
           }
           const response = await axios.post(requestURL, strSubmit, {
             headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
