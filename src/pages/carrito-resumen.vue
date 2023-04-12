@@ -29,7 +29,7 @@
       </div>
     </div>
     <div class="dafault-message" v-if="condicion == 0">
-      No cuenta con ningún producto seleccionado
+      Ningún producto seleccionado
     </div>
     <div
       class="contenedor-productos"
@@ -156,6 +156,13 @@ export default {
         try {
           const requestURL = 'http://127.0.0.1:18080/WebPrintSDK/Printer1'
           console.log('DATA-------------LIMPIA', this.limpio)
+
+          const nombre0 = this.limpio[0] ? this.limpio[0].name : ''
+          const cantidad0 = this.limpio[0] ? this.limpio[0].cantidad : ''
+          const nombre1 = this.limpio[1] ? this.limpio[1].name : ''
+          const cantidad1 = this.limpio[1] ? this.limpio[1].cantidad : ''
+          const nombre2 = this.limpio[2] ? this.limpio[2].name : ''
+          const cantidad2 = this.limpio[2] ? this.limpio[2].cantidad : ''
           const strSubmit = {
             id: 1,
             functions: {
@@ -171,89 +178,22 @@ export default {
                 drawDeviceFont: ['Cantidad', 250, 70, '0', 2, 2, 0, 0, 0, 0],
               },
               func5: {
-                drawDeviceFont: [
-                  this.limpio[0].name,
-                  60,
-                  90,
-                  '0',
-                  2,
-                  2,
-                  0,
-                  0,
-                  0,
-                  0,
-                ],
+                drawDeviceFont: [nombre0, 60, 90, '0', 2, 2, 0, 0, 0, 0],
               },
               func6: {
-                drawDeviceFont: [
-                  this.limpio[0].cantidad,
-                  ,
-                  250,
-                  90,
-                  '0',
-                  2,
-                  2,
-                  0,
-                  0,
-                  0,
-                  0,
-                ],
+                drawDeviceFont: [cantidad0, , 250, 90, '0', 2, 2, 0, 0, 0, 0],
               },
               func7: {
-                drawDeviceFont: [
-                  this.limpio[1].name,
-                  60,
-                  110,
-                  '0',
-                  2,
-                  2,
-                  0,
-                  0,
-                  0,
-                  0,
-                ],
+                drawDeviceFont: [nombre1, 60, 110, '0', 2, 2, 0, 0, 0, 0],
               },
               func8: {
-                drawDeviceFont: [
-                  this.limpio[1].cantidad,
-                  250,
-                  110,
-                  '0',
-                  2,
-                  2,
-                  0,
-                  0,
-                  0,
-                  0,
-                ],
+                drawDeviceFont: [cantidad1, 250, 110, '0', 2, 2, 0, 0, 0, 0],
               },
               func9: {
-                drawDeviceFont: [
-                  this.limpio[2].name,
-                  60,
-                  130,
-                  '0',
-                  2,
-                  2,
-                  0,
-                  0,
-                  0,
-                  0,
-                ],
+                drawDeviceFont: [nombre2, 60, 130, '0', 2, 2, 0, 0, 0, 0],
               },
               func10: {
-                drawDeviceFont: [
-                  this.limpio[2].cantidad,
-                  250,
-                  130,
-                  '0',
-                  2,
-                  2,
-                  0,
-                  0,
-                  0,
-                  0,
-                ],
+                drawDeviceFont: [cantidad2, 250, 130, '0', 2, 2, 0, 0, 0, 0],
               },
 
               func11: { printBuffer: [] },
@@ -351,7 +291,7 @@ export default {
   background: rgb(255, 255, 255);
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
   text-align: center;
-  font-size: 4rem;
+  font-size: 3.2rem;
   border-radius: 40px;
   font-weight: 600;
   line-height: 1.2;

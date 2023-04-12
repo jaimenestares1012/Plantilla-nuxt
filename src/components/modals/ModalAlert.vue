@@ -73,15 +73,15 @@ export default {
 <style>
 .message-title {
   color: #005092;
-  font-size: 60px;
+  font-size: 55px;
   line-height: 28px;
   font-weight: 700;
 }
 .message-modal {
   font-style: normal;
   font-weight: 600;
-  font-size: 50px;
-  line-height: 60px;
+  font-size: 45px;
+  line-height: 50px;
   text-align: center;
   color: #000000;
 }

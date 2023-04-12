@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="contenedor">
-      <v-card class="justify-center align-center" @click="redirect">
+      <!-- <v-card class="justify-center align-center" @click="redirect">
         <div
           class="titulo"
           style="padding-top: 50px; font-family: 'SAMSUNGSHARPSANS-MEDIUM'"
@@ -47,9 +47,17 @@
               alt=""
               style="width: 30vw; height: 7vw"
             />
+            <img :src="require('../assets/img/comidas.png')" alt="" />
           </div>
         </div>
-      </v-card>
+      </v-card> -->
+      <div @click="redirect">
+        <img
+          src="https://ja-my-serverless-react-app-20-03-2023.s3.amazonaws.com/samsung/5-Kiosk+Coffee+Area-1080x1920px-v3_Mesa+de+trabajo+1+copia.jpg"
+          alt=""
+          style="width: 100%; height: 100%"
+        />
+      </div>
     </div>
   </div>
 </template>
@@ -81,9 +89,6 @@ export default {
 
 <style>
 .contenedor {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
 
 .titulo {
