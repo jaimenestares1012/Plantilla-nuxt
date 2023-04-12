@@ -161,9 +161,38 @@ export default {
               func0: { clearBuffer: [] },
               func1: { setWidth: [380] },
               func2: {
-                drawDeviceFont: [this.idLast, 10, 40, '0', 2, 2, 190, 0, 0, 0],
+                drawDeviceFont: [this.idLast, 10, 40, '0', 2, 2, 0, 0, 0, 0],
               },
-              func7: { printBuffer: [] },
+              func3: {
+                drawDeviceFont: ['Producto', 60, 70, '0', 2, 2, 0, 0, 0, 0],
+              },
+              func4: {
+                drawDeviceFont: ['Cantidad', 250, 70, '0', 2, 2, 0, 0, 0, 0],
+              },
+              func5: {
+                drawDeviceFont: ['Infusiones', 60, 90, '0', 2, 2, 0, 0, 0, 0],
+              },
+              func6: {
+                drawDeviceFont: ['1', 250, 90, '0', 2, 2, 0, 0, 0, 0],
+              },
+              func7: {
+                drawDeviceFont: [
+                  'Mini muffins',
+                  60,
+                  110,
+                  '0',
+                  2,
+                  2,
+                  0,
+                  0,
+                  0,
+                  0,
+                ],
+              },
+              func8: {
+                drawDeviceFont: ['1', 250, 110, '0', 2, 2, 0, 0, 0, 0],
+              },
+              func9: { printBuffer: [] },
             },
           }
           const response = await axios.post(requestURL, strSubmit, {
