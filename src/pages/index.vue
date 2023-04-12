@@ -1,56 +1,6 @@
 <template>
   <div>
     <div class="contenedor">
-      <!-- <v-card class="justify-center align-center" @click="redirect">
-        <div
-          class="titulo"
-          style="padding-top: 50px; font-family: 'SAMSUNGSHARPSANS-MEDIUM'"
-        >
-          Bienvenido a nuestra
-        </div>
-        <div
-          class="titulo"
-          style="
-            font-size: 7rem;
-            padding-top: 20px;
-            font-family: 'SAMSUNGSHARPSANS-BOLD';
-          "
-        >
-          Cafetería
-        </div>
-        <div class="samsung-experience" @click="redirect">
-          <div class="image-container">
-            <img
-              src="https://ja-my-serverless-react-app-20-03-2023.s3.amazonaws.com/samsung/LogoSamsungDigitalExperience.png"
-              alt=""
-              style="width: 100vw; height: 60vw"
-            />
-          </div>
-          <div
-            class="image-container"
-            style="margin-top: 4rem"
-            @click="redirect"
-          >
-            <img
-              src="https://ja-my-serverless-react-app-20-03-2023.s3.amazonaws.com/here.png"
-              alt=""
-              style="width: 25vw; height: 44vw"
-            />
-          </div>
-          <div
-            class="image-container"
-            style="margin-top: -4rem"
-            @click="redirect"
-          >
-            <img
-              src="https://ja-my-serverless-react-app-20-03-2023.s3.amazonaws.com/samsung/Pulsa.png"
-              alt=""
-              style="width: 30vw; height: 7vw"
-            />
-            <img :src="require('../assets/img/comidas.png')" alt="" />
-          </div>
-        </div>
-      </v-card> -->
       <div @click="redirect">
         <img
           :src="require('../assets/img/fondo.jpg')"
