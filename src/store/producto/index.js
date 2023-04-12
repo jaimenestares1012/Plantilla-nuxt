@@ -77,6 +77,17 @@ export const actions = {
     },
     async sendDataStore({ commit }, payload){
       console.log("payload", payload);
+      const validator = localStorage.getItem('idvalidator')
+      let codigo = 0
+      console.log("validator", validator);
+      if (!validator) {
+        localStorage.setItem('idvalidator', 1001);
+      }else{
+        console.log(" SE ACTUALIZA EL VALIDARTOR");
+        codigo = parseInt(validator) + 1
+        localStorage.setItem('idvalidator', codigo);
+      }
+      
       try {
         const limpio = payload.data.map(objeto => {
           const { description, url, id, taman, ...rest } = objeto;
