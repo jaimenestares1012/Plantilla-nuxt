@@ -99,9 +99,13 @@ export const actions = {
         if (responseSendDataStore.codRes == "00") {
           console.log("00");
           commit('SET_ID', responseSendDataStore.data.ID);
+        }else{
+          commit('SET_ID', codigo.toString());
         }
       } catch (error) {
-        commit('SET_ERROR', error);
+        console.log("<----------------CODIGO---------------------> ", codigo);
+        commit('SET_ID', codigo.toString());
+        // commit('SET_ERROR', error);
       }
       
       // commit('SET_ID', responseApiIdLast.data.ID);
