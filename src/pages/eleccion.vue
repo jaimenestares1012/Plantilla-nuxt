@@ -31,17 +31,11 @@
     </div>
     <div class="contenedor-eleccion">
       <div class="image-container-eleccion" @click="redirect('/bebidas')">
-        <img
-          src="https://ja-my-serverless-react-app-20-03-2023.s3.amazonaws.com/samsung/bebida.png"
-          alt=""
-        />
+        <img :src="require('../assets/img/bebida.png')" alt="" />
         <div class="text-container" style="margin-top: 5.3rem">Bebida</div>
       </div>
       <div class="image-container-eleccion" @click="redirect('/comidas')">
-        <img
-          src="https://ja-my-serverless-react-app-20-03-2023.s3.amazonaws.com/samsung/comida.png"
-          alt=""
-        />
+        <img :src="require('../assets/img/comida.png')" alt="" />
         <div class="text-container">Comida</div>
       </div>
     </div>
@@ -62,10 +56,7 @@
           "
         >
           <!-- <i class="fas fa-shopping-cart" style="font-size: 4rem"></i> -->
-          <img
-            src="https://ja-my-serverless-react-app-20-03-2023.s3.amazonaws.com/samsung/Carrito.png"
-            alt=""
-          />
+          <img :src="require('../assets/img/Carrito.png')" alt="" />
           {{ conteoCanasta }}
         </v-btn>
       </div>
