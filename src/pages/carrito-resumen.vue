@@ -161,45 +161,10 @@ export default {
               func0: { clearBuffer: [] },
               func1: { setWidth: [380] },
               func2: {
-                drawDeviceFont: [this.idLast, 10, 15, '0', 2, 2, 0, 0, 0, 0],
+                drawDeviceFont: [this.idLast, 10, 40, '0', 2, 2, 190, 0, 0, 0],
               },
-              func3: {
-                drawTrueTypeFont: [
-                  'Sample',
-                  10,
-                  40,
-                  'Arial',
-                  80,
-                  0,
-                  false,
-                  true,
-                  false,
-                  true,
-                ],
-              },
-              func4: {
-                draw1DBarcode: ['1234567890', 10, 180, 1, 3, 2, 96, 0, 3],
-              },
-              func5: { drawBlock: [10, 60, 350, 160, 'B', 5] },
-              func6: {
-                drawVectorFont: [
-                  'Vector Font',
-                  10,
-                  350,
-                  'U',
-                  40,
-                  40,
-                  0,
-                  0,
-                  1,
-                  0,
-                  0,
-                  0,
-                  false,
-                ],
-              },
-              func7: { printBuffer: [] },
             },
+            func7: { printBuffer: [] },
           }
           const response = await axios.post(requestURL, strSubmit, {
             headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
