@@ -151,7 +151,7 @@ export default {
         }
         await this.$store.dispatch('producto/sendDataStore', paylodad)
         try {
-          const requestURL = 'http://127.0.0.1:18080/WebPrintSDK/BIXOLONBK3-3'
+          const requestURL = 'http://127.0.0.1:18080/WebPrintSDK/BK3-31'
           console.log('DATA-------------LIMPIA', this.limpio)
 
           const nombre0 = this.limpio[0] ? this.limpio[0].name : ''
