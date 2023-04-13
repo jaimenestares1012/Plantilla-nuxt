@@ -3,7 +3,7 @@
     <div class="contenedor">
       <div @click="redirect">
         <img
-          :src="require('../assets/img/fondo.jpg')"
+          src="https://ja-my-serverless-react-app-20-03-2023.s3.amazonaws.com/samsung/5-Kiosk+Coffee+Area-1080x1920px-v3_Mesa+de+trabajo+1+copia.jpg"
           alt=""
           style="width: 100%; height: 100%"
         />

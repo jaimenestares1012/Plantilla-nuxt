@@ -60,7 +60,10 @@
           "
         >
           <!-- <i class="fas fa-shopping-cart" style="font-size: 4rem"></i> -->
-          <img :src="require('../assets/img/Carrito.png')" alt="" />
+          <img
+            src="https://ja-my-serverless-react-app-20-03-2023.s3.amazonaws.com/samsung/Carrito.png"
+            alt=""
+          />
           {{ conteoCanasta }}</v-btn
         >
       </div>
