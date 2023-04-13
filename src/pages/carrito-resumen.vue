@@ -181,7 +181,7 @@ export default {
                 drawDeviceFont: [nombre0, 60, 90, '0', 2, 2, 0, 0, 0, 0],
               },
               func6: {
-                drawDeviceFont: [cantidad0, , 250, 90, '0', 2, 2, 0, 0, 0, 0],
+                drawDeviceFont: [cantidad0, 250, 90, '0', 2, 2, 0, 0, 0, 0],
               },
               func7: {
                 drawDeviceFont: [nombre1, 60, 110, '0', 2, 2, 0, 0, 0, 0],
