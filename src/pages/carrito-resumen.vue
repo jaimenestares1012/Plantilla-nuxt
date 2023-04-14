@@ -254,10 +254,18 @@ export default {
             id: 1,
             functions: {
               func0: { clearBuffer: [] },
-              func2: { printBuffer: [] },
-              func3: {
-                setAutoCutter: [1, 3],
+              func1: {
+                cutPaper: [1],
               },
+              func2: {
+                printBuffer: [],
+              },
+              func3: {
+                cutPaper: [1],
+              },
+              // func13: {
+              //   setAutoCutter: (1, 3),
+              // },
             },
           }
           const response = await axios.post(requestURL, strSubmit, {
