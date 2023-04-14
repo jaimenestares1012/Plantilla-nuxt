@@ -57,8 +57,8 @@ export default {
     ...mapState('producto', ['limpio', 'idLast']),
   },
   mounted() {
-    window.print() // Envia la tarea de impresion a la cola de impresion
-    window.close() // Cierra la ventana actual sin mostrar el cuadro de dialogo de impresion al usuario
+    // window.print()
+    // window.close()
     let detalle = ''
     let total = 0
     this.datos.forEach(function (d) {
