@@ -236,7 +236,7 @@ export default {
                     ` \n`,
                     ` \n`,
                     ` \n`,
-                    `\x1D\x56\x41\x10 \n`,
+                    `\x1D\x56\x41\x10`,
                   ]
                 }
                 if (nombre2) {
@@ -271,7 +271,7 @@ export default {
                     ` \n`,
                     ` \n`,
                     ` \n`,
-                    `\x1B\x69 \n`,
+                    `\x1D\x56\x41\x10`,
                   ]
                 }
 
