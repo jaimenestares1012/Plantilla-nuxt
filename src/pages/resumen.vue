@@ -42,7 +42,28 @@ export default {
   mounted() {
     window.print() // Envia la tarea de impresion a la cola de impresion
     window.close() // Cierra la ventana actual sin mostrar el cuadro de dialogo de impresion al usuario
+    try {
+      // Crea un objeto XMLHttpRequest
+      var xhr = new XMLHttpRequest()
 
+      // Configura la solicitud para que sea sincrónica y para que envíe los datos en crudo
+      xhr.open('POST', 'http://BIXO-3333.local')
+      xhr.setRequestHeader('Content-Type', 'application/octet-stream')
+      xhr.setRequestHeader(
+        'Content-Disposition',
+        'attachment;filename="archivo.pdf"'
+      )
+      xhr.setRequestHeader('Pragma', 'no-cache')
+      xhr.setRequestHeader('Cache-Control', 'no-cache')
+
+      // Envía el archivo PDF a la impresora
+      xhr.send(
+        new Blob(['\x1b\x40', 'contenido del archivo PDF', '\x1d\x56\x41\x00'])
+      )
+
+      // Cierra la conexión con la impresora
+      xhr.abort()
+    } catch (error) {}
     // redirigir al usuario a otra página después de 5 segundos
     setTimeout(() => {
       console.log('Han pasado 5 segundos')
