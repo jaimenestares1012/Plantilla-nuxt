@@ -204,7 +204,6 @@ export default {
                   ` \n`,
                   ` \n`,
                   ` \n`,
-                  bytes,
                 ]
                 if (nombre1) {
                   data = [
@@ -237,7 +236,7 @@ export default {
                     ` \n`,
                     ` \n`,
                     ` \n`,
-                    bytes,
+                    ` ${bytes}\n`,
                   ]
                 }
                 if (nombre2) {
