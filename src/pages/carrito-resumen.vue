@@ -273,28 +273,23 @@ export default {
                 return qz.print(config, data)
               })
               .then(() => {
-                cutPaper(1)
-                return qz.websocket.disconnect()
+                function cutPaper() {
+                  const bytes = new Uint8Array([0x1d, 0x56, 0x41, 0x10])
+                  return qz.printRaw(bytes)
+                }
+                return cutPaper()
               })
               .then(() => {
-                // process.exit(0);
+                return qz.websocket.disconnect()
               })
               .catch((err) => {
                 console.error(err)
-                // process.exit(1);
               })
           } catch (error) {
             console.log('error IMPRESORA', error)
           }
           const requestURL = 'http://127.0.0.1:18080/WebPrintSDK/BK3-31'
           console.log('DATA-------------LIMPIA', this.limpio)
-
-          const nombre0 = this.limpio[0] ? this.limpio[0].name : ''
-          const cantidad0 = this.limpio[0] ? this.limpio[0].cantidad : ''
-          const nombre1 = this.limpio[1] ? this.limpio[1].name : ''
-          const cantidad1 = this.limpio[1] ? this.limpio[1].cantidad : ''
-          const nombre2 = this.limpio[2] ? this.limpio[2].name : ''
-          const cantidad2 = this.limpio[2] ? this.limpio[2].cantidad : ''
           const strSubmit = {
             id: 1,
             functions: {
