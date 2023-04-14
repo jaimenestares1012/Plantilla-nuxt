@@ -39,7 +39,7 @@ export default {
     setTimeout(() => {
       console.log('Han pasado 5 segundos')
       this.$router.push('/final')
-    }, 57000)
+    }, 5000)
   },
 }
 </script>
