@@ -57,23 +57,17 @@ export default {
     ...mapState('producto', ['limpio', 'idLast']),
   },
   mounted() {
-    // window.print()
-    // window.close()
-    setTimeout(function () {
-      newWin.close()
+    window.print()
+    setTimeout(() => {
+      console.log('Han pasado 5 segundos')
+      this.$router.push('/final')
     }, 10)
   },
-
-  // redirigir al usuario a otra página después de 5 segundos
-  // setTimeout(() => {
-  //   console.log('Han pasado 5 segundos')
-  //   this.$router.push('/final')
-  // }, 5000)
 }
 </script>
 
 <style>
-/* .container {
+.container {
   max-width: none !important;
   height: 200px;
   padding: 0px;
@@ -87,5 +81,5 @@ td {
   padding: 8px;
   text-align: left;
   border-bottom: 1px solid #000000;
-} */
+}
 </style>

@@ -154,187 +154,187 @@ export default {
           data: productosFiltrados,
         }
         await this.$store.dispatch('producto/sendDataStore', paylodad)
-        try {
-          try {
-            qz.websocket
-              .connect()
-              .then(() => {
-                return qz.printers.find()
-              })
-              .then((printers) => {
-                console.log(printers)
-                const nombre0 = this.limpio[0] ? this.limpio[0].name : ''
-                const cantidad0 = this.limpio[0] ? this.limpio[0].cantidad : ''
-                const nombre1 = this.limpio[1] ? this.limpio[1].name : null
-                const cantidad1 = this.limpio[1]
-                  ? this.limpio[1].cantidad
-                  : null
-                const nombre2 = this.limpio[2] ? this.limpio[2].name : null
-                const cantidad2 = this.limpio[2]
-                  ? this.limpio[2].cantidad
-                  : null
-                let config = qz.configs.create('BIXOLON BK3-3')
-                let data = []
-                const bytes = new Uint8Array([0x1d, 0x56, 0x41, 0x10])
-                data = [
-                  ` \n`,
-                  ` \n`,
-                  `                  Samsung            \n`,
-                  `                 experience           \n `,
-                  ` \n`,
-                  `          TICKET: ${this.idLast} \n`,
-                  `-------------------------------------- \n`,
-                  `                      \n`,
-                  `       PRODUCTO     :       CANTIDAD    \n`,
-                  `-------------------------------------- \n`,
-                  `       ${nombre0}     :   ${cantidad0}  \n`,
-                  `-------------------------------------- \n`,
-                  ` \n`,
-                  ` \n`,
-                  ` \n`,
-                  ` \n`,
-                  ` \n`,
-                  ` \n`,
-                  ` \n`,
-                  ` \n`,
-                  ` \n`,
-                  ` \n`,
-                  ` \n`,
-                  ` \n`,
-                  ` \n`,
-                  ` \n`,
-                  ` \n`,
-                ]
-                if (nombre1) {
-                  data = [
-                    ` \n`,
-                    ` \n`,
-                    `                  Samsung            \n`,
-                    `                 experience           \n `,
-                    ` \n`,
-                    `          TICKET: ${this.idLast} \n`,
-                    `-------------------------------------- \n`,
-                    `                      \n`,
-                    `       PRODUCTO     :       CANTIDAD    \n`,
-                    `-------------------------------------- \n`,
-                    `       ${nombre0}     :   ${cantidad0}  \n`,
-                    `-------------------------------------- \n`,
-                    `       ${nombre1}     :   ${cantidad1}  \n`,
-                    `-------------------------------------- \n`,
-                    ` \n`,
-                    ` \n`,
-                    ` \n`,
-                    ` \n`,
-                    ` \n`,
-                    ` \n`,
-                    ` \n`,
-                    ` \n`,
-                    ` \n`,
-                    ` \n`,
-                    ` \n`,
-                    ` \n`,
-                    ` \n`,
-                    ` \n`,
-                    ` \n`,
-                  ]
-                }
-                if (nombre2) {
-                  data = [
-                    ` \n`,
-                    ` \n`,
-                    `                  Samsung            \n`,
-                    `                 experience           \n `,
-                    ` \n`,
-                    `          TICKET: ${this.idLast} \n`,
-                    `-------------------------------------- \n`,
-                    `                      \n`,
-                    `       PRODUCTO     :       CANTIDAD    \n`,
-                    `-------------------------------------- \n`,
-                    `       ${nombre0}     :   ${cantidad0}  \n`,
-                    `-------------------------------------- \n`,
-                    `       ${nombre1}     :   ${cantidad1}  \n`,
-                    `-------------------------------------- \n`,
-                    `       ${nombre2}     :   ${cantidad2}  \n`,
-                    `-------------------------------------- \n`,
-                    ` \n`,
-                    ` \n`,
-                    ` \n`,
-                    ` \n`,
-                    ` \n`,
-                    ` \n`,
-                    ` \n`,
-                    ` \n`,
-                    ` \n`,
-                    ` \n`,
-                    ` \n`,
-                    ` \n`,
-                    ` \n`,
-                    ` \n`,
-                    ` \n`,
-                  ]
-                }
+        // try {
+        //   try {
+        //     qz.websocket
+        //       .connect()
+        //       .then(() => {
+        //         return qz.printers.find()
+        //       })
+        //       .then((printers) => {
+        //         console.log(printers)
+        //         const nombre0 = this.limpio[0] ? this.limpio[0].name : ''
+        //         const cantidad0 = this.limpio[0] ? this.limpio[0].cantidad : ''
+        //         const nombre1 = this.limpio[1] ? this.limpio[1].name : null
+        //         const cantidad1 = this.limpio[1]
+        //           ? this.limpio[1].cantidad
+        //           : null
+        //         const nombre2 = this.limpio[2] ? this.limpio[2].name : null
+        //         const cantidad2 = this.limpio[2]
+        //           ? this.limpio[2].cantidad
+        //           : null
+        //         let config = qz.configs.create('BIXOLON BK3-3')
+        //         let data = []
+        //         const bytes = new Uint8Array([0x1d, 0x56, 0x41, 0x10])
+        //         data = [
+        //           ` \n`,
+        //           ` \n`,
+        //           `                  Samsung            \n`,
+        //           `                 experience           \n `,
+        //           ` \n`,
+        //           `          TICKET: ${this.idLast} \n`,
+        //           `-------------------------------------- \n`,
+        //           `                      \n`,
+        //           `       PRODUCTO     :       CANTIDAD    \n`,
+        //           `-------------------------------------- \n`,
+        //           `       ${nombre0}     :   ${cantidad0}  \n`,
+        //           `-------------------------------------- \n`,
+        //           ` \n`,
+        //           ` \n`,
+        //           ` \n`,
+        //           ` \n`,
+        //           ` \n`,
+        //           ` \n`,
+        //           ` \n`,
+        //           ` \n`,
+        //           ` \n`,
+        //           ` \n`,
+        //           ` \n`,
+        //           ` \n`,
+        //           ` \n`,
+        //           ` \n`,
+        //           ` \n`,
+        //         ]
+        //         if (nombre1) {
+        //           data = [
+        //             ` \n`,
+        //             ` \n`,
+        //             `                  Samsung            \n`,
+        //             `                 experience           \n `,
+        //             ` \n`,
+        //             `          TICKET: ${this.idLast} \n`,
+        //             `-------------------------------------- \n`,
+        //             `                      \n`,
+        //             `       PRODUCTO     :       CANTIDAD    \n`,
+        //             `-------------------------------------- \n`,
+        //             `       ${nombre0}     :   ${cantidad0}  \n`,
+        //             `-------------------------------------- \n`,
+        //             `       ${nombre1}     :   ${cantidad1}  \n`,
+        //             `-------------------------------------- \n`,
+        //             ` \n`,
+        //             ` \n`,
+        //             ` \n`,
+        //             ` \n`,
+        //             ` \n`,
+        //             ` \n`,
+        //             ` \n`,
+        //             ` \n`,
+        //             ` \n`,
+        //             ` \n`,
+        //             ` \n`,
+        //             ` \n`,
+        //             ` \n`,
+        //             ` \n`,
+        //             ` \n`,
+        //           ]
+        //         }
+        //         if (nombre2) {
+        //           data = [
+        //             ` \n`,
+        //             ` \n`,
+        //             `                  Samsung            \n`,
+        //             `                 experience           \n `,
+        //             ` \n`,
+        //             `          TICKET: ${this.idLast} \n`,
+        //             `-------------------------------------- \n`,
+        //             `                      \n`,
+        //             `       PRODUCTO     :       CANTIDAD    \n`,
+        //             `-------------------------------------- \n`,
+        //             `       ${nombre0}     :   ${cantidad0}  \n`,
+        //             `-------------------------------------- \n`,
+        //             `       ${nombre1}     :   ${cantidad1}  \n`,
+        //             `-------------------------------------- \n`,
+        //             `       ${nombre2}     :   ${cantidad2}  \n`,
+        //             `-------------------------------------- \n`,
+        //             ` \n`,
+        //             ` \n`,
+        //             ` \n`,
+        //             ` \n`,
+        //             ` \n`,
+        //             ` \n`,
+        //             ` \n`,
+        //             ` \n`,
+        //             ` \n`,
+        //             ` \n`,
+        //             ` \n`,
+        //             ` \n`,
+        //             ` \n`,
+        //             ` \n`,
+        //             ` \n`,
+        //           ]
+        //         }
 
-                return qz.print(config, data)
-              })
-              .then(() => {
-                try {
-                  const bytes = new Uint8Array([0x1d, 0x56, 0x41, 0x10])
-                  return qz.print(bytes)
-                } catch (error) {}
-              })
-              .then(() => {
-                return qz.websocket.disconnect()
-              })
-              .catch((err) => {
-                console.error(err)
-              })
-          } catch (error) {
-            console.log('error IMPRESORA', error)
-          }
-          const requestURL = 'http://127.0.0.1:18080/WebPrintSDK/BK3-31'
-          console.log('DATA-------------LIMPIA', this.limpio)
-          const strSubmit = {
-            id: 1,
-            functions: {
-              func0: { clearBuffer: [] },
-              func1: {
-                cutPaper: [1],
-              },
-              func2: {
-                printBuffer: [],
-              },
-              func3: {
-                cutPaper: [1],
-              },
-              func4: {
-                setAutoCutter: (1, 1),
-              },
-            },
-          }
-          const response = await axios.post(requestURL, strSubmit, {
-            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-          })
-          const res = response.data
-          const ret = res.Result
-          if (ret.search('ready') >= 0 || ret.search('progress') >= 0) {
-            await checkResult(
-              'POST',
-              strPrinterName,
-              res.RequestID,
-              res.ResponseID
-            )
-          } else if (ret.search('duplicated') >= 0) {
-            console.log(res.Result)
-          }
-        } catch (error) {
-          if (error.response && error.response.status === 404) {
-            console.log('xmlHttpReq 404', error.response)
-          } else {
-            console.log('xmlHttpReq error', error)
-          }
-        }
+        //         return qz.print(config, data)
+        //       })
+        //       .then(() => {
+        //         try {
+        //           const bytes = new Uint8Array([0x1d, 0x56, 0x41, 0x10])
+        //           return qz.print(bytes)
+        //         } catch (error) {}
+        //       })
+        //       .then(() => {
+        //         return qz.websocket.disconnect()
+        //       })
+        //       .catch((err) => {
+        //         console.error(err)
+        //       })
+        //   } catch (error) {
+        //     console.log('error IMPRESORA', error)
+        //   }
+        //   const requestURL = 'http://127.0.0.1:18080/WebPrintSDK/BK3-31'
+        //   console.log('DATA-------------LIMPIA', this.limpio)
+        //   const strSubmit = {
+        //     id: 1,
+        //     functions: {
+        //       func0: { clearBuffer: [] },
+        //       func1: {
+        //         cutPaper: [1],
+        //       },
+        //       func2: {
+        //         printBuffer: [],
+        //       },
+        //       func3: {
+        //         cutPaper: [1],
+        //       },
+        //       func4: {
+        //         setAutoCutter: (1, 1),
+        //       },
+        //     },
+        //   }
+        //   const response = await axios.post(requestURL, strSubmit, {
+        //     headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        //   })
+        //   const res = response.data
+        //   const ret = res.Result
+        //   if (ret.search('ready') >= 0 || ret.search('progress') >= 0) {
+        //     await checkResult(
+        //       'POST',
+        //       strPrinterName,
+        //       res.RequestID,
+        //       res.ResponseID
+        //     )
+        //   } else if (ret.search('duplicated') >= 0) {
+        //     console.log(res.Result)
+        //   }
+        // } catch (error) {
+        //   if (error.response && error.response.status === 404) {
+        //     console.log('xmlHttpReq 404', error.response)
+        //   } else {
+        //     console.log('xmlHttpReq error', error)
+        //   }
+        // }
         this.$showSpinner(false)
-        this.$router.push('/final')
+        this.$router.push('/resumen')
       }
     },
     inicioRefresh() {
