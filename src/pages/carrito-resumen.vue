@@ -197,15 +197,6 @@ export default {
                   ` \n`,
                   ` \n`,
                   ` \n`,
-                  ` \n`,
-                  ` \n`,
-                  ` \n`,
-                  ` \n`,
-                  ` \n`,
-                  ` \n`,
-                  ` \n`,
-                  ` \n`,
-                  ` \n`,
                   `\x1D\x56\x41\x10`,
                 ]
                 if (nombre1) {
@@ -224,14 +215,6 @@ export default {
                     `-------------------------------------- \n`,
                     `       ${nombre1}     :   ${cantidad1}  \n`,
                     `-------------------------------------- \n`,
-                    ` \n`,
-                    ` \n`,
-                    ` \n`,
-                    ` \n`,
-                    ` \n`,
-                    ` \n`,
-                    ` \n`,
-                    ` \n`,
                     ` \n`,
                     ` \n`,
                     ` \n`,
@@ -259,13 +242,6 @@ export default {
                     `-------------------------------------- \n`,
                     `       ${nombre2}     :   ${cantidad2}  \n`,
                     `-------------------------------------- \n`,
-                    ` \n`,
-                    ` \n`,
-                    ` \n`,
-                    ` \n`,
-                    ` \n`,
-                    ` \n`,
-                    ` \n`,
                     ` \n`,
                     ` \n`,
                     ` \n`,
@@ -441,7 +417,7 @@ export default {
 }
 .contenedor-exit {
   margin-top: 50px;
-  margin-bottom: 15vw;
+  margin-bottom: 240px;
   width: 100%;
   display: flex;
   text-align: center;
