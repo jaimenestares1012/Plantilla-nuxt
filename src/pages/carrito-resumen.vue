@@ -165,17 +165,20 @@ export default {
                 console.log(printers)
                 const nombre0 = this.limpio[0] ? this.limpio[0].name : ''
                 const cantidad0 = this.limpio[0] ? this.limpio[0].cantidad : ''
-                const nombre1 = this.limpio[1] ? this.limpio[1].name : ''
-                const cantidad1 = this.limpio[1] ? this.limpio[1].cantidad : ''
-                const nombre2 = this.limpio[2] ? this.limpio[2].name : ''
-                const cantidad2 = this.limpio[2] ? this.limpio[2].cantidad : ''
+                const nombre1 = this.limpio[1] ? this.limpio[1].name : null
+                const cantidad1 = this.limpio[1]
+                  ? this.limpio[1].cantidad
+                  : null
+                const nombre2 = this.limpio[2] ? this.limpio[2].name : null
+                const cantidad2 = this.limpio[2]
+                  ? this.limpio[2].cantidad
+                  : null
                 let config = qz.configs.create('BIXOLON BK3-3')
-                var data = [
-                  `                         ID: ${this.idLast} \n`,
+                let data = []
+                data = [
+                  `          ID: ${this.idLast} \n`,
                   `                      \n`,
-                  `                ${nombre0}     :   ${cantidad0}  \n`,
-                  `                ${nombre1}     :   ${cantidad1}  \n`,
-                  `                ${nombre2}     :   ${cantidad2}  \n`,
+                  `       ${nombre0}     :   ${cantidad0}  \n`,
                   ` \n`,
                   ` \n`,
                   ` \n`,
@@ -185,20 +188,43 @@ export default {
                   ` \n`,
                   ` \n`,
                   ` \n`,
-                  ` \n`,
-                  ` \n`,
-                  ` \n`,
-                  ` \n`,
-                  ` \n`,
-                  ` \n`,
-                  ` \n`,
-                  ` \n`,
-                  ` \n`,
-                  ` \n`,
-                  ` \n`,
-                  ` \n`,
-                  ` 1\n`,
                 ]
+                if (nombre1) {
+                  data = [
+                    `          ID: ${this.idLast} \n`,
+                    `                      \n`,
+                    `       ${nombre0}     :   ${cantidad0}  \n`,
+                    `       ${nombre1}     :   ${cantidad1}  \n`,
+                    ` \n`,
+                    ` \n`,
+                    ` \n`,
+                    ` \n`,
+                    ` \n`,
+                    ` \n`,
+                    ` \n`,
+                    ` \n`,
+                    ` \n`,
+                  ]
+                }
+                if (nombre2) {
+                  data = [
+                    `          ID: ${this.idLast} \n`,
+                    `                      \n`,
+                    `       ${nombre0}     :   ${cantidad0}  \n`,
+                    `       ${nombre1}     :   ${cantidad1}  \n`,
+                    `       ${nombre2}     :   ${cantidad2}  \n`,
+                    ` \n`,
+                    ` \n`,
+                    ` \n`,
+                    ` \n`,
+                    ` \n`,
+                    ` \n`,
+                    ` \n`,
+                    ` \n`,
+                    ` \n`,
+                  ]
+                }
+
                 return qz.print(config, data)
               })
               .then(() => {
