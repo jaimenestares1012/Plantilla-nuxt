@@ -188,6 +188,10 @@ export default {
                   ` \n`,
                   ` \n`,
                   ` \n`,
+                  ` \n`,
+                  ` \n`,
+                  ` \n`,
+                  ` \n`,
                 ]
                 if (nombre1) {
                   data = [
@@ -195,6 +199,10 @@ export default {
                     `                      \n`,
                     `       ${nombre0}     :   ${cantidad0}  \n`,
                     `       ${nombre1}     :   ${cantidad1}  \n`,
+                    ` \n`,
+                    ` \n`,
+                    ` \n`,
+                    ` \n`,
                     ` \n`,
                     ` \n`,
                     ` \n`,
@@ -213,6 +221,10 @@ export default {
                     `       ${nombre0}     :   ${cantidad0}  \n`,
                     `       ${nombre1}     :   ${cantidad1}  \n`,
                     `       ${nombre2}     :   ${cantidad2}  \n`,
+                    ` \n`,
+                    ` \n`,
+                    ` \n`,
+                    ` \n`,
                     ` \n`,
                     ` \n`,
                     ` \n`,
