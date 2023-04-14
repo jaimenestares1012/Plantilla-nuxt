@@ -21,9 +21,12 @@ export default {
       
       // { rel: 'stylesheet', href: '/fonts/AMSUNGSHARPSANS-REGULAR.ttf' }
     ],
-    // script: [
-    //   { src: 'https://www.bixolon.com/include/js/BxWebPrint.js', async: true, defer: true }
-    // ]
+    script: [
+      {
+        src: '/js/qz-tray.js' ,
+        type: 'text/javascript',
+      },
+    ]
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css

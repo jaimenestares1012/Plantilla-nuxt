@@ -109,6 +109,7 @@
 <script>
 import { mapState } from 'vuex'
 import axios from 'axios'
+// const qz = require('qz-tray')
 import ModalAlert from '@/components/modals/ModalAlert'
 export default {
   components: {
@@ -154,6 +155,66 @@ export default {
         }
         await this.$store.dispatch('producto/sendDataStore', paylodad)
         try {
+          try {
+            qz.websocket
+              .connect()
+              .then(() => {
+                return qz.printers.find()
+              })
+              .then((printers) => {
+                console.log(printers)
+                const nombre0 = this.limpio[0] ? this.limpio[0].name : ''
+                const cantidad0 = this.limpio[0] ? this.limpio[0].cantidad : ''
+                const nombre1 = this.limpio[1] ? this.limpio[1].name : ''
+                const cantidad1 = this.limpio[1] ? this.limpio[1].cantidad : ''
+                const nombre2 = this.limpio[2] ? this.limpio[2].name : ''
+                const cantidad2 = this.limpio[2] ? this.limpio[2].cantidad : ''
+                let config = qz.configs.create('BIXOLON BK3-3')
+                var data = [
+                  `                         ID: ${this.idLast} \n`,
+                  `                      \n`,
+                  `                ${nombre0}     :   ${cantidad0}  \n`,
+                  `                ${nombre1}     :   ${cantidad1}  \n`,
+                  `                ${nombre2}     :   ${cantidad2}  \n`,
+                  ` \n`,
+                  ` \n`,
+                  ` \n`,
+                  ` \n`,
+                  ` \n`,
+                  ` \n`,
+                  ` \n`,
+                  ` \n`,
+                  ` \n`,
+                  ` \n`,
+                  ` \n`,
+                  ` \n`,
+                  ` \n`,
+                  ` \n`,
+                  ` \n`,
+                  ` \n`,
+                  ` \n`,
+                  ` \n`,
+                  ` \n`,
+                  ` \n`,
+                  ` \n`,
+                  ` 1\n`,
+                ]
+                return qz.print(config, data)
+              })
+              .then(() => {
+                cutPaper(1)
+                return qz.websocket.disconnect()
+              })
+              .then(() => {
+                // process.exit(0);
+              })
+              .catch((err) => {
+                console.error(err)
+                // process.exit(1);
+              })
+          } catch (error) {
+            console.log('error IMPRESORA', error)
+          }
           const requestURL = 'http://127.0.0.1:18080/WebPrintSDK/BK3-31'
           console.log('DATA-------------LIMPIA', this.limpio)
 
@@ -195,8 +256,10 @@ export default {
               func10: {
                 drawDeviceFont: [cantidad2, 250, 130, '0', 2, 2, 0, 0, 0, 0],
               },
-
               func11: { printBuffer: [] },
+              func10: {
+                cutPaper: [1],
+              },
             },
           }
           const response = await axios.post(requestURL, strSubmit, {
