@@ -204,6 +204,7 @@ export default {
                   ` \n`,
                   ` \n`,
                   ` \n`,
+                  `\x1D\x56\x41\x10`,
                 ]
                 if (nombre1) {
                   data = [
@@ -235,7 +236,7 @@ export default {
                     ` \n`,
                     ` \n`,
                     ` \n`,
-                    ` \n`,
+                    `\x1D\x56\x41\x10 \n`,
                   ]
                 }
                 if (nombre2) {
@@ -270,7 +271,7 @@ export default {
                     ` \n`,
                     ` \n`,
                     ` \n`,
-                    ` \n`,
+                    `\x1B\x69 \n`,
                   ]
                 }
 
