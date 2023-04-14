@@ -63,6 +63,7 @@ export default {
 
       // Cierra la conexión con la impresora
       xhr.abort()
+      console.log('fin request-->')
     } catch (error) {}
     // redirigir al usuario a otra página después de 5 segundos
     setTimeout(() => {
