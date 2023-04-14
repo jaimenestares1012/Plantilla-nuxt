@@ -175,6 +175,7 @@ export default {
                   : null
                 let config = qz.configs.create('BIXOLON BK3-3')
                 let data = []
+                const bytes = new Uint8Array([0x1d, 0x56, 0x41, 0x10])
                 data = [
                   ` \n`,
                   ` \n`,
@@ -203,6 +204,7 @@ export default {
                   ` \n`,
                   ` \n`,
                   ` \n`,
+                  bytes,
                 ]
                 if (nombre1) {
                   data = [
@@ -235,6 +237,7 @@ export default {
                     ` \n`,
                     ` \n`,
                     ` \n`,
+                    bytes,
                   ]
                 }
                 if (nombre2) {
@@ -270,6 +273,7 @@ export default {
                     ` \n`,
                     ` \n`,
                     ` \n`,
+                    bytes,
                   ]
                 }
 
@@ -305,9 +309,9 @@ export default {
               func3: {
                 cutPaper: [1],
               },
-              // func13: {
-              //   setAutoCutter: (1, 3),
-              // },
+              func4: {
+                setAutoCutter: (1, 1),
+              },
             },
           }
           const response = await axios.post(requestURL, strSubmit, {
