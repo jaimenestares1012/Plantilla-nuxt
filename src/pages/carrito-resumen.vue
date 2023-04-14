@@ -222,7 +222,7 @@ export default {
           }
         }
         this.$showSpinner(false)
-        this.$router.push('/resumen')
+        this.$router.push('/final')
       }
     },
     inicioRefresh() {
