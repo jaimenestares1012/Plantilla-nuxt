@@ -236,7 +236,6 @@ export default {
                     ` \n`,
                     ` \n`,
                     ` \n`,
-                    ` ${bytes}\n`,
                   ]
                 }
                 if (nombre2) {
@@ -272,17 +271,16 @@ export default {
                     ` \n`,
                     ` \n`,
                     ` \n`,
-                    bytes,
                   ]
                 }
 
                 return qz.print(config, data)
               })
               .then(() => {
-                console.log('<----------------------------->')
-                const bytes = new Uint8Array([0x1d, 0x56, 0x41, 0x10])
-                console.log('EN EL CORTADO', bytes)
-                return qz.print(bytes)
+                try {
+                  const bytes = new Uint8Array([0x1d, 0x56, 0x41, 0x10])
+                  return qz.print(bytes)
+                } catch (error) {}
               })
               .then(() => {
                 return qz.websocket.disconnect()
