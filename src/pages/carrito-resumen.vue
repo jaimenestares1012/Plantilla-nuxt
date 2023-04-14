@@ -176,6 +176,10 @@ export default {
                 let config = qz.configs.create('BIXOLON BK3-3')
                 let data = []
                 data = [
+                  ` \n`,
+                  ` \n`,
+                  `                  Samsung            \n`,
+                  `                 experience           \n `,
                   `          TICKET: ${this.idLast} \n`,
                   `-------------------------------------- \n`,
                   `                      \n`,
@@ -201,6 +205,10 @@ export default {
                 ]
                 if (nombre1) {
                   data = [
+                    ` \n`,
+                    ` \n`,
+                    `                  Samsung            \n`,
+                    `                 experience           \n `,
                     `          TICKET: ${this.idLast} \n`,
                     `-------------------------------------- \n`,
                     `                      \n`,
@@ -229,6 +237,10 @@ export default {
                 }
                 if (nombre2) {
                   data = [
+                    ` \n`,
+                    ` \n`,
+                    `                  Samsung            \n`,
+                    `                 experience           \n `,
                     `          TICKET: ${this.idLast} \n`,
                     `-------------------------------------- \n`,
                     `                      \n`,
