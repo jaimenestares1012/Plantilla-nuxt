@@ -46,6 +46,12 @@ export default {
 </script>
 
 <style>
+.container {
+  max-width: none !important;
+  height: 1900px;
+  padding: 0px;
+  background: #f5f6f7;
+}
 .contenedor-group-final {
   width: 100%;
   text-align: center;

@@ -1,26 +1,34 @@
 <template>
   <div>
-    <div style="margin: auto; width: 50%; text-align: center; margin-top: 20px">
-      Samsung experience
-    </div>
-    <div style="margin: auto; width: 50%; text-align: center; margin-top: 20px">
-      Nro ticket : {{ idLast }}
-    </div>
-    <div style="margin: auto; width: 50%; text-align: center; margin-top: 20px">
-      <table>
-        <thead>
-          <tr>
-            <th style="text-align: center">Producto</th>
-            <th style="text-align: center">Cantidad</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr v-for="(dat, index) in limpio" :key="index">
-            <td style="text-align: center; height: 80px">{{ dat.name }}</td>
-            <td style="text-align: center">{{ dat.cantidad }}</td>
-          </tr>
-        </tbody>
-      </table>
+    <div style="container">
+      <div
+        style="margin: auto; width: 50%; text-align: center; margin-top: 20px"
+      >
+        Samsung experience
+      </div>
+      <div
+        style="margin: auto; width: 50%; text-align: center; margin-top: 20px"
+      >
+        Nro ticket : {{ idLast }}
+      </div>
+      <div
+        style="margin: auto; width: 50%; text-align: center; margin-top: 20px"
+      >
+        <table>
+          <thead>
+            <tr>
+              <th style="text-align: center">Producto</th>
+              <th style="text-align: center">Cantidad</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-for="(dat, index) in limpio" :key="index">
+              <td style="text-align: center; height: 40px">{{ dat.name }}</td>
+              <td style="text-align: center">{{ dat.cantidad }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   </div>
 </template>
@@ -45,6 +53,11 @@ export default {
 </script>
 
 <style>
+.container {
+  max-width: none !important;
+  height: 200px;
+  padding: 0px;
+}
 table {
   border-collapse: collapse;
   width: 100%;
