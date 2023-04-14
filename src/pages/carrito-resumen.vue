@@ -277,17 +277,8 @@ export default {
               })
               .then(() => {
                 function cutPaper() {
-                  let config = qz.configs.create('BIXOLON BK3-3')
                   const bytes = new Uint8Array([0x1d, 0x56, 0x41, 0x10])
-                  return qz.printRaw(config, bytes)
-                }
-                return cutPaper()
-              })
-              .then(() => {
-                function cutPaper() {
-                  let config = qz.configs.create('BIXOLON BK3-3')
-                  const bytes = new Uint8Array([0x1d, 0x56, 0x41, 0x10])
-                  return qz.print(config, bytes)
+                  return qz.print(bytes)
                 }
                 return cutPaper()
               })
