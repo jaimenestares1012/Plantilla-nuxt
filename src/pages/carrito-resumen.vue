@@ -276,11 +276,10 @@ export default {
                 return qz.print(config, data)
               })
               .then(() => {
-                function cutPaper() {
-                  const bytes = new Uint8Array([0x1d, 0x56, 0x41, 0x10])
-                  return qz.print(bytes)
-                }
-                return cutPaper()
+                console.log('<----------------------------->')
+                const bytes = new Uint8Array([0x1d, 0x56, 0x41, 0x10])
+                console.log('EN EL CORTADO', bytes)
+                return qz.print(bytes)
               })
               .then(() => {
                 return qz.websocket.disconnect()
