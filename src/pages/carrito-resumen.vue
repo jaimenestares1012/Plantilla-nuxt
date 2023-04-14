@@ -28,37 +28,39 @@
         >
       </div>
     </div>
-    <div class="dafault-message" v-if="condicion == 0">
-      Ningún producto seleccionado
-    </div>
-    <div
-      class="contenedor-productos"
-      v-for="(dat, index) in carProducto"
-      :key="index"
-      v-else
-    >
-      <div class="contendor-iterador">
-        <div class="contenedor-img-text">
-          <div class="contenedor-img-resumen">
-            <img
-              :src="`https://ja-my-serverless-react-app-20-03-2023.s3.amazonaws.com${dat.url}`"
-              alt=""
-              :style="{ width: tamanored(dat) + '%' }"
-            />
-          </div>
 
-          <div class="text-description">{{ dat.description }}</div>
-        </div>
-        <div class="group-contenedores">
-          <div class="contenedor-cantidad">{{ dat.cantidad }}</div>
-          <div class="contenedor-cantidad" @click="restCantidad(dat)">
-            <b>-</b>
+    <div>
+      <div class="dafault-message" v-if="condicion == 0">
+        Ningún producto seleccionado
+      </div>
+      <div
+        class="contenedor-productos"
+        v-for="(dat, index) in carProducto"
+        :key="index"
+        v-else
+      >
+        <div class="contendor-iterador">
+          <div class="contenedor-img-text">
+            <div class="contenedor-img-resumen">
+              <img
+                :src="`https://ja-my-serverless-react-app-20-03-2023.s3.amazonaws.com${dat.url}`"
+                alt=""
+                :style="{ width: tamanored(dat) + '%' }"
+              />
+            </div>
+            <div class="text-description">{{ dat.description }}</div>
           </div>
-          <div class="contenedor-cantidad" @click="addCantidad(dat)">
-            <b>+</b>
-          </div>
-          <div class="contenedor-cantidad" @click="quitProducto(dat)">
-            <i class="fas fa-trash-alt"></i>
+          <div class="group-contenedores">
+            <div class="contenedor-cantidad">{{ dat.cantidad }}</div>
+            <div class="contenedor-cantidad" @click="restCantidad(dat)">
+              <b>-</b>
+            </div>
+            <div class="contenedor-cantidad" @click="addCantidad(dat)">
+              <b>+</b>
+            </div>
+            <div class="contenedor-cantidad" @click="quitProducto(dat)">
+              <i class="fas fa-trash-alt"></i>
+            </div>
           </div>
         </div>
       </div>
@@ -439,6 +441,7 @@ export default {
 }
 .contenedor-exit {
   margin-top: 50px;
+  margin-bottom: 15vw;
   width: 100%;
   display: flex;
   text-align: center;
@@ -510,8 +513,8 @@ export default {
   background-color: #c0c0c0;
 }
 .contenedor-img {
-  position: absolute;
-  bottom: 0px;
-  width: 100%;
+  position: fixed;
+  /* bottom: 0px; */
+  /* width: 100%; */
 }
 </style>

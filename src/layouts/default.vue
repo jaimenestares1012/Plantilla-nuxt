@@ -52,7 +52,7 @@ export default {
 }
 .container {
   max-width: none !important;
-  height: 1900px;
+  /* height: 1900px; */
   padding: 0px;
   background: #f5f6f7;
 }
