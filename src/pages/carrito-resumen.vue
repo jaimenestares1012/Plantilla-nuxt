@@ -176,9 +176,13 @@ export default {
                 let config = qz.configs.create('BIXOLON BK3-3')
                 let data = []
                 data = [
-                  `          ID: ${this.idLast} \n`,
+                  `          TICKET: ${this.idLast} \n`,
+                  `-------------------------------------- \n`,
                   `                      \n`,
+                  `       PRODUCTO     :       CANTIDAD    \n`,
+                  `-------------------------------------- \n`,
                   `       ${nombre0}     :   ${cantidad0}  \n`,
+                  `-------------------------------------- \n`,
                   ` \n`,
                   ` \n`,
                   ` \n`,
@@ -197,10 +201,15 @@ export default {
                 ]
                 if (nombre1) {
                   data = [
-                    `          ID: ${this.idLast} \n`,
+                    `          TICKET: ${this.idLast} \n`,
+                    `-------------------------------------- \n`,
                     `                      \n`,
+                    `       PRODUCTO     :       CANTIDAD    \n`,
+                    `-------------------------------------- \n`,
                     `       ${nombre0}     :   ${cantidad0}  \n`,
+                    `-------------------------------------- \n`,
                     `       ${nombre1}     :   ${cantidad1}  \n`,
+                    `-------------------------------------- \n`,
                     ` \n`,
                     ` \n`,
                     ` \n`,
@@ -220,11 +229,17 @@ export default {
                 }
                 if (nombre2) {
                   data = [
-                    `          ID: ${this.idLast} \n`,
+                    `          TICKET: ${this.idLast} \n`,
+                    `-------------------------------------- \n`,
                     `                      \n`,
+                    `       PRODUCTO     :       CANTIDAD    \n`,
+                    `-------------------------------------- \n`,
                     `       ${nombre0}     :   ${cantidad0}  \n`,
+                    `-------------------------------------- \n`,
                     `       ${nombre1}     :   ${cantidad1}  \n`,
+                    `-------------------------------------- \n`,
                     `       ${nombre2}     :   ${cantidad2}  \n`,
+                    `-------------------------------------- \n`,
                     ` \n`,
                     ` \n`,
                     ` \n`,
