@@ -159,14 +159,14 @@ export default {
         try {
           try {
             //  const src = "require('/assets/img/credInstante/congrats.png')"
-            qz.security.setCertificatePromise(function (resolve, reject) {
-              fetch('./static/override.crt', {
-                cache: 'no-store',
-                headers: { 'Content-Type': 'text/plain' },
-              }).then(function (data) {
-                data.ok ? resolve(data.text()) : reject(data.text())
-              })
-            })
+            // qz.security.setCertificatePromise(function (resolve, reject) {
+            //   fetch('./static/override.crt', {
+            //     cache: 'no-store',
+            //     headers: { 'Content-Type': 'text/plain' },
+            //   }).then(function (data) {
+            //     data.ok ? resolve(data.text()) : reject(data.text())
+            //   })
+            // })
             qz.websocket
               .connect()
               .then(() => {
@@ -325,6 +325,18 @@ export default {
         this.$router.push('/final')
       }
     },
+
+    loadCertificate() {
+      const src = '/override.crt'
+      qz.security.setCertificatePromise(function (resolve, reject) {
+        fetch(src, {
+          cache: 'no-store',
+          headers: { 'Content-Type': 'text/plain' },
+        }).then(function (data) {
+          data.ok ? resolve(data.text()) : reject(data.text())
+        })
+      })
+    },
     inicioRefresh() {
       this.$store.commit('producto/SET_CLEAR')
       this.$router.push('/')
@@ -362,7 +374,9 @@ export default {
     },
     creatorFunction() {},
   },
-  mounted() {},
+  mounted() {
+    this.loadCertificate()
+  },
 }
 </script>
 
