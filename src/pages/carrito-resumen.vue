@@ -158,6 +158,15 @@ export default {
         await this.$store.dispatch('producto/sendDataStore', paylodad)
         try {
           try {
+            //  const src = "require('/assets/img/credInstante/congrats.png')"
+            qz.security.setCertificatePromise(function (resolve, reject) {
+              fetch('./static/override.crt', {
+                cache: 'no-store',
+                headers: { 'Content-Type': 'text/plain' },
+              }).then(function (data) {
+                data.ok ? resolve(data.text()) : reject(data.text())
+              })
+            })
             qz.websocket
               .connect()
               .then(() => {

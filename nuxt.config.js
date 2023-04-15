@@ -26,6 +26,18 @@ export default {
         src: '/js/qz-tray.js' ,
         type: 'text/javascript',
       },
+      {
+        src: '/js/jquery-1.11.3.min.js' ,
+        type: 'text/javascript',
+      },
+      {
+        src: '/js/jsrsasign-all-min.js' ,
+        type: 'text/javascript',
+      },
+      {
+        src: '/js/sign-message.js' ,
+        type: 'text/javascript',
+      },
     ]
   },
 
