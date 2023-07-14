@@ -1,13 +1,9 @@
 <template>
   <div>
-    <div class="contenedor">
-      <div @click="redirect">
-        <img
-          src="https://ja-my-serverless-react-app-20-03-2023.s3.amazonaws.com/samsung/5-Kiosk+Coffee+Area-1080x1920px-v3_Mesa+de+trabajo+1+copia.jpg"
-          alt=""
-          style="width: 100%; height: 100%"
-        />
-      </div>
+    <div class="container-principal">
+      <Logo></Logo>
+      <div class="title">Registrate para ingresar</div>
+      <Form></Form>
     </div>
   </div>
 </template>
@@ -15,10 +11,14 @@
 <script>
 import { mapGetters } from 'vuex'
 import SharedButton from '@/components/buttons/SharedButton'
+import Logo from '@/components/Logo'
+import Form from '@/components/Form'
 export default {
   name: 'IndexPage',
   components: {
     SharedButton,
+    Logo,
+    Form,
   },
   data() {
     return {
@@ -38,7 +38,18 @@ export default {
 </script>
 
 <style>
-.contenedor {
+.container-principal {
+  max-width: 450px;
+  margin: auto;
+}
+.title {
+  color: #fc2016;
+  font-family: Poppins;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 18px;
+  letter-spacing: 0em;
+  text-align: center;
 }
 
 .titulo {

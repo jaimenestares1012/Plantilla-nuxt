@@ -54,7 +54,7 @@ export default {
   max-width: none !important;
   /* height: 1900px; */
   padding: 0px;
-  background: #f5f6f7;
+  background: #ffffff;
 }
 
 /* .v-application {
