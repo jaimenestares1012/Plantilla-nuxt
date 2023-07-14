@@ -12,12 +12,12 @@
 .logo {
   width: 200px;
   height: 72px;
-
   top: 29px;
   left: 93px;
 }
 .contendor-logo {
   width: 173px;
-  margin: auto;
+  /* margin-top: 30px; */
+  margin: 60px auto;
 }
 </style>
