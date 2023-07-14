@@ -2,50 +2,9 @@
   <div>
     <div class="container-principal">
       <Logo></Logo>
-      <div class="container-card">
-        <div class="title-card">Lg TV - 69% de descuento</div>
-        <div>
-          <img
-            width="100%"
-            src="https://ja-my-serverless-react-app-20-03-2023.s3.amazonaws.com/vue-project/69-plaza-vea-nanocell+1.png"
-            alt=""
-          />
-        </div>
-        <div class="contendor-avatar">
-          <img
-            width="70px"
-            src="https://ja-my-serverless-react-app-20-03-2023.s3.amazonaws.com/vue-project/mirada-ojos-encuadre-primer-plano-sexy-810x540+1.png"
-            alt=""
-          />
-          <div class="name-avatar">
-            {{ promocion.user ? promocion.user.firstName : '' }}
-            {{ promocion.user ? promocion.user.lastName : '' }}
-          </div>
-        </div>
-        <div class="card-description">{{ promocion.description }}</div>
-        <div class="card-fecha">Publicado a las {{ promocion.createdAt }}</div>
-      </div>
-      <div class="container-comment">
-        <div class="title-card">Comentarios</div>
-        <div v-for="comment in comentarios.slice(0, 10)" :key="comment.id">
-          <div class="container-card color-background">
-            <div class="card-title">
-              <div class="contendor-avatar">
-                <img
-                  width="70px"
-                  src="https://ja-my-serverless-react-app-20-03-2023.s3.amazonaws.com/vue-project/mirada-ojos-encuadre-primer-plano-sexy-810x540+1.png"
-                  alt=""
-                />
-                <div class="name-avatar">
-                  {{ comment.user ? comment.user.firstName : '' }}
-                  {{ comment.user ? comment.user.lastName : '' }}
-                </div>
-              </div>
-            </div>
-            <div class="card-description">{{ comment.text }}</div>
-          </div>
-        </div>
-      </div>
+      <cardProducto :promocion="promocion"></cardProducto>
+      <cardComentarios :comentarios="comentarios"></cardComentarios>
+
       <div>
         <form ref="form" @submit.prevent="sendLead">
           <div class="pagos-form__inputs">
@@ -79,13 +38,15 @@
 import { mapGetters } from 'vuex'
 import SharedButton from '@/components/buttons/SharedButton'
 import Logo from '@/components/Logo'
-import InfiniteScroll from '@/components/InfiniteScroll'
+import cardProducto from '@/components/CardProducto'
+import cardComentarios from '@/components/CardComentarios'
 export default {
   name: 'IndexPage',
   components: {
     SharedButton,
     Logo,
-    InfiniteScroll,
+    cardProducto,
+    cardComentarios,
   },
   data() {
     return {
