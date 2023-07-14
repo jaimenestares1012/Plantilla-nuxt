@@ -3,8 +3,8 @@
     <div class="container-principal">
       <Logo></Logo>
       <div class="title">Registrate para ingresar</div>
-      <div class="image-container">
-        <img v-if="selectedImage" :src="selectedImage" alt="Selected Image" />
+      <div class="image-container" v-if="selectedImage">
+        <img :src="selectedImage" alt="Selected Image" />
       </div>
       <input type="file" @change="handleImageUpload" accept="image/*" />
       <Form></Form>
