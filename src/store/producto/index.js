@@ -1,5 +1,4 @@
 
-import { apiIdLast, apiSendDataStore, apiGetDataStore } from '@/api/serverles';
 import { apiPromociones, apiPromocion, apiComment } from '@/api/service';
 export const state = () => ({
   isLoading: false,
