@@ -55,9 +55,7 @@ export default {
     }
   },
   methods: {
-    sendLead() {
-      console.log('SSSSSSSSSSSSSSSSSSSS')
-    },
+    sendLead() {},
   },
   computed: {
     ...mapGetters('producto', ['promocion', 'comentarios']),
