@@ -1,5 +1,5 @@
 
-import { apiPromociones, apiPromocion, apiComment } from '@/api/service';
+import { apiPromociones, apiPromocion, apiComment,apiComentario } from '@/api/service';
 export const state = () => ({
   isLoading: false,
   promociones: [],
@@ -30,6 +30,11 @@ export const actions = {
       const responseApicoment = await apiComment(id);
       commit('SET_COMENTARIOS', responseApicoment);
     },
+    async postComentario({ commit }, id){
+      const responseApiComentario = await apiComentario(id);
+      // console.log("responseApiComentario", responseApiComentario);
+      return responseApiComentario
+    }
 };
 
 

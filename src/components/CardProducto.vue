@@ -33,7 +33,6 @@ export default {
   },
   props: {
     promocion: {
-      type: Array,
       default: [],
     },
   },

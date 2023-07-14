@@ -1,7 +1,7 @@
 <template>
   <v-dialog
     v-model="dialogVisible"
-    max-width="560.8pt !important"
+    max-width="300.8pt !important"
     class="v-dialog"
   >
     <v-card>
@@ -14,9 +14,6 @@
       </div>
 
       <div class="container-body">
-        <!-- <div class="container-img">
-          <span style="font-size: 170px">{{ imgModal }}</span>
-        </div> -->
         <div class="container-title">
           <span class="message-title"> {{ tituloModal }}</span>
         </div>
@@ -27,7 +24,7 @@
         <div>
           <v-btn
             class="buttom-close"
-            style="font-size: 40px; padding: 30px"
+            style="font-size: 23px; padding: 10px"
             @click="close"
           >
             OK
@@ -62,7 +59,6 @@ export default {
       this.dialogVisible = true
       this.nextStep = payload.nextStep
       this.nameSpace = payload.nameSpace
-      this.resetPath = payload.resetPath || '/paga-tus-cuotas'
     },
     close() {
       this.dialogVisible = false
@@ -73,14 +69,14 @@ export default {
 <style>
 .message-title {
   color: #005092;
-  font-size: 55px;
+  font-size: 40px;
   line-height: 28px;
   font-weight: 700;
 }
 .message-modal {
   font-style: normal;
   font-weight: 600;
-  font-size: 45px;
+  font-size: 30px;
   line-height: 50px;
   text-align: center;
   color: #000000;
@@ -89,7 +85,7 @@ export default {
   width: 50%;
   font-style: normal;
   font-weight: 500;
-  font-size: 40px;
+  font-size: 30px;
   line-height: 21px;
   background: #005191 !important;
   text-align: center;

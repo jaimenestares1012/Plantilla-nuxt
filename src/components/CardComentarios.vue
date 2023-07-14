@@ -31,7 +31,6 @@ export default {
   },
   props: {
     comentarios: {
-      type: Array,
       default: [],
     },
   },

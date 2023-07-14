@@ -31,12 +31,14 @@
         </form>
       </div>
     </div>
+    <ModalAlert ref="modalAlert" />
   </div>
 </template>
 
 <script>
 import { mapGetters } from 'vuex'
 import SharedButton from '@/components/buttons/SharedButton'
+import ModalAlert from '@/components/modals/ModalAlert'
 import Logo from '@/components/Logo'
 import cardProducto from '@/components/CardProducto'
 import cardComentarios from '@/components/CardComentarios'
@@ -45,6 +47,7 @@ export default {
   components: {
     SharedButton,
     Logo,
+    ModalAlert,
     cardProducto,
     cardComentarios,
   },
@@ -55,13 +58,33 @@ export default {
     }
   },
   methods: {
-    sendLead() {},
+    async sendLead() {
+      console.log('comentario', this.comentario)
+      const estado = await this.$store.dispatch(
+        'producto/postComentario',
+        this.comentario
+      )
+      let data = {}
+      if (estado.codRes == '00') {
+        data = {
+          img: '😃',
+          titulo: 'Estimado usuario',
+          message: 'Proximamente',
+        }
+      } else {
+        data = {
+          img: '😟',
+          titulo: 'Estimado usuario',
+          message: 'Hubo un error',
+        }
+      }
+      this.$refs.modalAlert.open(data)
+    },
   },
   computed: {
     ...mapGetters('producto', ['promocion', 'comentarios']),
   },
   async mounted() {
-    const paylodad = {}
     const id = this.$route.query.id
     console.log('id', id)
     await this.$store.dispatch('producto/getPromocion', id)

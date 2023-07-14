@@ -49,4 +49,22 @@ async function apiPromociones(data) {
       };
     }
   }
-  export { apiPromociones, apiPromocion, apiComment};
+  async function apiComentario(data) {
+    const body = {
+      "comentario":data
+    }
+    console.log("body", body);
+    try {
+      const response = await axios({
+        url: `${base}/${data}/comments`,
+        method: "POST",
+      });
+      return response.data
+    } catch (error) {
+      return {
+        codRes: "99",
+        message: "Error",
+      };
+    }
+     }
+  export { apiPromociones, apiPromocion, apiComment, apiComentario}
