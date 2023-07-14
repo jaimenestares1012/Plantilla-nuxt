@@ -3,6 +3,10 @@
     <div class="container-principal">
       <Logo></Logo>
       <div class="title">Registrate para ingresar</div>
+      <div class="image-container">
+        <img v-if="selectedImage" :src="selectedImage" alt="Selected Image" />
+      </div>
+      <input type="file" @change="handleImageUpload" accept="image/*" />
       <Form></Form>
     </div>
   </div>
@@ -23,11 +27,21 @@ export default {
   data() {
     return {
       loading: null,
+      selectedImage:
+        'https://ja-my-serverless-react-app-20-03-2023.s3.amazonaws.com/vue-project/bx-user+1.png',
     }
   },
   methods: {
     redirect() {
       this.$router.push('/eleccion')
+    },
+    handleImageUpload(event) {
+      const file = event.target.files[0]
+      const reader = new FileReader()
+      reader.onload = () => {
+        this.selectedImage = reader.result
+      }
+      reader.readAsDataURL(file)
     },
   },
   computed: {
@@ -50,5 +64,18 @@ export default {
   line-height: 18px;
   letter-spacing: 0em;
   text-align: center;
+}
+.image-container {
+  width: 200px;
+  height: 200px;
+  border: 1px solid #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-container img {
+  max-width: 100%;
+  max-height: 100%;
 }
 </style>
