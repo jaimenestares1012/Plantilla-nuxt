@@ -1,8 +1,9 @@
 import axios from "axios";
+const base = "https://61c35faa9cfb8f0017a3eb2e.mockapi.io/api/v1/posts"
 async function apiPromociones(data) {
     try {
       const response = await axios({
-        url: `https://61c35faa9cfb8f0017a3eb2e.mockapi.io/api/v1/posts/?page=1&limit=10`,
+        url: `${base}/?page=1&limit=10`,
         method: "GET",
       });
       console.log("<------------------------>", response);
@@ -19,7 +20,7 @@ async function apiPromociones(data) {
   async function apiPromocion(data) {
     try {
       const response = await axios({
-        url: `https://61c35faa9cfb8f0017a3eb2e.mockapi.io/api/v1/posts/${data}/`,
+        url: `${base}/${data}/`,
         method: "GET",
       });
       console.log("<------------------------>", response);
@@ -35,7 +36,7 @@ async function apiPromociones(data) {
   async function apiComment(data) {
     try {
       const response = await axios({
-        url: `https://61c35faa9cfb8f0017a3eb2e.mockapi.io/api/v1/posts/${data}/comments`,
+        url: `${base}/${data}/comments`,
         method: "GET",
       });
       console.log("<------------------------>", response);
