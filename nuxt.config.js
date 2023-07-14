@@ -5,8 +5,8 @@ export default {
   srcDir: 'src/',
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    titleTemplate: '%s - samsung experience',
-    title: 'samsung experience',
+    titleTemplate: '%s - reto experience',
+    title: 'reto experience',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
